@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_22f45a9db4b006c4d2e1db9ae7638d39 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed;
+            bottom: 50px; right: 50px; width: 200px; height: 250px;
+            background-color: white; border:2px solid grey; z-index:9999;
+            font-size:14px; padding: 10px">
+<p style="margin-bottom:10px;"><b>Günlük Yolcu Sayısı</b></p>
+<p><i style="background:#67000d;width:20px;height:20px;display:inline-block;"></i> > 500,000</p>
+<p><i style="background:#a50f15;width:20px;height:20px;display:inline-block;"></i> 250K - 500K</p>
+<p><i style="background:#de2d26;width:20px;height:20px;display:inline-block;"></i> 100K - 250K</p>
+<p><i style="background:#fb6a4a;width:20px;height:20px;display:inline-block;"></i> 50K - 100K</p>
+<p><i style="background:#fcae91;width:20px;height:20px;display:inline-block;"></i> 10K - 50K</p>
+<p><i style="background:#fee5d9;width:20px;height:20px;display:inline-block;"></i> < 10K</p>
+<p><i style="background:#cccccc;width:20px;height:20px;display:inline-block;"></i> Veri yok</p>
+</div>
+    
+            <div class="folium-map" id="map_22f45a9db4b006c4d2e1db9ae7638d39" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_22f45a9db4b006c4d2e1db9ae7638d39 = L.map(
+                "map_22f45a9db4b006c4d2e1db9ae7638d39",
+                {
+                    center: [39.93, 32.86],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e731e8010047b9344de855bcbf2ed823 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e731e8010047b9344de855bcbf2ed823.addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+            var rectangle_527bad4c0e560c896c1d9e74ca1c175e = L.rectangle(
+                [[39.927927927927925, 32.84705882352941], [39.93693693693693, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcae91", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_e0aa651190e90b91f19b9f7a57d33c41 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_23c72e1da99b974962af9f58e0f51457 = $(`<div id="html_23c72e1da99b974962af9f58e0f51457" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 763.0<br>         Günlük Yolcu: 16,981         </div>`)[0];
+                popup_e0aa651190e90b91f19b9f7a57d33c41.setContent(html_23c72e1da99b974962af9f58e0f51457);
+            
+        
+
+        rectangle_527bad4c0e560c896c1d9e74ca1c175e.bindPopup(popup_e0aa651190e90b91f19b9f7a57d33c41)
+        ;
+
+        
+    
+    
+            var rectangle_cd372baf1722eb1a3afc35fde1b429fc = L.rectangle(
+                [[39.91891891891892, 32.84705882352941], [39.927927927927925, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcae91", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_efd2a5fed10ac48ec1e63c4bed2247e3 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3e797792bc8d2d8b593d25dce9c4c30b = $(`<div id="html_3e797792bc8d2d8b593d25dce9c4c30b" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 549.0<br>         Günlük Yolcu: 13,326         </div>`)[0];
+                popup_efd2a5fed10ac48ec1e63c4bed2247e3.setContent(html_3e797792bc8d2d8b593d25dce9c4c30b);
+            
+        
+
+        rectangle_cd372baf1722eb1a3afc35fde1b429fc.bindPopup(popup_efd2a5fed10ac48ec1e63c4bed2247e3)
+        ;
+
+        
+    
+    
+            var rectangle_62580e87cc5a529dd2ccb64dcd867a5d = L.rectangle(
+                [[39.93693693693694, 32.84705882352941], [39.945945945945944, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcae91", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_d9510a30d0b31568a8a3f0e30c0d8e03 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_730628d887a2eef50ec4ffd8cbe66c48 = $(`<div id="html_730628d887a2eef50ec4ffd8cbe66c48" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 573.0<br>         Günlük Yolcu: 11,253         </div>`)[0];
+                popup_d9510a30d0b31568a8a3f0e30c0d8e03.setContent(html_730628d887a2eef50ec4ffd8cbe66c48);
+            
+        
+
+        rectangle_62580e87cc5a529dd2ccb64dcd867a5d.bindPopup(popup_d9510a30d0b31568a8a3f0e30c0d8e03)
+        ;
+
+        
+    
+    
+            var rectangle_14e8a126fd4ca45e45f87ae8bf52e0e3 = L.rectangle(
+                [[39.945945945945944, 32.84705882352941], [39.95495495495495, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcae91", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_19b7da9958a39b371b99938a37966620 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_61caddb5ba432efd5825a7bd5f6da51c = $(`<div id="html_61caddb5ba432efd5825a7bd5f6da51c" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 431.0<br>         Günlük Yolcu: 10,261         </div>`)[0];
+                popup_19b7da9958a39b371b99938a37966620.setContent(html_61caddb5ba432efd5825a7bd5f6da51c);
+            
+        
+
+        rectangle_14e8a126fd4ca45e45f87ae8bf52e0e3.bindPopup(popup_19b7da9958a39b371b99938a37966620)
+        ;
+
+        
+    
+    
+            var rectangle_42f5aca4d7a614578c878f70384e887f = L.rectangle(
+                [[39.927927927927925, 32.88235294117647], [39.93693693693693, 32.89411764705883]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_25dc0d4e17c1b92589371488bffe5f31 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a108a5eefeb37215367dd6dbd8034608 = $(`<div id="html_a108a5eefeb37215367dd6dbd8034608" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 298.0<br>         Günlük Yolcu: 8,245         </div>`)[0];
+                popup_25dc0d4e17c1b92589371488bffe5f31.setContent(html_a108a5eefeb37215367dd6dbd8034608);
+            
+        
+
+        rectangle_42f5aca4d7a614578c878f70384e887f.bindPopup(popup_25dc0d4e17c1b92589371488bffe5f31)
+        ;
+
+        
+    
+    
+            var rectangle_5f0f6b59aa1b08d37b6dd498968e318f = L.rectangle(
+                [[39.927927927927925, 32.870588235294115], [39.93693693693693, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_8ecdcaf0ad27cc2f09d90dc46b6a0682 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d8af96f2181da5734ee6e243b5c92b3d = $(`<div id="html_d8af96f2181da5734ee6e243b5c92b3d" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 270.0<br>         Günlük Yolcu: 6,590         </div>`)[0];
+                popup_8ecdcaf0ad27cc2f09d90dc46b6a0682.setContent(html_d8af96f2181da5734ee6e243b5c92b3d);
+            
+        
+
+        rectangle_5f0f6b59aa1b08d37b6dd498968e318f.bindPopup(popup_8ecdcaf0ad27cc2f09d90dc46b6a0682)
+        ;
+
+        
+    
+    
+            var rectangle_5f274d6725fd96f569ecece87ee59b35 = L.rectangle(
+                [[39.927927927927925, 32.858823529411765], [39.93693693693693, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_35e6bd721ba2222fc9f2c27acf0fc46c = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_c5f4929b6e4c3fd98fb2456105c13619 = $(`<div id="html_c5f4929b6e4c3fd98fb2456105c13619" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 241.0<br>         Günlük Yolcu: 6,389         </div>`)[0];
+                popup_35e6bd721ba2222fc9f2c27acf0fc46c.setContent(html_c5f4929b6e4c3fd98fb2456105c13619);
+            
+        
+
+        rectangle_5f274d6725fd96f569ecece87ee59b35.bindPopup(popup_35e6bd721ba2222fc9f2c27acf0fc46c)
+        ;
+
+        
+    
+    
+            var rectangle_4880111fcaf90efa6624612f3b477f50 = L.rectangle(
+                [[39.95495495495496, 32.858823529411765], [39.96396396396396, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_09c8cd3d8f074a560ff4cea0772a33a7 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d8f865a733e759a0c5b1a30378bd9bb8 = $(`<div id="html_d8f865a733e759a0c5b1a30378bd9bb8" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 309.0<br>         Günlük Yolcu: 5,617         </div>`)[0];
+                popup_09c8cd3d8f074a560ff4cea0772a33a7.setContent(html_d8f865a733e759a0c5b1a30378bd9bb8);
+            
+        
+
+        rectangle_4880111fcaf90efa6624612f3b477f50.bindPopup(popup_09c8cd3d8f074a560ff4cea0772a33a7)
+        ;
+
+        
+    
+    
+            var rectangle_adcba3c2d013a3d3cd54c11c84efcb45 = L.rectangle(
+                [[39.96396396396396, 32.83529411764706], [39.97297297297297, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_37300d5119b820ceca4e08b3f05b3b22 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4ce3121ed22979b03df27acabab0ecdf = $(`<div id="html_4ce3121ed22979b03df27acabab0ecdf" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 159.0<br>         Günlük Yolcu: 5,331         </div>`)[0];
+                popup_37300d5119b820ceca4e08b3f05b3b22.setContent(html_4ce3121ed22979b03df27acabab0ecdf);
+            
+        
+
+        rectangle_adcba3c2d013a3d3cd54c11c84efcb45.bindPopup(popup_37300d5119b820ceca4e08b3f05b3b22)
+        ;
+
+        
+    
+    
+            var rectangle_509578da0fafed0e78a2bcb03ef7120b = L.rectangle(
+                [[39.909909909909906, 32.89411764705882], [39.91891891891891, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_7d91e561d135340ba38a0bfc4595bb75 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a9d019d5c86e738cb39eee66871ab0b3 = $(`<div id="html_a9d019d5c86e738cb39eee66871ab0b3" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 127.0<br>         Günlük Yolcu: 4,605         </div>`)[0];
+                popup_7d91e561d135340ba38a0bfc4595bb75.setContent(html_a9d019d5c86e738cb39eee66871ab0b3);
+            
+        
+
+        rectangle_509578da0fafed0e78a2bcb03ef7120b.bindPopup(popup_7d91e561d135340ba38a0bfc4595bb75)
+        ;
+
+        
+    
+    
+            var rectangle_543f32dea40a2b2e4fcbde54dd60014b = L.rectangle(
+                [[39.909909909909906, 32.88235294117647], [39.91891891891891, 32.89411764705883]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_872f808628984c3a70718304c0eb7fa2 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_255f5a05fb4848c83a36dae46ca5309a = $(`<div id="html_255f5a05fb4848c83a36dae46ca5309a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 80.0<br>         Günlük Yolcu: 4,520         </div>`)[0];
+                popup_872f808628984c3a70718304c0eb7fa2.setContent(html_255f5a05fb4848c83a36dae46ca5309a);
+            
+        
+
+        rectangle_543f32dea40a2b2e4fcbde54dd60014b.bindPopup(popup_872f808628984c3a70718304c0eb7fa2)
+        ;
+
+        
+    
+    
+            var rectangle_fa4c04270a4bc9e09393726a516030ed = L.rectangle(
+                [[39.91891891891892, 32.858823529411765], [39.927927927927925, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_052c2214b3b8764eda01bd87eb212705 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f9982ea02bc988f138a5960b2a8df624 = $(`<div id="html_f9982ea02bc988f138a5960b2a8df624" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 156.0<br>         Günlük Yolcu: 4,387         </div>`)[0];
+                popup_052c2214b3b8764eda01bd87eb212705.setContent(html_f9982ea02bc988f138a5960b2a8df624);
+            
+        
+
+        rectangle_fa4c04270a4bc9e09393726a516030ed.bindPopup(popup_052c2214b3b8764eda01bd87eb212705)
+        ;
+
+        
+    
+    
+            var rectangle_d2ba2cc6918b27e4a658c88ccda848ec = L.rectangle(
+                [[39.91891891891892, 32.917647058823526], [39.927927927927925, 32.92941176470588]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_f8adedb04657c0fc2ee77c2c13e94af9 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_9cc302a5a5162677fe4f497c96d6d91a = $(`<div id="html_9cc302a5a5162677fe4f497c96d6d91a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 247.0<br>         Günlük Yolcu: 4,297         </div>`)[0];
+                popup_f8adedb04657c0fc2ee77c2c13e94af9.setContent(html_9cc302a5a5162677fe4f497c96d6d91a);
+            
+        
+
+        rectangle_d2ba2cc6918b27e4a658c88ccda848ec.bindPopup(popup_f8adedb04657c0fc2ee77c2c13e94af9)
+        ;
+
+        
+    
+    
+            var rectangle_86c852dfd609ccc9c6d23c1aa644cc6b = L.rectangle(
+                [[39.91891891891892, 32.88235294117647], [39.927927927927925, 32.89411764705883]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_f093102dca125ecd02b4179ef2adbd19 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_58b4eb9b12cdb813810199eaf165e2cb = $(`<div id="html_58b4eb9b12cdb813810199eaf165e2cb" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 134.0<br>         Günlük Yolcu: 4,206         </div>`)[0];
+                popup_f093102dca125ecd02b4179ef2adbd19.setContent(html_58b4eb9b12cdb813810199eaf165e2cb);
+            
+        
+
+        rectangle_86c852dfd609ccc9c6d23c1aa644cc6b.bindPopup(popup_f093102dca125ecd02b4179ef2adbd19)
+        ;
+
+        
+    
+    
+            var rectangle_0f6af0fd67a40538eb227d655038d51f = L.rectangle(
+                [[39.96396396396396, 32.870588235294115], [39.97297297297297, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1c87bf181823c5d42aeb8b1e127b85d1 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_1f73f1a0a61af20f6741f5e623bd8a84 = $(`<div id="html_1f73f1a0a61af20f6741f5e623bd8a84" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 279.0<br>         Günlük Yolcu: 4,014         </div>`)[0];
+                popup_1c87bf181823c5d42aeb8b1e127b85d1.setContent(html_1f73f1a0a61af20f6741f5e623bd8a84);
+            
+        
+
+        rectangle_0f6af0fd67a40538eb227d655038d51f.bindPopup(popup_1c87bf181823c5d42aeb8b1e127b85d1)
+        ;
+
+        
+    
+    
+            var rectangle_bd3aded049293f49a9d6fa9e2c80cfbf = L.rectangle(
+                [[39.990990990990994, 32.8], [40.0, 32.811764705882354]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_567493fb8e65aaf6e58f7a90e38fa669 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_46d9b16321ea9523bfde40e2a66c8ed8 = $(`<div id="html_46d9b16321ea9523bfde40e2a66c8ed8" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 85.0<br>         Günlük Yolcu: 3,982         </div>`)[0];
+                popup_567493fb8e65aaf6e58f7a90e38fa669.setContent(html_46d9b16321ea9523bfde40e2a66c8ed8);
+            
+        
+
+        rectangle_bd3aded049293f49a9d6fa9e2c80cfbf.bindPopup(popup_567493fb8e65aaf6e58f7a90e38fa669)
+        ;
+
+        
+    
+    
+            var rectangle_c06321d81c11a6f771552a59bb0d4f1d = L.rectangle(
+                [[39.85585585585586, 32.72941176470588], [39.86486486486486, 32.741176470588236]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_c047a692f1312d84a3ad409d9790bee6 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_89b48509831151960fbf891484cc37f6 = $(`<div id="html_89b48509831151960fbf891484cc37f6" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 7.0<br>         Günlük Yolcu: 3,945         </div>`)[0];
+                popup_c047a692f1312d84a3ad409d9790bee6.setContent(html_89b48509831151960fbf891484cc37f6);
+            
+        
+
+        rectangle_c06321d81c11a6f771552a59bb0d4f1d.bindPopup(popup_c047a692f1312d84a3ad409d9790bee6)
+        ;
+
+        
+    
+    
+            var rectangle_5a313ccc1e6472e9aad53f31c05d0547 = L.rectangle(
+                [[39.86486486486486, 32.72941176470588], [39.87387387387387, 32.741176470588236]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_670adaee4114c972a755a9856bbbc9cb = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d52e02407103d70816e333a44ecc8dcc = $(`<div id="html_d52e02407103d70816e333a44ecc8dcc" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 4.0<br>         Günlük Yolcu: 3,910         </div>`)[0];
+                popup_670adaee4114c972a755a9856bbbc9cb.setContent(html_d52e02407103d70816e333a44ecc8dcc);
+            
+        
+
+        rectangle_5a313ccc1e6472e9aad53f31c05d0547.bindPopup(popup_670adaee4114c972a755a9856bbbc9cb)
+        ;
+
+        
+    
+    
+            var rectangle_d27d29fad026029d85a5b275a539a96a = L.rectangle(
+                [[39.927927927927925, 32.83529411764706], [39.93693693693693, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_570068d4e099dc20ad9b4650c5eae698 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_bac11b73f545be6a6157f53e3fcfe214 = $(`<div id="html_bac11b73f545be6a6157f53e3fcfe214" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 198.0<br>         Günlük Yolcu: 3,848         </div>`)[0];
+                popup_570068d4e099dc20ad9b4650c5eae698.setContent(html_bac11b73f545be6a6157f53e3fcfe214);
+            
+        
+
+        rectangle_d27d29fad026029d85a5b275a539a96a.bindPopup(popup_570068d4e099dc20ad9b4650c5eae698)
+        ;
+
+        
+    
+    
+            var rectangle_530eb30439e96c3c63b91df874e3572b = L.rectangle(
+                [[39.78378378378378, 32.8], [39.79279279279279, 32.811764705882354]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_f0f3f81e49d3251ca05a4bb69d390645 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a7840fabde2d455c2f0fb90ace6bc87d = $(`<div id="html_a7840fabde2d455c2f0fb90ace6bc87d" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 360.0<br>         Günlük Yolcu: 3,724         </div>`)[0];
+                popup_f0f3f81e49d3251ca05a4bb69d390645.setContent(html_a7840fabde2d455c2f0fb90ace6bc87d);
+            
+        
+
+        rectangle_530eb30439e96c3c63b91df874e3572b.bindPopup(popup_f0f3f81e49d3251ca05a4bb69d390645)
+        ;
+
+        
+    
+    
+            var rectangle_44f440d9676188e5cb3cff0e497e9a69 = L.rectangle(
+                [[39.85585585585586, 32.8235294117647], [39.86486486486486, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_17eba89dadbe63e74ee85212daaafbda = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_75dfece5b3c3b551941980f330d0b8f4 = $(`<div id="html_75dfece5b3c3b551941980f330d0b8f4" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 60.0<br>         Günlük Yolcu: 3,651         </div>`)[0];
+                popup_17eba89dadbe63e74ee85212daaafbda.setContent(html_75dfece5b3c3b551941980f330d0b8f4);
+            
+        
+
+        rectangle_44f440d9676188e5cb3cff0e497e9a69.bindPopup(popup_17eba89dadbe63e74ee85212daaafbda)
+        ;
+
+        
+    
+    
+            var rectangle_b1a398e76ad08bf0a1808dc5d7ac8988 = L.rectangle(
+                [[39.9009009009009, 32.72941176470588], [39.909909909909906, 32.741176470588236]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_d40223e393874512155d0fa70db8e69b = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4ca94ea60d68d5293b3b893fcdd16b71 = $(`<div id="html_4ca94ea60d68d5293b3b893fcdd16b71" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 40.0<br>         Günlük Yolcu: 3,626         </div>`)[0];
+                popup_d40223e393874512155d0fa70db8e69b.setContent(html_4ca94ea60d68d5293b3b893fcdd16b71);
+            
+        
+
+        rectangle_b1a398e76ad08bf0a1808dc5d7ac8988.bindPopup(popup_d40223e393874512155d0fa70db8e69b)
+        ;
+
+        
+    
+    
+            var rectangle_3cff9d9f376a58ca6f27a41a2f2afced = L.rectangle(
+                [[39.909909909909906, 32.90588235294118], [39.91891891891891, 32.91764705882353]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_0c9f249b5d709da8b5208bd4e70b3a16 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_5ebf90c7616b17d7fef4eedc72374ebe = $(`<div id="html_5ebf90c7616b17d7fef4eedc72374ebe" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 148.0<br>         Günlük Yolcu: 3,619         </div>`)[0];
+                popup_0c9f249b5d709da8b5208bd4e70b3a16.setContent(html_5ebf90c7616b17d7fef4eedc72374ebe);
+            
+        
+
+        rectangle_3cff9d9f376a58ca6f27a41a2f2afced.bindPopup(popup_0c9f249b5d709da8b5208bd4e70b3a16)
+        ;
+
+        
+    
+    
+            var rectangle_97d8b1f2c594efdf6d056c8e129c02d3 = L.rectangle(
+                [[39.990990990990994, 32.84705882352941], [40.0, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_c93797a17f3d0895355693d74d84cc7d = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_28762c8128375384e85fbf61c42bd130 = $(`<div id="html_28762c8128375384e85fbf61c42bd130" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 150.0<br>         Günlük Yolcu: 3,617         </div>`)[0];
+                popup_c93797a17f3d0895355693d74d84cc7d.setContent(html_28762c8128375384e85fbf61c42bd130);
+            
+        
+
+        rectangle_97d8b1f2c594efdf6d056c8e129c02d3.bindPopup(popup_c93797a17f3d0895355693d74d84cc7d)
+        ;
+
+        
+    
+    
+            var rectangle_73d0daf58f141a9eaefc3cc70bac6980 = L.rectangle(
+                [[39.98198198198198, 32.78823529411765], [39.99099099099099, 32.800000000000004]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_bc6450723e4f23a6ad3fa057ebe2f487 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b3a74445f76a605d8a69a266e6307e9c = $(`<div id="html_b3a74445f76a605d8a69a266e6307e9c" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 41.0<br>         Günlük Yolcu: 3,572         </div>`)[0];
+                popup_bc6450723e4f23a6ad3fa057ebe2f487.setContent(html_b3a74445f76a605d8a69a266e6307e9c);
+            
+        
+
+        rectangle_73d0daf58f141a9eaefc3cc70bac6980.bindPopup(popup_bc6450723e4f23a6ad3fa057ebe2f487)
+        ;
+
+        
+    
+    
+            var rectangle_a1c1e16bc598a9871d02b69f619b6a60 = L.rectangle(
+                [[39.972972972972975, 32.858823529411765], [39.98198198198198, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_21b88f38e56b8ec29ae604732adca665 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_46335915a664eb9dbb2e181df94e7c88 = $(`<div id="html_46335915a664eb9dbb2e181df94e7c88" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 125.0<br>         Günlük Yolcu: 3,514         </div>`)[0];
+                popup_21b88f38e56b8ec29ae604732adca665.setContent(html_46335915a664eb9dbb2e181df94e7c88);
+            
+        
+
+        rectangle_a1c1e16bc598a9871d02b69f619b6a60.bindPopup(popup_21b88f38e56b8ec29ae604732adca665)
+        ;
+
+        
+    
+    
+            var rectangle_7f7706a02b46bbfdf53c0ea6615cc5c3 = L.rectangle(
+                [[39.909909909909906, 32.811764705882354], [39.91891891891891, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_fe22497cee9ce4cfa0c248d5de53b004 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_17b86244b654b023ac7682201cf617e2 = $(`<div id="html_17b86244b654b023ac7682201cf617e2" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 217.0<br>         Günlük Yolcu: 3,486         </div>`)[0];
+                popup_fe22497cee9ce4cfa0c248d5de53b004.setContent(html_17b86244b654b023ac7682201cf617e2);
+            
+        
+
+        rectangle_7f7706a02b46bbfdf53c0ea6615cc5c3.bindPopup(popup_fe22497cee9ce4cfa0c248d5de53b004)
+        ;
+
+        
+    
+    
+            var rectangle_78c02be68b7b5e9d297230a45b0402fd = L.rectangle(
+                [[39.972972972972975, 32.88235294117647], [39.98198198198198, 32.89411764705883]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_bdfd7d32458ebc3175abbab8fbaf054e = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_e728dbe1a0e310a10949ea91a92d3e95 = $(`<div id="html_e728dbe1a0e310a10949ea91a92d3e95" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 228.0<br>         Günlük Yolcu: 3,483         </div>`)[0];
+                popup_bdfd7d32458ebc3175abbab8fbaf054e.setContent(html_e728dbe1a0e310a10949ea91a92d3e95);
+            
+        
+
+        rectangle_78c02be68b7b5e9d297230a45b0402fd.bindPopup(popup_bdfd7d32458ebc3175abbab8fbaf054e)
+        ;
+
+        
+    
+    
+            var rectangle_cf32b70025839b2869dbd07389dba189 = L.rectangle(
+                [[39.93693693693694, 32.870588235294115], [39.945945945945944, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_5cb69e4de2a52678d7defcfb746c2aa8 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4cbf4c7513a3f50ed497db0f14fae50c = $(`<div id="html_4cbf4c7513a3f50ed497db0f14fae50c" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 180.0<br>         Günlük Yolcu: 3,476         </div>`)[0];
+                popup_5cb69e4de2a52678d7defcfb746c2aa8.setContent(html_4cbf4c7513a3f50ed497db0f14fae50c);
+            
+        
+
+        rectangle_cf32b70025839b2869dbd07389dba189.bindPopup(popup_5cb69e4de2a52678d7defcfb746c2aa8)
+        ;
+
+        
+    
+    
+            var rectangle_1664834d18acec82b3a9684e116bf99b = L.rectangle(
+                [[39.927927927927925, 32.90588235294118], [39.93693693693693, 32.91764705882353]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_8233fa30980d4968fb3b31df7843310e = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_7fb2a0c2a053996233e34b9dac261439 = $(`<div id="html_7fb2a0c2a053996233e34b9dac261439" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 124.0<br>         Günlük Yolcu: 3,461         </div>`)[0];
+                popup_8233fa30980d4968fb3b31df7843310e.setContent(html_7fb2a0c2a053996233e34b9dac261439);
+            
+        
+
+        rectangle_1664834d18acec82b3a9684e116bf99b.bindPopup(popup_8233fa30980d4968fb3b31df7843310e)
+        ;
+
+        
+    
+    
+            var rectangle_81bd6868f09b9e9e5e254903da7028b7 = L.rectangle(
+                [[39.9009009009009, 32.90588235294118], [39.909909909909906, 32.91764705882353]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_ff7a68090fbf45b93702b9d250c353f8 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_dbd6962ba1cbadee8909d1b7132060d2 = $(`<div id="html_dbd6962ba1cbadee8909d1b7132060d2" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 149.0<br>         Günlük Yolcu: 3,451         </div>`)[0];
+                popup_ff7a68090fbf45b93702b9d250c353f8.setContent(html_dbd6962ba1cbadee8909d1b7132060d2);
+            
+        
+
+        rectangle_81bd6868f09b9e9e5e254903da7028b7.bindPopup(popup_ff7a68090fbf45b93702b9d250c353f8)
+        ;
+
+        
+    
+    
+            var rectangle_f16da3d34c95b19487aad4ae551dfa83 = L.rectangle(
+                [[39.96396396396396, 32.94117647058823], [39.97297297297297, 32.95294117647059]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_d47650eea74eeab7f1348689d2e49ecd = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_134b854775486fe39849147319548557 = $(`<div id="html_134b854775486fe39849147319548557" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 140.0<br>         Günlük Yolcu: 3,439         </div>`)[0];
+                popup_d47650eea74eeab7f1348689d2e49ecd.setContent(html_134b854775486fe39849147319548557);
+            
+        
+
+        rectangle_f16da3d34c95b19487aad4ae551dfa83.bindPopup(popup_d47650eea74eeab7f1348689d2e49ecd)
+        ;
+
+        
+    
+    
+            var rectangle_2db3c7ef43f3b1b4b047afd22ba28d24 = L.rectangle(
+                [[40.009009009009006, 32.84705882352941], [40.01801801801801, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_7de3835195f2eabf7fab5f5d1afcef17 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d29291bc20203e1aa3da9683e4d990f7 = $(`<div id="html_d29291bc20203e1aa3da9683e4d990f7" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 125.0<br>         Günlük Yolcu: 3,438         </div>`)[0];
+                popup_7de3835195f2eabf7fab5f5d1afcef17.setContent(html_d29291bc20203e1aa3da9683e4d990f7);
+            
+        
+
+        rectangle_2db3c7ef43f3b1b4b047afd22ba28d24.bindPopup(popup_7de3835195f2eabf7fab5f5d1afcef17)
+        ;
+
+        
+    
+    
+            var rectangle_e54b28873c581f7487dbc3f1c26f8d7f = L.rectangle(
+                [[40.0, 32.83529411764706], [40.009009009009006, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_b85087eb2d11c0bf0d3c11ed0bd8e0eb = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_fae1abc9f3564497d209a80d9583e72c = $(`<div id="html_fae1abc9f3564497d209a80d9583e72c" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 117.0<br>         Günlük Yolcu: 3,421         </div>`)[0];
+                popup_b85087eb2d11c0bf0d3c11ed0bd8e0eb.setContent(html_fae1abc9f3564497d209a80d9583e72c);
+            
+        
+
+        rectangle_e54b28873c581f7487dbc3f1c26f8d7f.bindPopup(popup_b85087eb2d11c0bf0d3c11ed0bd8e0eb)
+        ;
+
+        
+    
+    
+            var rectangle_7ddb19f2f28d65533551c9170600fd03 = L.rectangle(
+                [[39.93693693693694, 32.83529411764706], [39.945945945945944, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_b1d4d501dc1fdd850613d12de334c9be = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6f7bf90121bf7ee1911434eb946d19f5 = $(`<div id="html_6f7bf90121bf7ee1911434eb946d19f5" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 375.0<br>         Günlük Yolcu: 3,401         </div>`)[0];
+                popup_b1d4d501dc1fdd850613d12de334c9be.setContent(html_6f7bf90121bf7ee1911434eb946d19f5);
+            
+        
+
+        rectangle_7ddb19f2f28d65533551c9170600fd03.bindPopup(popup_b1d4d501dc1fdd850613d12de334c9be)
+        ;
+
+        
+    
+    
+            var rectangle_1ed8196baf8728ef1f987bc181b2ea21 = L.rectangle(
+                [[39.95495495495496, 32.89411764705882], [39.96396396396396, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_edd48298fd197c6186cf6e0ec3a8f562 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_adc6ad1b1093f5e8fc2e96d4678cb30f = $(`<div id="html_adc6ad1b1093f5e8fc2e96d4678cb30f" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 155.0<br>         Günlük Yolcu: 3,397         </div>`)[0];
+                popup_edd48298fd197c6186cf6e0ec3a8f562.setContent(html_adc6ad1b1093f5e8fc2e96d4678cb30f);
+            
+        
+
+        rectangle_1ed8196baf8728ef1f987bc181b2ea21.bindPopup(popup_edd48298fd197c6186cf6e0ec3a8f562)
+        ;
+
+        
+    
+    
+            var rectangle_5a23ee89706d41a13c89a1cf4ab0c6f7 = L.rectangle(
+                [[39.98198198198198, 32.858823529411765], [39.99099099099099, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_f8009fcdbc15d4e1c6a7e731d2301116 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_83a969bc9f4d04c85d5130fe00212945 = $(`<div id="html_83a969bc9f4d04c85d5130fe00212945" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 96.0<br>         Günlük Yolcu: 3,392         </div>`)[0];
+                popup_f8009fcdbc15d4e1c6a7e731d2301116.setContent(html_83a969bc9f4d04c85d5130fe00212945);
+            
+        
+
+        rectangle_5a23ee89706d41a13c89a1cf4ab0c6f7.bindPopup(popup_f8009fcdbc15d4e1c6a7e731d2301116)
+        ;
+
+        
+    
+    
+            var rectangle_6f50091e2e2633012c97f3f2ba4ae4d1 = L.rectangle(
+                [[39.98198198198198, 32.811764705882354], [39.99099099099099, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_d5d2e578e7202a204cecb97366e5e845 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f7bb19aff0a6149fc60b49e98c8dcfff = $(`<div id="html_f7bb19aff0a6149fc60b49e98c8dcfff" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 100.0<br>         Günlük Yolcu: 3,373         </div>`)[0];
+                popup_d5d2e578e7202a204cecb97366e5e845.setContent(html_f7bb19aff0a6149fc60b49e98c8dcfff);
+            
+        
+
+        rectangle_6f50091e2e2633012c97f3f2ba4ae4d1.bindPopup(popup_d5d2e578e7202a204cecb97366e5e845)
+        ;
+
+        
+    
+    
+            var rectangle_57905e37aa0611ba0311d1af05efd7da = L.rectangle(
+                [[39.891891891891895, 32.917647058823526], [39.9009009009009, 32.92941176470588]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1fb9d38719d40c64ae8a88a64e3fb1ab = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b204932dbfebf36ca5d2a2c5fb397f37 = $(`<div id="html_b204932dbfebf36ca5d2a2c5fb397f37" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 152.0<br>         Günlük Yolcu: 3,266         </div>`)[0];
+                popup_1fb9d38719d40c64ae8a88a64e3fb1ab.setContent(html_b204932dbfebf36ca5d2a2c5fb397f37);
+            
+        
+
+        rectangle_57905e37aa0611ba0311d1af05efd7da.bindPopup(popup_1fb9d38719d40c64ae8a88a64e3fb1ab)
+        ;
+
+        
+    
+    
+            var rectangle_57c3f8e582c5705da375a4937a0a21a4 = L.rectangle(
+                [[39.990990990990994, 32.8235294117647], [40.0, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_a3a98567e7534a83abcd6b15a137e885 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b093efab0fb0660dcfc1c99cebbba0e8 = $(`<div id="html_b093efab0fb0660dcfc1c99cebbba0e8" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 120.0<br>         Günlük Yolcu: 3,252         </div>`)[0];
+                popup_a3a98567e7534a83abcd6b15a137e885.setContent(html_b093efab0fb0660dcfc1c99cebbba0e8);
+            
+        
+
+        rectangle_57c3f8e582c5705da375a4937a0a21a4.bindPopup(popup_a3a98567e7534a83abcd6b15a137e885)
+        ;
+
+        
+    
+    
+            var rectangle_2881d5444678b36d17dd71a15f87e997 = L.rectangle(
+                [[40.0, 32.870588235294115], [40.009009009009006, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_9639424e65ddf831d8b4ea9c8b2dafe0 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d4fd3c2b2b5bfa590676a07d25ff27c9 = $(`<div id="html_d4fd3c2b2b5bfa590676a07d25ff27c9" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 169.0<br>         Günlük Yolcu: 3,250         </div>`)[0];
+                popup_9639424e65ddf831d8b4ea9c8b2dafe0.setContent(html_d4fd3c2b2b5bfa590676a07d25ff27c9);
+            
+        
+
+        rectangle_2881d5444678b36d17dd71a15f87e997.bindPopup(popup_9639424e65ddf831d8b4ea9c8b2dafe0)
+        ;
+
+        
+    
+    
+            var rectangle_1d84d1c0e55b6f1ef6af8a5ba254e356 = L.rectangle(
+                [[39.909909909909906, 32.84705882352941], [39.91891891891891, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_de04bc10ada66856fcbf681136e6559f = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_efe16117da743f8fee54aa58bf71aac0 = $(`<div id="html_efe16117da743f8fee54aa58bf71aac0" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 120.0<br>         Günlük Yolcu: 3,249         </div>`)[0];
+                popup_de04bc10ada66856fcbf681136e6559f.setContent(html_efe16117da743f8fee54aa58bf71aac0);
+            
+        
+
+        rectangle_1d84d1c0e55b6f1ef6af8a5ba254e356.bindPopup(popup_de04bc10ada66856fcbf681136e6559f)
+        ;
+
+        
+    
+    
+            var rectangle_a57bfa5288c728cefab7c8d89279f4ca = L.rectangle(
+                [[39.891891891891895, 32.811764705882354], [39.9009009009009, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_2d40c071144546bc2c432d4b14705880 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_5af2db283bd5aff32c1317b02165722a = $(`<div id="html_5af2db283bd5aff32c1317b02165722a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 211.0<br>         Günlük Yolcu: 3,198         </div>`)[0];
+                popup_2d40c071144546bc2c432d4b14705880.setContent(html_5af2db283bd5aff32c1317b02165722a);
+            
+        
+
+        rectangle_a57bfa5288c728cefab7c8d89279f4ca.bindPopup(popup_2d40c071144546bc2c432d4b14705880)
+        ;
+
+        
+    
+    
+            var rectangle_e204ceef7e02089a2ff3b0ac466ae182 = L.rectangle(
+                [[39.990990990990994, 32.78823529411765], [40.0, 32.800000000000004]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_5b8a6505530f707fbaadd0b699d41022 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_db55855efcd6e5d04b6502e9e5e08698 = $(`<div id="html_db55855efcd6e5d04b6502e9e5e08698" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 45.0<br>         Günlük Yolcu: 3,179         </div>`)[0];
+                popup_5b8a6505530f707fbaadd0b699d41022.setContent(html_db55855efcd6e5d04b6502e9e5e08698);
+            
+        
+
+        rectangle_e204ceef7e02089a2ff3b0ac466ae182.bindPopup(popup_5b8a6505530f707fbaadd0b699d41022)
+        ;
+
+        
+    
+    
+            var rectangle_932090e47a7fc1d1d71b0611abe489e0 = L.rectangle(
+                [[39.972972972972975, 32.8235294117647], [39.98198198198198, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_15292f79df2b57e3791f52b3b9a4a0d4 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_20c56aa9f56a0e27a3c1bff270a9de1a = $(`<div id="html_20c56aa9f56a0e27a3c1bff270a9de1a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 75.0<br>         Günlük Yolcu: 3,178         </div>`)[0];
+                popup_15292f79df2b57e3791f52b3b9a4a0d4.setContent(html_20c56aa9f56a0e27a3c1bff270a9de1a);
+            
+        
+
+        rectangle_932090e47a7fc1d1d71b0611abe489e0.bindPopup(popup_15292f79df2b57e3791f52b3b9a4a0d4)
+        ;
+
+        
+    
+    
+            var rectangle_dd5c851dcb0065289c663ca960314fa3 = L.rectangle(
+                [[40.0, 32.8], [40.009009009009006, 32.811764705882354]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1ba95ece20c5d137ed52ce757e49db9c = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_76fba5953786760753ea8edd1e759b89 = $(`<div id="html_76fba5953786760753ea8edd1e759b89" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 74.0<br>         Günlük Yolcu: 3,103         </div>`)[0];
+                popup_1ba95ece20c5d137ed52ce757e49db9c.setContent(html_76fba5953786760753ea8edd1e759b89);
+            
+        
+
+        rectangle_dd5c851dcb0065289c663ca960314fa3.bindPopup(popup_1ba95ece20c5d137ed52ce757e49db9c)
+        ;
+
+        
+    
+    
+            var rectangle_77816294b807517555207d1ec0466009 = L.rectangle(
+                [[39.96396396396396, 32.8235294117647], [39.97297297297297, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_6c7fa96fe4e5591b0887d47fca9a9e65 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_418b429d50f016496cee0c9e87fd3224 = $(`<div id="html_418b429d50f016496cee0c9e87fd3224" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 99.0<br>         Günlük Yolcu: 3,103         </div>`)[0];
+                popup_6c7fa96fe4e5591b0887d47fca9a9e65.setContent(html_418b429d50f016496cee0c9e87fd3224);
+            
+        
+
+        rectangle_77816294b807517555207d1ec0466009.bindPopup(popup_6c7fa96fe4e5591b0887d47fca9a9e65)
+        ;
+
+        
+    
+    
+            var rectangle_abaf67110e4c26e74e43c919c5c1fd72 = L.rectangle(
+                [[39.972972972972975, 32.83529411764706], [39.98198198198198, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_c4a1c0ba42f54cc0cbdf7e9efa16628a = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_61dcbad327978d49180adab26538c4bd = $(`<div id="html_61dcbad327978d49180adab26538c4bd" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 99.0<br>         Günlük Yolcu: 3,102         </div>`)[0];
+                popup_c4a1c0ba42f54cc0cbdf7e9efa16628a.setContent(html_61dcbad327978d49180adab26538c4bd);
+            
+        
+
+        rectangle_abaf67110e4c26e74e43c919c5c1fd72.bindPopup(popup_c4a1c0ba42f54cc0cbdf7e9efa16628a)
+        ;
+
+        
+    
+    
+            var rectangle_87d7e6e374a751d89ac34d14e547c84e = L.rectangle(
+                [[39.945945945945944, 32.89411764705882], [39.95495495495495, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_b6bf19fce120c7981226ad877b2fda6c = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_9ffe27648287492f9886cc5ec809c525 = $(`<div id="html_9ffe27648287492f9886cc5ec809c525" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 168.0<br>         Günlük Yolcu: 3,051         </div>`)[0];
+                popup_b6bf19fce120c7981226ad877b2fda6c.setContent(html_9ffe27648287492f9886cc5ec809c525);
+            
+        
+
+        rectangle_87d7e6e374a751d89ac34d14e547c84e.bindPopup(popup_b6bf19fce120c7981226ad877b2fda6c)
+        ;
+
+        
+    
+    
+            var rectangle_0dbbfe7b5b5a6ddd61eff9583f721a3f = L.rectangle(
+                [[39.945945945945944, 32.65882352941176], [39.95495495495495, 32.67058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_e772cf63a6004fec086fd4e13daae8e5 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b925b5748c4f53d812397d52f5841c6f = $(`<div id="html_b925b5748c4f53d812397d52f5841c6f" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 208.0<br>         Günlük Yolcu: 3,045         </div>`)[0];
+                popup_e772cf63a6004fec086fd4e13daae8e5.setContent(html_b925b5748c4f53d812397d52f5841c6f);
+            
+        
+
+        rectangle_0dbbfe7b5b5a6ddd61eff9583f721a3f.bindPopup(popup_e772cf63a6004fec086fd4e13daae8e5)
+        ;
+
+        
+    
+    
+            var rectangle_ed02d17f5ab58f8540740fc5466fad41 = L.rectangle(
+                [[39.77477477477478, 32.811764705882354], [39.78378378378378, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_47a4b4f9bd6adeb9daed84504d65d342 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_ed6b4171455edcae9dbcec4965e2c218 = $(`<div id="html_ed6b4171455edcae9dbcec4965e2c218" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 191.0<br>         Günlük Yolcu: 2,977         </div>`)[0];
+                popup_47a4b4f9bd6adeb9daed84504d65d342.setContent(html_ed6b4171455edcae9dbcec4965e2c218);
+            
+        
+
+        rectangle_ed02d17f5ab58f8540740fc5466fad41.bindPopup(popup_47a4b4f9bd6adeb9daed84504d65d342)
+        ;
+
+        
+    
+    
+            var rectangle_1fd945d3548daf59f1a14a3d03cb951f = L.rectangle(
+                [[39.891891891891895, 32.92941176470588], [39.9009009009009, 32.94117647058824]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_e3df40714c8c48bbaabb761902f56834 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_2bca9a02de2a2611aea83af81bdb07b1 = $(`<div id="html_2bca9a02de2a2611aea83af81bdb07b1" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 119.0<br>         Günlük Yolcu: 2,871         </div>`)[0];
+                popup_e3df40714c8c48bbaabb761902f56834.setContent(html_2bca9a02de2a2611aea83af81bdb07b1);
+            
+        
+
+        rectangle_1fd945d3548daf59f1a14a3d03cb951f.bindPopup(popup_e3df40714c8c48bbaabb761902f56834)
+        ;
+
+        
+    
+    
+            var rectangle_f6c11f597ff1297d1da672f0440aa653 = L.rectangle(
+                [[39.9009009009009, 32.92941176470588], [39.909909909909906, 32.94117647058824]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_6bea639ae57181cf2a38a2b98943d999 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a53910140e74a5c3d210ad09b9b005fe = $(`<div id="html_a53910140e74a5c3d210ad09b9b005fe" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 127.0<br>         Günlük Yolcu: 2,822         </div>`)[0];
+                popup_6bea639ae57181cf2a38a2b98943d999.setContent(html_a53910140e74a5c3d210ad09b9b005fe);
+            
+        
+
+        rectangle_f6c11f597ff1297d1da672f0440aa653.bindPopup(popup_6bea639ae57181cf2a38a2b98943d999)
+        ;
+
+        
+    
+    
+            var rectangle_5e8deeae8324d5052d3f0a7c9c7c4088 = L.rectangle(
+                [[39.98198198198198, 32.576470588235296], [39.99099099099099, 32.58823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_2aca4f9205d2a74422e858b64fd9c09b = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_44ff9019db60b99180a81a78646a26cd = $(`<div id="html_44ff9019db60b99180a81a78646a26cd" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 257.0<br>         Günlük Yolcu: 2,760         </div>`)[0];
+                popup_2aca4f9205d2a74422e858b64fd9c09b.setContent(html_44ff9019db60b99180a81a78646a26cd);
+            
+        
+
+        rectangle_5e8deeae8324d5052d3f0a7c9c7c4088.bindPopup(popup_2aca4f9205d2a74422e858b64fd9c09b)
+        ;
+
+        
+    
+    
+            var rectangle_38dace4a6db4be3789e722ac7d682322 = L.rectangle(
+                [[39.909909909909906, 32.95294117647059], [39.91891891891891, 32.964705882352945]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_a57aec84708ac6cf7851ed16befc1da3 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_935165bddef617c357bc57e74a7380a2 = $(`<div id="html_935165bddef617c357bc57e74a7380a2" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 165.0<br>         Günlük Yolcu: 2,708         </div>`)[0];
+                popup_a57aec84708ac6cf7851ed16befc1da3.setContent(html_935165bddef617c357bc57e74a7380a2);
+            
+        
+
+        rectangle_38dace4a6db4be3789e722ac7d682322.bindPopup(popup_a57aec84708ac6cf7851ed16befc1da3)
+        ;
+
+        
+    
+    
+            var rectangle_14224a90c83bb48f7203c64956f8d5d0 = L.rectangle(
+                [[39.96396396396396, 32.811764705882354], [39.97297297297297, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_ab503ab532bb3db2e41fdc77c90153d3 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_48c2fbf6752cd8e467bd717e7bf15c05 = $(`<div id="html_48c2fbf6752cd8e467bd717e7bf15c05" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 86.0<br>         Günlük Yolcu: 2,702         </div>`)[0];
+                popup_ab503ab532bb3db2e41fdc77c90153d3.setContent(html_48c2fbf6752cd8e467bd717e7bf15c05);
+            
+        
+
+        rectangle_14224a90c83bb48f7203c64956f8d5d0.bindPopup(popup_ab503ab532bb3db2e41fdc77c90153d3)
+        ;
+
+        
+    
+    
+            var rectangle_a635ae28f0d4b18a9f70364809b6547a = L.rectangle(
+                [[39.98198198198198, 32.84705882352941], [39.99099099099099, 32.858823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_4a48e3e35d2034f8b9bd42bbd660d839 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_2daee10acd991d3aecaf0da2cc78a716 = $(`<div id="html_2daee10acd991d3aecaf0da2cc78a716" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 79.0<br>         Günlük Yolcu: 2,698         </div>`)[0];
+                popup_4a48e3e35d2034f8b9bd42bbd660d839.setContent(html_2daee10acd991d3aecaf0da2cc78a716);
+            
+        
+
+        rectangle_a635ae28f0d4b18a9f70364809b6547a.bindPopup(popup_4a48e3e35d2034f8b9bd42bbd660d839)
+        ;
+
+        
+    
+    
+            var rectangle_8b9c8a2f50fe913a655f26b579c931f7 = L.rectangle(
+                [[39.93693693693694, 32.588235294117645], [39.945945945945944, 32.6]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_7bb4a37846c6cb50bb816832e0dc0b05 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_eb56cca8c7554a7a01d900b94dd1250f = $(`<div id="html_eb56cca8c7554a7a01d900b94dd1250f" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 155.0<br>         Günlük Yolcu: 2,697         </div>`)[0];
+                popup_7bb4a37846c6cb50bb816832e0dc0b05.setContent(html_eb56cca8c7554a7a01d900b94dd1250f);
+            
+        
+
+        rectangle_8b9c8a2f50fe913a655f26b579c931f7.bindPopup(popup_7bb4a37846c6cb50bb816832e0dc0b05)
+        ;
+
+        
+    
+    
+            var rectangle_d38655a5078703803f8483d845827b91 = L.rectangle(
+                [[39.95495495495496, 32.68235294117647], [39.96396396396396, 32.694117647058825]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_fab1700c6b36b543d74b16edc1a50f0e = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_02f151b26e0a84faeb4a355625715029 = $(`<div id="html_02f151b26e0a84faeb4a355625715029" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 266.0<br>         Günlük Yolcu: 2,688         </div>`)[0];
+                popup_fab1700c6b36b543d74b16edc1a50f0e.setContent(html_02f151b26e0a84faeb4a355625715029);
+            
+        
+
+        rectangle_d38655a5078703803f8483d845827b91.bindPopup(popup_fab1700c6b36b543d74b16edc1a50f0e)
+        ;
+
+        
+    
+    
+            var rectangle_74d64eebda4811cff24bd512cb5a65aa = L.rectangle(
+                [[39.945945945945944, 32.576470588235296], [39.95495495495495, 32.58823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_398e55c301b2a5142509faaeb787de65 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_dbc0b465820d1bd2310c4a435df9c42a = $(`<div id="html_dbc0b465820d1bd2310c4a435df9c42a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 176.0<br>         Günlük Yolcu: 2,688         </div>`)[0];
+                popup_398e55c301b2a5142509faaeb787de65.setContent(html_dbc0b465820d1bd2310c4a435df9c42a);
+            
+        
+
+        rectangle_74d64eebda4811cff24bd512cb5a65aa.bindPopup(popup_398e55c301b2a5142509faaeb787de65)
+        ;
+
+        
+    
+    
+            var rectangle_fd7bc07966f723598ca81aea28623753 = L.rectangle(
+                [[39.945945945945944, 32.77647058823529], [39.95495495495495, 32.78823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_50982537f4c311d47dd6ee8bf6bf3cf7 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_1b706b55c3d6f4d826fb8747abe5c76a = $(`<div id="html_1b706b55c3d6f4d826fb8747abe5c76a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 220.0<br>         Günlük Yolcu: 2,681         </div>`)[0];
+                popup_50982537f4c311d47dd6ee8bf6bf3cf7.setContent(html_1b706b55c3d6f4d826fb8747abe5c76a);
+            
+        
+
+        rectangle_fd7bc07966f723598ca81aea28623753.bindPopup(popup_50982537f4c311d47dd6ee8bf6bf3cf7)
+        ;
+
+        
+    
+    
+            var rectangle_51e97c78700484e677341a8080da2ebb = L.rectangle(
+                [[39.96396396396396, 32.63529411764706], [39.97297297297297, 32.64705882352941]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_3562a93bf0ba728c3cebaf9ee068c397 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_238103f6f19648d42c7a6fd144b2e6ee = $(`<div id="html_238103f6f19648d42c7a6fd144b2e6ee" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 259.0<br>         Günlük Yolcu: 2,649         </div>`)[0];
+                popup_3562a93bf0ba728c3cebaf9ee068c397.setContent(html_238103f6f19648d42c7a6fd144b2e6ee);
+            
+        
+
+        rectangle_51e97c78700484e677341a8080da2ebb.bindPopup(popup_3562a93bf0ba728c3cebaf9ee068c397)
+        ;
+
+        
+    
+    
+            var rectangle_821e4b6be7d2d397d1b25a98e9fad127 = L.rectangle(
+                [[39.9009009009009, 32.917647058823526], [39.909909909909906, 32.92941176470588]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_6738925a8a1591e48e66638493b509ca = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_fe87ff8c63578cf17c49a4107269c4ab = $(`<div id="html_fe87ff8c63578cf17c49a4107269c4ab" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 140.0<br>         Günlük Yolcu: 2,621         </div>`)[0];
+                popup_6738925a8a1591e48e66638493b509ca.setContent(html_fe87ff8c63578cf17c49a4107269c4ab);
+            
+        
+
+        rectangle_821e4b6be7d2d397d1b25a98e9fad127.bindPopup(popup_6738925a8a1591e48e66638493b509ca)
+        ;
+
+        
+    
+    
+            var rectangle_63b383c044057d9391430c6f6a525682 = L.rectangle(
+                [[39.972972972972975, 32.576470588235296], [39.98198198198198, 32.58823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_967329e712e72fbc2775e636b9567cf2 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6beed56ed9915408aeb27385f0ade744 = $(`<div id="html_6beed56ed9915408aeb27385f0ade744" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 211.0<br>         Günlük Yolcu: 2,618         </div>`)[0];
+                popup_967329e712e72fbc2775e636b9567cf2.setContent(html_6beed56ed9915408aeb27385f0ade744);
+            
+        
+
+        rectangle_63b383c044057d9391430c6f6a525682.bindPopup(popup_967329e712e72fbc2775e636b9567cf2)
+        ;
+
+        
+    
+    
+            var rectangle_6c20d9e6d73acde5d4e20a465723cd99 = L.rectangle(
+                [[40.0, 32.89411764705882], [40.009009009009006, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_25bc77f333651e1394c0d1c29e3deadf = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a5a0a042ec26dfdd4d90e2fbb49c6b72 = $(`<div id="html_a5a0a042ec26dfdd4d90e2fbb49c6b72" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 99.0<br>         Günlük Yolcu: 2,613         </div>`)[0];
+                popup_25bc77f333651e1394c0d1c29e3deadf.setContent(html_a5a0a042ec26dfdd4d90e2fbb49c6b72);
+            
+        
+
+        rectangle_6c20d9e6d73acde5d4e20a465723cd99.bindPopup(popup_25bc77f333651e1394c0d1c29e3deadf)
+        ;
+
+        
+    
+    
+            var rectangle_b11554b237800061c4ad48f3569dee87 = L.rectangle(
+                [[39.927927927927925, 32.89411764705882], [39.93693693693693, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_0d9806e5fd323210f27820c5d9db10a5 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_c77a7f94049ebd525cd5c7e673b110ee = $(`<div id="html_c77a7f94049ebd525cd5c7e673b110ee" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 97.0<br>         Günlük Yolcu: 2,585         </div>`)[0];
+                popup_0d9806e5fd323210f27820c5d9db10a5.setContent(html_c77a7f94049ebd525cd5c7e673b110ee);
+            
+        
+
+        rectangle_b11554b237800061c4ad48f3569dee87.bindPopup(popup_0d9806e5fd323210f27820c5d9db10a5)
+        ;
+
+        
+    
+    
+            var rectangle_14fe309d9edd45fa27a05d528415f890 = L.rectangle(
+                [[39.909909909909906, 32.92941176470588], [39.91891891891891, 32.94117647058824]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_219145e865d2c683962cf532ac3cac9f = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a6ec0d2812b47652798fc60fd64f29d0 = $(`<div id="html_a6ec0d2812b47652798fc60fd64f29d0" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 169.0<br>         Günlük Yolcu: 2,540         </div>`)[0];
+                popup_219145e865d2c683962cf532ac3cac9f.setContent(html_a6ec0d2812b47652798fc60fd64f29d0);
+            
+        
+
+        rectangle_14fe309d9edd45fa27a05d528415f890.bindPopup(popup_219145e865d2c683962cf532ac3cac9f)
+        ;
+
+        
+    
+    
+            var rectangle_0d5072a5165576dce6622495898af0ec = L.rectangle(
+                [[39.96396396396396, 32.71764705882353], [39.97297297297297, 32.72941176470589]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_cd72db1b2b1ae639aeb192067bc984fe = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f50d1c7a14986ea36e7b5f9823378b1d = $(`<div id="html_f50d1c7a14986ea36e7b5f9823378b1d" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 122.0<br>         Günlük Yolcu: 2,530         </div>`)[0];
+                popup_cd72db1b2b1ae639aeb192067bc984fe.setContent(html_f50d1c7a14986ea36e7b5f9823378b1d);
+            
+        
+
+        rectangle_0d5072a5165576dce6622495898af0ec.bindPopup(popup_cd72db1b2b1ae639aeb192067bc984fe)
+        ;
+
+        
+    
+    
+            var rectangle_79f6815b6e8ea6aabfdc807b264087c9 = L.rectangle(
+                [[39.91891891891892, 32.89411764705882], [39.927927927927925, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_215628778c6817f719d9a79649133f24 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_7fb1763463fcf48766a899a946f7f32c = $(`<div id="html_7fb1763463fcf48766a899a946f7f32c" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 104.0<br>         Günlük Yolcu: 2,515         </div>`)[0];
+                popup_215628778c6817f719d9a79649133f24.setContent(html_7fb1763463fcf48766a899a946f7f32c);
+            
+        
+
+        rectangle_79f6815b6e8ea6aabfdc807b264087c9.bindPopup(popup_215628778c6817f719d9a79649133f24)
+        ;
+
+        
+    
+    
+            var rectangle_baa1315e433f44a13729e89761cb9cca = L.rectangle(
+                [[39.95495495495496, 32.576470588235296], [39.96396396396396, 32.58823529411765]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_ef7f982d927f5a0ec4040d7384fb5fa2 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_c8f63a4e530080dd05b67a8e14e1d933 = $(`<div id="html_c8f63a4e530080dd05b67a8e14e1d933" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 205.0<br>         Günlük Yolcu: 2,514         </div>`)[0];
+                popup_ef7f982d927f5a0ec4040d7384fb5fa2.setContent(html_c8f63a4e530080dd05b67a8e14e1d933);
+            
+        
+
+        rectangle_baa1315e433f44a13729e89761cb9cca.bindPopup(popup_ef7f982d927f5a0ec4040d7384fb5fa2)
+        ;
+
+        
+    
+    
+            var rectangle_cb1bf7ca6e4fa93e2c9ed41f56c4ef7c = L.rectangle(
+                [[39.990990990990994, 32.870588235294115], [40.0, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1da83aba0a2f9a0bb67264d1bf05bcbd = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_61d8e4ee4410c5d3918d14b19dcee955 = $(`<div id="html_61d8e4ee4410c5d3918d14b19dcee955" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 149.0<br>         Günlük Yolcu: 2,470         </div>`)[0];
+                popup_1da83aba0a2f9a0bb67264d1bf05bcbd.setContent(html_61d8e4ee4410c5d3918d14b19dcee955);
+            
+        
+
+        rectangle_cb1bf7ca6e4fa93e2c9ed41f56c4ef7c.bindPopup(popup_1da83aba0a2f9a0bb67264d1bf05bcbd)
+        ;
+
+        
+    
+    
+            var rectangle_09946f34ebd93fc1c59aef65f07a4e5d = L.rectangle(
+                [[39.945945945945944, 32.694117647058825], [39.95495495495495, 32.70588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_8d0bae57afe5787f96b02049eb9d37c8 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d0a576ec4361053ec0689b42e68356b0 = $(`<div id="html_d0a576ec4361053ec0689b42e68356b0" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 267.0<br>         Günlük Yolcu: 2,461         </div>`)[0];
+                popup_8d0bae57afe5787f96b02049eb9d37c8.setContent(html_d0a576ec4361053ec0689b42e68356b0);
+            
+        
+
+        rectangle_09946f34ebd93fc1c59aef65f07a4e5d.bindPopup(popup_8d0bae57afe5787f96b02049eb9d37c8)
+        ;
+
+        
+    
+    
+            var rectangle_c535b9ca3a6ec4cf8d5da8864b0e2d60 = L.rectangle(
+                [[39.990990990990994, 32.811764705882354], [40.0, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_f6c2458f631e0eed9e8c5b4793856014 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f839f955bfd60256d4e5038ac8c12414 = $(`<div id="html_f839f955bfd60256d4e5038ac8c12414" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 74.0<br>         Günlük Yolcu: 2,457         </div>`)[0];
+                popup_f6c2458f631e0eed9e8c5b4793856014.setContent(html_f839f955bfd60256d4e5038ac8c12414);
+            
+        
+
+        rectangle_c535b9ca3a6ec4cf8d5da8864b0e2d60.bindPopup(popup_f6c2458f631e0eed9e8c5b4793856014)
+        ;
+
+        
+    
+    
+            var rectangle_c45abd3abb3f3fc35e36d67b994db602 = L.rectangle(
+                [[40.0, 32.858823529411765], [40.009009009009006, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_7fd0864f3eb214cc650bd6c7c03d8362 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_8d3a518689bcdad111ee1d4fca5dbc6b = $(`<div id="html_8d3a518689bcdad111ee1d4fca5dbc6b" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 96.0<br>         Günlük Yolcu: 2,444         </div>`)[0];
+                popup_7fd0864f3eb214cc650bd6c7c03d8362.setContent(html_8d3a518689bcdad111ee1d4fca5dbc6b);
+            
+        
+
+        rectangle_c45abd3abb3f3fc35e36d67b994db602.bindPopup(popup_7fd0864f3eb214cc650bd6c7c03d8362)
+        ;
+
+        
+    
+    
+            var rectangle_d4d39ceceb3b5318044aa8d6f85f2878 = L.rectangle(
+                [[39.945945945945944, 32.78823529411765], [39.95495495495495, 32.800000000000004]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_e3f35a987b803cfac8377a441e3bf9ee = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_0184ce286856798e7d3d76fda1ad1449 = $(`<div id="html_0184ce286856798e7d3d76fda1ad1449" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 261.0<br>         Günlük Yolcu: 2,429         </div>`)[0];
+                popup_e3f35a987b803cfac8377a441e3bf9ee.setContent(html_0184ce286856798e7d3d76fda1ad1449);
+            
+        
+
+        rectangle_d4d39ceceb3b5318044aa8d6f85f2878.bindPopup(popup_e3f35a987b803cfac8377a441e3bf9ee)
+        ;
+
+        
+    
+    
+            var rectangle_2c934b1ee66f836a4e9e3342118910da = L.rectangle(
+                [[39.945945945945944, 32.858823529411765], [39.95495495495495, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_2ed50cf0a9af6dbacd2d6e749eb46052 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_708fc50037caf893f3e562bd4b3cd8ff = $(`<div id="html_708fc50037caf893f3e562bd4b3cd8ff" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 100.0<br>         Günlük Yolcu: 2,423         </div>`)[0];
+                popup_2ed50cf0a9af6dbacd2d6e749eb46052.setContent(html_708fc50037caf893f3e562bd4b3cd8ff);
+            
+        
+
+        rectangle_2c934b1ee66f836a4e9e3342118910da.bindPopup(popup_2ed50cf0a9af6dbacd2d6e749eb46052)
+        ;
+
+        
+    
+    
+            var rectangle_4d0071dc737a507fd2ffe40e6011c9a8 = L.rectangle(
+                [[39.78378378378378, 32.811764705882354], [39.79279279279279, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_630696f469b058cb596b82d3c7086c43 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_757cfdb4eeff2ae2df69da4402f48c44 = $(`<div id="html_757cfdb4eeff2ae2df69da4402f48c44" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 130.0<br>         Günlük Yolcu: 2,390         </div>`)[0];
+                popup_630696f469b058cb596b82d3c7086c43.setContent(html_757cfdb4eeff2ae2df69da4402f48c44);
+            
+        
+
+        rectangle_4d0071dc737a507fd2ffe40e6011c9a8.bindPopup(popup_630696f469b058cb596b82d3c7086c43)
+        ;
+
+        
+    
+    
+            var rectangle_7dff66237c7a896ed219c0a9741cd47b = L.rectangle(
+                [[39.98198198198198, 32.55294117647059], [39.99099099099099, 32.564705882352946]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_12b94b145a74ac551eb47968c63ce4eb = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_2e82d201840d31c9bda25a2a8735faef = $(`<div id="html_2e82d201840d31c9bda25a2a8735faef" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 261.0<br>         Günlük Yolcu: 2,389         </div>`)[0];
+                popup_12b94b145a74ac551eb47968c63ce4eb.setContent(html_2e82d201840d31c9bda25a2a8735faef);
+            
+        
+
+        rectangle_7dff66237c7a896ed219c0a9741cd47b.bindPopup(popup_12b94b145a74ac551eb47968c63ce4eb)
+        ;
+
+        
+    
+    
+            var rectangle_bd690ce9abb7bfaece94d853506fa298 = L.rectangle(
+                [[39.9009009009009, 32.811764705882354], [39.909909909909906, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_93e0d09f7e901210d77b5dabd9670ffd = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3d71912d55b56f477074f183f5f0a13b = $(`<div id="html_3d71912d55b56f477074f183f5f0a13b" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 139.0<br>         Günlük Yolcu: 2,377         </div>`)[0];
+                popup_93e0d09f7e901210d77b5dabd9670ffd.setContent(html_3d71912d55b56f477074f183f5f0a13b);
+            
+        
+
+        rectangle_bd690ce9abb7bfaece94d853506fa298.bindPopup(popup_93e0d09f7e901210d77b5dabd9670ffd)
+        ;
+
+        
+    
+    
+            var rectangle_0415353b837eba654a49181c00842751 = L.rectangle(
+                [[39.95495495495496, 32.65882352941176], [39.96396396396396, 32.67058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_319b104575d29ee3a77ff541da192f34 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3c41986259295a51df739e18769bd43a = $(`<div id="html_3c41986259295a51df739e18769bd43a" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 222.0<br>         Günlük Yolcu: 2,375         </div>`)[0];
+                popup_319b104575d29ee3a77ff541da192f34.setContent(html_3c41986259295a51df739e18769bd43a);
+            
+        
+
+        rectangle_0415353b837eba654a49181c00842751.bindPopup(popup_319b104575d29ee3a77ff541da192f34)
+        ;
+
+        
+    
+    
+            var rectangle_90a44d32d4b2bd0ebb722b4a92128a3f = L.rectangle(
+                [[39.972972972972975, 32.811764705882354], [39.98198198198198, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_96ca87d227c841763e284ccf7b7f1c60 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_8da79ac0ce7040e08c854c078044a130 = $(`<div id="html_8da79ac0ce7040e08c854c078044a130" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 50.0<br>         Günlük Yolcu: 2,367         </div>`)[0];
+                popup_96ca87d227c841763e284ccf7b7f1c60.setContent(html_8da79ac0ce7040e08c854c078044a130);
+            
+        
+
+        rectangle_90a44d32d4b2bd0ebb722b4a92128a3f.bindPopup(popup_96ca87d227c841763e284ccf7b7f1c60)
+        ;
+
+        
+    
+    
+            var rectangle_93b901edf082f218a1bf82f7440fc3fb = L.rectangle(
+                [[39.93693693693694, 32.8235294117647], [39.945945945945944, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_bfb394d1b0c6e1e09e9a9385d4e6b9d2 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_43543203749393e3189a7654d22bcc57 = $(`<div id="html_43543203749393e3189a7654d22bcc57" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 252.0<br>         Günlük Yolcu: 2,361         </div>`)[0];
+                popup_bfb394d1b0c6e1e09e9a9385d4e6b9d2.setContent(html_43543203749393e3189a7654d22bcc57);
+            
+        
+
+        rectangle_93b901edf082f218a1bf82f7440fc3fb.bindPopup(popup_bfb394d1b0c6e1e09e9a9385d4e6b9d2)
+        ;
+
+        
+    
+    
+            var rectangle_f8acd1ab0e39c448d996c661261c7843 = L.rectangle(
+                [[39.990990990990994, 32.83529411764706], [40.0, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_02d683a4736a45de82333e3b5f31437e = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6e2b12937b545d7a612f9b75870e5372 = $(`<div id="html_6e2b12937b545d7a612f9b75870e5372" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 93.0<br>         Günlük Yolcu: 2,357         </div>`)[0];
+                popup_02d683a4736a45de82333e3b5f31437e.setContent(html_6e2b12937b545d7a612f9b75870e5372);
+            
+        
+
+        rectangle_f8acd1ab0e39c448d996c661261c7843.bindPopup(popup_02d683a4736a45de82333e3b5f31437e)
+        ;
+
+        
+    
+    
+            var rectangle_5f110316d892f6fcb2f3782a79c3e3ef = L.rectangle(
+                [[39.945945945945944, 32.8], [39.95495495495495, 32.811764705882354]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_6a3abe35d74ef8198c7469fa9693fb82 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_5742a88ac6bc52236a4260f74446604b = $(`<div id="html_5742a88ac6bc52236a4260f74446604b" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 239.0<br>         Günlük Yolcu: 2,346         </div>`)[0];
+                popup_6a3abe35d74ef8198c7469fa9693fb82.setContent(html_5742a88ac6bc52236a4260f74446604b);
+            
+        
+
+        rectangle_5f110316d892f6fcb2f3782a79c3e3ef.bindPopup(popup_6a3abe35d74ef8198c7469fa9693fb82)
+        ;
+
+        
+    
+    
+            var rectangle_23cc717920f4d3695c276f756ea86853 = L.rectangle(
+                [[40.009009009009006, 32.858823529411765], [40.01801801801801, 32.87058823529412]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1d16f7b83bfb99aaddfbbb9fda419d2b = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4165626108ad1fdbc62099320f91e1b7 = $(`<div id="html_4165626108ad1fdbc62099320f91e1b7" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 121.0<br>         Günlük Yolcu: 2,332         </div>`)[0];
+                popup_1d16f7b83bfb99aaddfbbb9fda419d2b.setContent(html_4165626108ad1fdbc62099320f91e1b7);
+            
+        
+
+        rectangle_23cc717920f4d3695c276f756ea86853.bindPopup(popup_1d16f7b83bfb99aaddfbbb9fda419d2b)
+        ;
+
+        
+    
+    
+            var rectangle_366bf382de4d1e62cfcc5d086f8ede96 = L.rectangle(
+                [[39.95495495495496, 32.811764705882354], [39.96396396396396, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_6387da0b6ffa8a1e07244f03bbba80f3 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_91e36010de471c890bd6a411f07dc050 = $(`<div id="html_91e36010de471c890bd6a411f07dc050" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 75.0<br>         Günlük Yolcu: 2,321         </div>`)[0];
+                popup_6387da0b6ffa8a1e07244f03bbba80f3.setContent(html_91e36010de471c890bd6a411f07dc050);
+            
+        
+
+        rectangle_366bf382de4d1e62cfcc5d086f8ede96.bindPopup(popup_6387da0b6ffa8a1e07244f03bbba80f3)
+        ;
+
+        
+    
+    
+            var rectangle_49c6df68f24189a7f2dee178cce7980b = L.rectangle(
+                [[39.945945945945944, 32.6], [39.95495495495495, 32.61176470588236]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_16e08b5f6cd960b58ac31b2e58a323a7 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4f4981701c3722b82f2d26177344dd05 = $(`<div id="html_4f4981701c3722b82f2d26177344dd05" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 219.0<br>         Günlük Yolcu: 2,282         </div>`)[0];
+                popup_16e08b5f6cd960b58ac31b2e58a323a7.setContent(html_4f4981701c3722b82f2d26177344dd05);
+            
+        
+
+        rectangle_49c6df68f24189a7f2dee178cce7980b.bindPopup(popup_16e08b5f6cd960b58ac31b2e58a323a7)
+        ;
+
+        
+    
+    
+            var rectangle_d2473a80c9acc38d60d77f77d343e8d5 = L.rectangle(
+                [[39.927927927927925, 32.811764705882354], [39.93693693693693, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_bf9df2b56dd03099ba5359a0f9fd991c = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_de1df51c36190460b13b7086a4e865b1 = $(`<div id="html_de1df51c36190460b13b7086a4e865b1" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 149.0<br>         Günlük Yolcu: 2,278         </div>`)[0];
+                popup_bf9df2b56dd03099ba5359a0f9fd991c.setContent(html_de1df51c36190460b13b7086a4e865b1);
+            
+        
+
+        rectangle_d2473a80c9acc38d60d77f77d343e8d5.bindPopup(popup_bf9df2b56dd03099ba5359a0f9fd991c)
+        ;
+
+        
+    
+    
+            var rectangle_e0d5b680f8f64cf0966fc8565bfc8384 = L.rectangle(
+                [[39.95495495495496, 32.870588235294115], [39.96396396396396, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_1f45dfee5564b27d7b1da0c8a997a140 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_65edab6f6057030e6b289f747e6a05a8 = $(`<div id="html_65edab6f6057030e6b289f747e6a05a8" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 169.0<br>         Günlük Yolcu: 2,273         </div>`)[0];
+                popup_1f45dfee5564b27d7b1da0c8a997a140.setContent(html_65edab6f6057030e6b289f747e6a05a8);
+            
+        
+
+        rectangle_e0d5b680f8f64cf0966fc8565bfc8384.bindPopup(popup_1f45dfee5564b27d7b1da0c8a997a140)
+        ;
+
+        
+    
+    
+            var rectangle_c2e44b6b3d3926b07c9b252ff83d75c8 = L.rectangle(
+                [[39.873873873873876, 32.811764705882354], [39.88288288288288, 32.82352941176471]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_16522b8f2e318d32bed99534cc6f4cd9 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_39a8dc47f8111e8bf7fba5af430febe3 = $(`<div id="html_39a8dc47f8111e8bf7fba5af430febe3" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 133.0<br>         Günlük Yolcu: 2,266         </div>`)[0];
+                popup_16522b8f2e318d32bed99534cc6f4cd9.setContent(html_39a8dc47f8111e8bf7fba5af430febe3);
+            
+        
+
+        rectangle_c2e44b6b3d3926b07c9b252ff83d75c8.bindPopup(popup_16522b8f2e318d32bed99534cc6f4cd9)
+        ;
+
+        
+    
+    
+            var rectangle_a9800b5c8584b3d6afa70e22dc66144f = L.rectangle(
+                [[39.86486486486486, 32.8235294117647], [39.87387387387387, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_a7550255e7673105dacc54dd253bd58e = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4328b2864e812268db9507687f062aa5 = $(`<div id="html_4328b2864e812268db9507687f062aa5" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 91.0<br>         Günlük Yolcu: 2,264         </div>`)[0];
+                popup_a7550255e7673105dacc54dd253bd58e.setContent(html_4328b2864e812268db9507687f062aa5);
+            
+        
+
+        rectangle_a9800b5c8584b3d6afa70e22dc66144f.bindPopup(popup_a7550255e7673105dacc54dd253bd58e)
+        ;
+
+        
+    
+    
+            var rectangle_f3397876c6692e3e41fb0aba4dea8ce7 = L.rectangle(
+                [[39.909909909909906, 32.83529411764706], [39.91891891891891, 32.847058823529416]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_15dabe604c759df879ffce3d03146bcc = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b4ec88b466eee2a13d4ad397d10c0cce = $(`<div id="html_b4ec88b466eee2a13d4ad397d10c0cce" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 104.0<br>         Günlük Yolcu: 2,240         </div>`)[0];
+                popup_15dabe604c759df879ffce3d03146bcc.setContent(html_b4ec88b466eee2a13d4ad397d10c0cce);
+            
+        
+
+        rectangle_f3397876c6692e3e41fb0aba4dea8ce7.bindPopup(popup_15dabe604c759df879ffce3d03146bcc)
+        ;
+
+        
+    
+    
+            var rectangle_a42dce591bf9af87ae7e2ec2709c262d = L.rectangle(
+                [[40.009009009009006, 32.529411764705884], [40.01801801801801, 32.54117647058824]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_84f8e25d366ae208ba77f1e5105bd1a1 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_09a6aeb6c241cb531402a7f64961d5b6 = $(`<div id="html_09a6aeb6c241cb531402a7f64961d5b6" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 160.0<br>         Günlük Yolcu: 2,239         </div>`)[0];
+                popup_84f8e25d366ae208ba77f1e5105bd1a1.setContent(html_09a6aeb6c241cb531402a7f64961d5b6);
+            
+        
+
+        rectangle_a42dce591bf9af87ae7e2ec2709c262d.bindPopup(popup_84f8e25d366ae208ba77f1e5105bd1a1)
+        ;
+
+        
+    
+    
+            var rectangle_71c85952a70c9e1855f03d71d33039ac = L.rectangle(
+                [[39.98198198198198, 32.870588235294115], [39.99099099099099, 32.88235294117647]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_55a32e581d1824ef2af8298fcd354abe = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f6af05b670b1f0d63536223b9616ec9e = $(`<div id="html_f6af05b670b1f0d63536223b9616ec9e" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 110.0<br>         Günlük Yolcu: 2,235         </div>`)[0];
+                popup_55a32e581d1824ef2af8298fcd354abe.setContent(html_f6af05b670b1f0d63536223b9616ec9e);
+            
+        
+
+        rectangle_71c85952a70c9e1855f03d71d33039ac.bindPopup(popup_55a32e581d1824ef2af8298fcd354abe)
+        ;
+
+        
+    
+    
+            var rectangle_5300477ca9df385bb877b41e8bbdfd86 = L.rectangle(
+                [[39.945945945945944, 32.88235294117647], [39.95495495495495, 32.89411764705883]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_412625c0d99e91ec62173fc6924a3b15 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_9e6651ff36165152e513735fa115e74e = $(`<div id="html_9e6651ff36165152e513735fa115e74e" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 109.0<br>         Günlük Yolcu: 2,211         </div>`)[0];
+                popup_412625c0d99e91ec62173fc6924a3b15.setContent(html_9e6651ff36165152e513735fa115e74e);
+            
+        
+
+        rectangle_5300477ca9df385bb877b41e8bbdfd86.bindPopup(popup_412625c0d99e91ec62173fc6924a3b15)
+        ;
+
+        
+    
+    
+            var rectangle_0cf10c6a26acd21a59acd8985f219ab4 = L.rectangle(
+                [[39.891891891891895, 32.752941176470586], [39.9009009009009, 32.76470588235294]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_cd5f6427f453d8a5e3802602d98a538f = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3850b14ddd2d4f264343865f2c379e1d = $(`<div id="html_3850b14ddd2d4f264343865f2c379e1d" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 91.0<br>         Günlük Yolcu: 2,210         </div>`)[0];
+                popup_cd5f6427f453d8a5e3802602d98a538f.setContent(html_3850b14ddd2d4f264343865f2c379e1d);
+            
+        
+
+        rectangle_0cf10c6a26acd21a59acd8985f219ab4.bindPopup(popup_cd5f6427f453d8a5e3802602d98a538f)
+        ;
+
+        
+    
+    
+            var rectangle_3a0f42f6d063d198218a40d9c7e8b5da = L.rectangle(
+                [[39.873873873873876, 32.8], [39.88288288288288, 32.811764705882354]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_0f789c333161edd21d8362532f4aef2c = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_a045d7f620f34544489de7ab2491f78b = $(`<div id="html_a045d7f620f34544489de7ab2491f78b" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 134.0<br>         Günlük Yolcu: 2,194         </div>`)[0];
+                popup_0f789c333161edd21d8362532f4aef2c.setContent(html_a045d7f620f34544489de7ab2491f78b);
+            
+        
+
+        rectangle_3a0f42f6d063d198218a40d9c7e8b5da.bindPopup(popup_0f789c333161edd21d8362532f4aef2c)
+        ;
+
+        
+    
+    
+            var rectangle_27587249d6e71b72b630f29c29240a21 = L.rectangle(
+                [[39.98198198198198, 32.8235294117647], [39.99099099099099, 32.83529411764706]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_ac23fe1a3e20a4c503cca70544e2aef3 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_011a5495f9ae14ad0a869f742ea08268 = $(`<div id="html_011a5495f9ae14ad0a869f742ea08268" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 107.0<br>         Günlük Yolcu: 2,173         </div>`)[0];
+                popup_ac23fe1a3e20a4c503cca70544e2aef3.setContent(html_011a5495f9ae14ad0a869f742ea08268);
+            
+        
+
+        rectangle_27587249d6e71b72b630f29c29240a21.bindPopup(popup_ac23fe1a3e20a4c503cca70544e2aef3)
+        ;
+
+        
+    
+    
+            var rectangle_b712f3f68fbb6fc4420ea29adbc6951d = L.rectangle(
+                [[39.972972972972975, 32.89411764705882], [39.98198198198198, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_e30a4d2490b05e8314400832d4c659f5 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b7a96c62bb674acab68067f03421b295 = $(`<div id="html_b7a96c62bb674acab68067f03421b295" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 85.0<br>         Günlük Yolcu: 2,164         </div>`)[0];
+                popup_e30a4d2490b05e8314400832d4c659f5.setContent(html_b7a96c62bb674acab68067f03421b295);
+            
+        
+
+        rectangle_b712f3f68fbb6fc4420ea29adbc6951d.bindPopup(popup_e30a4d2490b05e8314400832d4c659f5)
+        ;
+
+        
+    
+    
+            var rectangle_939817926d9d7e02163fcf5d86c5ed29 = L.rectangle(
+                [[39.98198198198198, 32.89411764705882], [39.99099099099099, 32.90588235294118]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 1}
+            ).addTo(map_22f45a9db4b006c4d2e1db9ae7638d39);
+        
+    
+        var popup_79b7ef2bdbc03d74008616101ec53bfb = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_5e1a9fe409f55c686c987c6c2b6a3700 = $(`<div id="html_5e1a9fe409f55c686c987c6c2b6a3700" style="width: 100.0%; height: 100.0%;">         <b>Yoğun Bölge</b><br>         Durak: 155.0<br>         Günlük Yolcu: 2,158         </div>`)[0];
+                popup_79b7ef2bdbc03d74008616101ec53bfb.setContent(html_5e1a9fe409f55c686c987c6c2b6a3700);
+            
+        
+
+        rectangle_939817926d9d7e02163fcf5d86c5ed29.bindPopup(popup_79b7ef2bdbc03d74008616101ec53bfb)
+        ;
+
+        
+    
+</script>
+</html>

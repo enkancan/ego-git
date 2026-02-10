@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1adf78886fcdcd4edb56c41d0009ce9d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    <div style="position:fixed;top:10px;left:50%;transform:translateX(-50%);
+    z-index:9999;background:rgba(0,0,0,0.8);padding:12px 24px;border-radius:8px;
+    color:white;font-size:18px;font-weight:bold;">
+    🚇 Ankara Metro & Rail Lines</div>
+    
+<div style="position:fixed;bottom:30px;right:30px;z-index:9999;
+    background:rgba(255,255,255,0.95);padding:15px;border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);font-size:13px;">
+    <b>Metro Hatları</b><br>
+    <span style="color:#E63946;">━━</span> M1-M2-M3 Çayyolu-Batıkent-Sincan<br>
+    <span style="color:#457B9D;">━━</span> M4 Keçiören<br>
+    <span style="color:#2A9D8F;">━━</span> A1 Ankaray<br>
+    <span style="color:#F4A261;">━━</span> T1 Teleferik<br>
+    <br>● Terminal &nbsp; ○ İstasyon
+</div>
+    
+            <div class="folium-map" id="map_1adf78886fcdcd4edb56c41d0009ce9d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1adf78886fcdcd4edb56c41d0009ce9d = L.map(
+                "map_1adf78886fcdcd4edb56c41d0009ce9d",
+                {
+                    center: [39.935, 32.82],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7a31294f9d9b6beacfbcf0fa89058c6a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7a31294f9d9b6beacfbcf0fa89058c6a.addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+            var poly_line_3a223f77b2628ebb3a82f36fb71a65eb = L.polyline(
+                [[39.8768, 32.6849], [39.8819, 32.6977], [39.8722, 32.7192], [39.866, 32.7295], [39.8807, 32.7365], [39.8886, 32.751], [39.9017, 32.7601], [39.9144, 32.7777], [39.9197, 32.8029], [39.9214, 32.8537], [39.9274, 32.8596], [39.9413, 32.857], [39.9549, 32.8483], [39.9621, 32.8437], [39.9728, 32.8168], [39.9783, 32.8081], [39.984, 32.7919], [39.9873, 32.7779], [39.9893, 32.7621], [39.9904, 32.7483], [39.9886, 32.7238], [39.9851, 32.7073], [39.9827, 32.6939], [39.978, 32.6775], [39.9741, 32.6577], [39.9698, 32.6371], [39.9661, 32.616], [39.9632, 32.5993], [39.9569, 32.5838], [39.9525, 32.5717]],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#E63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_eb2a8afbb6d617b72b146ebc6572313f = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_19cd7a4ddca8f56c0ae5ac88b2fe34b1 = $(`<div id="html_19cd7a4ddca8f56c0ae5ac88b2fe34b1" style="width: 100.0%; height: 100.0%;"><b>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</b></div>`)[0];
+                popup_eb2a8afbb6d617b72b146ebc6572313f.setContent(html_19cd7a4ddca8f56c0ae5ac88b2fe34b1);
+            
+        
+
+        poly_line_3a223f77b2628ebb3a82f36fb71a65eb.bindPopup(popup_eb2a8afbb6d617b72b146ebc6572313f)
+        ;
+
+        
+    
+    
+            var circle_marker_760dc6217c475ce6e0ea9f8ff1ecf603 = L.circleMarker(
+                [39.8768, 32.6849],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_83e82217f90efa3bb916f5185a41b1b9 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_725bc325cac4883f2545f3e1cd355d74 = $(`<div id="html_725bc325cac4883f2545f3e1cd355d74" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Çayyolu</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_83e82217f90efa3bb916f5185a41b1b9.setContent(html_725bc325cac4883f2545f3e1cd355d74);
+            
+        
+
+        circle_marker_760dc6217c475ce6e0ea9f8ff1ecf603.bindPopup(popup_83e82217f90efa3bb916f5185a41b1b9)
+        ;
+
+        
+    
+    
+            circle_marker_760dc6217c475ce6e0ea9f8ff1ecf603.bindTooltip(
+                `<div>
+                     Çayyolu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_239b345ed49d05d187bdd45bbb05ca1e = L.circleMarker(
+                [39.8819, 32.6977],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_94a9de31e4e110bca8df103629c991c8 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6c5bf36a1cad064d29389fd43f0fa1b0 = $(`<div id="html_6c5bf36a1cad064d29389fd43f0fa1b0" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Ümitköy</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_94a9de31e4e110bca8df103629c991c8.setContent(html_6c5bf36a1cad064d29389fd43f0fa1b0);
+            
+        
+
+        circle_marker_239b345ed49d05d187bdd45bbb05ca1e.bindPopup(popup_94a9de31e4e110bca8df103629c991c8)
+        ;
+
+        
+    
+    
+            circle_marker_239b345ed49d05d187bdd45bbb05ca1e.bindTooltip(
+                `<div>
+                     Ümitköy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cf3672c634cccd34788c90c69c915067 = L.circleMarker(
+                [39.8722, 32.7192],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_6b90cb74c6c2a17e6843f10471170add = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_9e41011da89f5d4fb6e21257ef9344c7 = $(`<div id="html_9e41011da89f5d4fb6e21257ef9344c7" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Beytepe</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_6b90cb74c6c2a17e6843f10471170add.setContent(html_9e41011da89f5d4fb6e21257ef9344c7);
+            
+        
+
+        circle_marker_cf3672c634cccd34788c90c69c915067.bindPopup(popup_6b90cb74c6c2a17e6843f10471170add)
+        ;
+
+        
+    
+    
+            circle_marker_cf3672c634cccd34788c90c69c915067.bindTooltip(
+                `<div>
+                     Beytepe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfcd45d972c6980040d7e97ad17dfd1b = L.circleMarker(
+                [39.866, 32.7295],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_d002518e69e3f9e75770826e0023f4b6 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6388308b2bc3691b4f19446ebe4035d6 = $(`<div id="html_6388308b2bc3691b4f19446ebe4035d6" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Tarım Bakanlığı</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_d002518e69e3f9e75770826e0023f4b6.setContent(html_6388308b2bc3691b4f19446ebe4035d6);
+            
+        
+
+        circle_marker_dfcd45d972c6980040d7e97ad17dfd1b.bindPopup(popup_d002518e69e3f9e75770826e0023f4b6)
+        ;
+
+        
+    
+    
+            circle_marker_dfcd45d972c6980040d7e97ad17dfd1b.bindTooltip(
+                `<div>
+                     Tarım Bakanlığı
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a17fa63868a5a0cb053067e9dd4a36fa = L.circleMarker(
+                [39.8807, 32.7365],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_edbc046fc8a90dd6ee70d5aea0762a48 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_bd2c9649120569be5397423795a57c05 = $(`<div id="html_bd2c9649120569be5397423795a57c05" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">ODTÜ</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_edbc046fc8a90dd6ee70d5aea0762a48.setContent(html_bd2c9649120569be5397423795a57c05);
+            
+        
+
+        circle_marker_a17fa63868a5a0cb053067e9dd4a36fa.bindPopup(popup_edbc046fc8a90dd6ee70d5aea0762a48)
+        ;
+
+        
+    
+    
+            circle_marker_a17fa63868a5a0cb053067e9dd4a36fa.bindTooltip(
+                `<div>
+                     ODTÜ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb105dd2ee62789786001ec7c47c9dda = L.circleMarker(
+                [39.8886, 32.751],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_3a46c2549efb4153126a49239dbdd3cf = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_2235dd8753cfb1ec2463bc23f0ff1a14 = $(`<div id="html_2235dd8753cfb1ec2463bc23f0ff1a14" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">MTA</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_3a46c2549efb4153126a49239dbdd3cf.setContent(html_2235dd8753cfb1ec2463bc23f0ff1a14);
+            
+        
+
+        circle_marker_eb105dd2ee62789786001ec7c47c9dda.bindPopup(popup_3a46c2549efb4153126a49239dbdd3cf)
+        ;
+
+        
+    
+    
+            circle_marker_eb105dd2ee62789786001ec7c47c9dda.bindTooltip(
+                `<div>
+                     MTA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_21cf7af50dbefab19e6ff16b18c9efbf = L.circleMarker(
+                [39.9017, 32.7601],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_10103c408e22cc065e589ab0e3b83663 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3927edf453da486aed3b01e2bc5f6c46 = $(`<div id="html_3927edf453da486aed3b01e2bc5f6c46" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Söğütözü</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_10103c408e22cc065e589ab0e3b83663.setContent(html_3927edf453da486aed3b01e2bc5f6c46);
+            
+        
+
+        circle_marker_21cf7af50dbefab19e6ff16b18c9efbf.bindPopup(popup_10103c408e22cc065e589ab0e3b83663)
+        ;
+
+        
+    
+    
+            circle_marker_21cf7af50dbefab19e6ff16b18c9efbf.bindTooltip(
+                `<div>
+                     Söğütözü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48b3146f4ac41a776164976819e5e99f = L.circleMarker(
+                [39.9144, 32.7777],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_878d6d3570c92eda4cca9c525df204c5 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_c569d21c286530f854b2801e424e6a0b = $(`<div id="html_c569d21c286530f854b2801e424e6a0b" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Milli Kütüphane</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_878d6d3570c92eda4cca9c525df204c5.setContent(html_c569d21c286530f854b2801e424e6a0b);
+            
+        
+
+        circle_marker_48b3146f4ac41a776164976819e5e99f.bindPopup(popup_878d6d3570c92eda4cca9c525df204c5)
+        ;
+
+        
+    
+    
+            circle_marker_48b3146f4ac41a776164976819e5e99f.bindTooltip(
+                `<div>
+                     Milli Kütüphane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_767c44a48deecfe6bf50e4a659429caf = L.circleMarker(
+                [39.9197, 32.8029],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_8403adff3ddfb0ed5a1dbfafe9f68f53 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_fe096b1480bbab1dd8b48b675c26c6bc = $(`<div id="html_fe096b1480bbab1dd8b48b675c26c6bc" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Necatibey</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_8403adff3ddfb0ed5a1dbfafe9f68f53.setContent(html_fe096b1480bbab1dd8b48b675c26c6bc);
+            
+        
+
+        circle_marker_767c44a48deecfe6bf50e4a659429caf.bindPopup(popup_8403adff3ddfb0ed5a1dbfafe9f68f53)
+        ;
+
+        
+    
+    
+            circle_marker_767c44a48deecfe6bf50e4a659429caf.bindTooltip(
+                `<div>
+                     Necatibey
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73a521c0b386bbb36be48516ac847bc3 = L.circleMarker(
+                [39.9214, 32.8537],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_828e48f569763f6deac139973a5bee1d = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d7e3d1d35e7336381129a7e1ca09acae = $(`<div id="html_d7e3d1d35e7336381129a7e1ca09acae" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Kızılay</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_828e48f569763f6deac139973a5bee1d.setContent(html_d7e3d1d35e7336381129a7e1ca09acae);
+            
+        
+
+        circle_marker_73a521c0b386bbb36be48516ac847bc3.bindPopup(popup_828e48f569763f6deac139973a5bee1d)
+        ;
+
+        
+    
+    
+            circle_marker_73a521c0b386bbb36be48516ac847bc3.bindTooltip(
+                `<div>
+                     Kızılay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c4fe0246132bed7e59054d746106e630 = L.circleMarker(
+                [39.9274, 32.8596],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_82f4d00f5e7b3c2af8ba3c701e178af5 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_061ce6aab0af32d25673bfc30b11e64b = $(`<div id="html_061ce6aab0af32d25673bfc30b11e64b" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Sıhhiye</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_82f4d00f5e7b3c2af8ba3c701e178af5.setContent(html_061ce6aab0af32d25673bfc30b11e64b);
+            
+        
+
+        circle_marker_c4fe0246132bed7e59054d746106e630.bindPopup(popup_82f4d00f5e7b3c2af8ba3c701e178af5)
+        ;
+
+        
+    
+    
+            circle_marker_c4fe0246132bed7e59054d746106e630.bindTooltip(
+                `<div>
+                     Sıhhiye
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83014b6a98a8bbd4a6d4506348ec3e81 = L.circleMarker(
+                [39.9413, 32.857],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_bfefcabbe24f8013fbf0a025a48c20e0 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_2f22f91a4a792917b1222266d9670a7b = $(`<div id="html_2f22f91a4a792917b1222266d9670a7b" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Ulus</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_bfefcabbe24f8013fbf0a025a48c20e0.setContent(html_2f22f91a4a792917b1222266d9670a7b);
+            
+        
+
+        circle_marker_83014b6a98a8bbd4a6d4506348ec3e81.bindPopup(popup_bfefcabbe24f8013fbf0a025a48c20e0)
+        ;
+
+        
+    
+    
+            circle_marker_83014b6a98a8bbd4a6d4506348ec3e81.bindTooltip(
+                `<div>
+                     Ulus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb4b4efc77e8056c2fec60e7a280c6eb = L.circleMarker(
+                [39.9549, 32.8483],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_963b9651d6df655b363c54fabbc7f497 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_0d8495c5aabd779e180842ab5c141aee = $(`<div id="html_0d8495c5aabd779e180842ab5c141aee" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Atatürk Kültür Merkezi</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_963b9651d6df655b363c54fabbc7f497.setContent(html_0d8495c5aabd779e180842ab5c141aee);
+            
+        
+
+        circle_marker_fb4b4efc77e8056c2fec60e7a280c6eb.bindPopup(popup_963b9651d6df655b363c54fabbc7f497)
+        ;
+
+        
+    
+    
+            circle_marker_fb4b4efc77e8056c2fec60e7a280c6eb.bindTooltip(
+                `<div>
+                     Atatürk Kültür Merkezi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1302e40357f61b79a1766742cd60ca3c = L.circleMarker(
+                [39.9621, 32.8437],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_44bc41a82faf5c09c26b7f5ec52af777 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_90b502ccbf442bffe56e8714a70f0c7b = $(`<div id="html_90b502ccbf442bffe56e8714a70f0c7b" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Akköprü</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_44bc41a82faf5c09c26b7f5ec52af777.setContent(html_90b502ccbf442bffe56e8714a70f0c7b);
+            
+        
+
+        circle_marker_1302e40357f61b79a1766742cd60ca3c.bindPopup(popup_44bc41a82faf5c09c26b7f5ec52af777)
+        ;
+
+        
+    
+    
+            circle_marker_1302e40357f61b79a1766742cd60ca3c.bindTooltip(
+                `<div>
+                     Akköprü
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_918da1ed4634a3d4cf75c94dc377af12 = L.circleMarker(
+                [39.9728, 32.8168],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_81cb2f9abe9b9af82f6a2664b553f82b = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_56fb0c7430d413906c5d475707b04b12 = $(`<div id="html_56fb0c7430d413906c5d475707b04b12" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">İvedik</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_81cb2f9abe9b9af82f6a2664b553f82b.setContent(html_56fb0c7430d413906c5d475707b04b12);
+            
+        
+
+        circle_marker_918da1ed4634a3d4cf75c94dc377af12.bindPopup(popup_81cb2f9abe9b9af82f6a2664b553f82b)
+        ;
+
+        
+    
+    
+            circle_marker_918da1ed4634a3d4cf75c94dc377af12.bindTooltip(
+                `<div>
+                     İvedik
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0474455e386ff1b7070245b68e7b6906 = L.circleMarker(
+                [39.9783, 32.8081],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_da4df3160398bfd6ba0bb71ef84dc0c5 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_c503f9cd994c67914200dcd5a8080ae8 = $(`<div id="html_c503f9cd994c67914200dcd5a8080ae8" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Yenimahalle</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_da4df3160398bfd6ba0bb71ef84dc0c5.setContent(html_c503f9cd994c67914200dcd5a8080ae8);
+            
+        
+
+        circle_marker_0474455e386ff1b7070245b68e7b6906.bindPopup(popup_da4df3160398bfd6ba0bb71ef84dc0c5)
+        ;
+
+        
+    
+    
+            circle_marker_0474455e386ff1b7070245b68e7b6906.bindTooltip(
+                `<div>
+                     Yenimahalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_61495f05fc6eb559e49b36e0e1cf9a4c = L.circleMarker(
+                [39.984, 32.7919],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_36d0817a7c9ce9bb74a4ea1acdcda21d = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_235f09dcf1a20811b1fd68ae1958b4b5 = $(`<div id="html_235f09dcf1a20811b1fd68ae1958b4b5" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Demetevler</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_36d0817a7c9ce9bb74a4ea1acdcda21d.setContent(html_235f09dcf1a20811b1fd68ae1958b4b5);
+            
+        
+
+        circle_marker_61495f05fc6eb559e49b36e0e1cf9a4c.bindPopup(popup_36d0817a7c9ce9bb74a4ea1acdcda21d)
+        ;
+
+        
+    
+    
+            circle_marker_61495f05fc6eb559e49b36e0e1cf9a4c.bindTooltip(
+                `<div>
+                     Demetevler
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6391218bdff3c0144942943b1c7151c4 = L.circleMarker(
+                [39.9873, 32.7779],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_71a5990ae154bf4ca93626691dea9d1d = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4be8bc08a5bd1bdbeeee47e59fc80c9f = $(`<div id="html_4be8bc08a5bd1bdbeeee47e59fc80c9f" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Hastane</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_71a5990ae154bf4ca93626691dea9d1d.setContent(html_4be8bc08a5bd1bdbeeee47e59fc80c9f);
+            
+        
+
+        circle_marker_6391218bdff3c0144942943b1c7151c4.bindPopup(popup_71a5990ae154bf4ca93626691dea9d1d)
+        ;
+
+        
+    
+    
+            circle_marker_6391218bdff3c0144942943b1c7151c4.bindTooltip(
+                `<div>
+                     Hastane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4251d0b70140132162f82eff495f882b = L.circleMarker(
+                [39.9893, 32.7621],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_a6ed33c25b7754a4f8c699fe60bd868e = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3b14d7f573b88e6ffd0fee18ee7d1767 = $(`<div id="html_3b14d7f573b88e6ffd0fee18ee7d1767" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Macunköy</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_a6ed33c25b7754a4f8c699fe60bd868e.setContent(html_3b14d7f573b88e6ffd0fee18ee7d1767);
+            
+        
+
+        circle_marker_4251d0b70140132162f82eff495f882b.bindPopup(popup_a6ed33c25b7754a4f8c699fe60bd868e)
+        ;
+
+        
+    
+    
+            circle_marker_4251d0b70140132162f82eff495f882b.bindTooltip(
+                `<div>
+                     Macunköy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3b9f3ed1a4304a0c5f898ceaf75e97f = L.circleMarker(
+                [39.9904, 32.7483],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_2da3dcc4297f7d110e4f2e3bb5a9a434 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_645a5addb46e07e4011f5b25a7c82b9d = $(`<div id="html_645a5addb46e07e4011f5b25a7c82b9d" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Ostim</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_2da3dcc4297f7d110e4f2e3bb5a9a434.setContent(html_645a5addb46e07e4011f5b25a7c82b9d);
+            
+        
+
+        circle_marker_b3b9f3ed1a4304a0c5f898ceaf75e97f.bindPopup(popup_2da3dcc4297f7d110e4f2e3bb5a9a434)
+        ;
+
+        
+    
+    
+            circle_marker_b3b9f3ed1a4304a0c5f898ceaf75e97f.bindTooltip(
+                `<div>
+                     Ostim
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbca67d85f223b9295aa507d4f97b45a = L.circleMarker(
+                [39.9886, 32.7238],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_cf867115fdd27712d42c62ff058d38a3 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_f6f82f1cc1caab241d1b4ca5e17d4571 = $(`<div id="html_f6f82f1cc1caab241d1b4ca5e17d4571" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Batıkent</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_cf867115fdd27712d42c62ff058d38a3.setContent(html_f6f82f1cc1caab241d1b4ca5e17d4571);
+            
+        
+
+        circle_marker_cbca67d85f223b9295aa507d4f97b45a.bindPopup(popup_cf867115fdd27712d42c62ff058d38a3)
+        ;
+
+        
+    
+    
+            circle_marker_cbca67d85f223b9295aa507d4f97b45a.bindTooltip(
+                `<div>
+                     Batıkent
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7f3cc1dc7a1b5442201f9f1dbf7b7d6 = L.circleMarker(
+                [39.9851, 32.7073],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_138a2647ad7612c5a6067000705dec37 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_e0ab12eda0c796dab8348001e1baff81 = $(`<div id="html_e0ab12eda0c796dab8348001e1baff81" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Mesa</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_138a2647ad7612c5a6067000705dec37.setContent(html_e0ab12eda0c796dab8348001e1baff81);
+            
+        
+
+        circle_marker_d7f3cc1dc7a1b5442201f9f1dbf7b7d6.bindPopup(popup_138a2647ad7612c5a6067000705dec37)
+        ;
+
+        
+    
+    
+            circle_marker_d7f3cc1dc7a1b5442201f9f1dbf7b7d6.bindTooltip(
+                `<div>
+                     Mesa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc532a1bb7ada810896a9a4d43cde7ba = L.circleMarker(
+                [39.9827, 32.6939],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_974a9e0200df2c59132fdb4d21485cd8 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_eb49f93db309fb20ac06369138124181 = $(`<div id="html_eb49f93db309fb20ac06369138124181" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Botanik</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_974a9e0200df2c59132fdb4d21485cd8.setContent(html_eb49f93db309fb20ac06369138124181);
+            
+        
+
+        circle_marker_dc532a1bb7ada810896a9a4d43cde7ba.bindPopup(popup_974a9e0200df2c59132fdb4d21485cd8)
+        ;
+
+        
+    
+    
+            circle_marker_dc532a1bb7ada810896a9a4d43cde7ba.bindTooltip(
+                `<div>
+                     Botanik
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbdf2427d9ae59dfb1edc99a4b2a8d9d = L.circleMarker(
+                [39.978, 32.6775],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_e0126a906610a01248b30c3f9381341c = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_981606e875b6a91ec2f3ca2a6f55eef0 = $(`<div id="html_981606e875b6a91ec2f3ca2a6f55eef0" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">İstanbul Yolu</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_e0126a906610a01248b30c3f9381341c.setContent(html_981606e875b6a91ec2f3ca2a6f55eef0);
+            
+        
+
+        circle_marker_fbdf2427d9ae59dfb1edc99a4b2a8d9d.bindPopup(popup_e0126a906610a01248b30c3f9381341c)
+        ;
+
+        
+    
+    
+            circle_marker_fbdf2427d9ae59dfb1edc99a4b2a8d9d.bindTooltip(
+                `<div>
+                     İstanbul Yolu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0e1d712e357d48aa856865eb01ec2e4 = L.circleMarker(
+                [39.9741, 32.6577],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_92d0285c566df41c0808bb491f085b49 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_31a827de5c41c824e0ab67e6df0a0c6d = $(`<div id="html_31a827de5c41c824e0ab67e6df0a0c6d" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Eryaman 1-2</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_92d0285c566df41c0808bb491f085b49.setContent(html_31a827de5c41c824e0ab67e6df0a0c6d);
+            
+        
+
+        circle_marker_c0e1d712e357d48aa856865eb01ec2e4.bindPopup(popup_92d0285c566df41c0808bb491f085b49)
+        ;
+
+        
+    
+    
+            circle_marker_c0e1d712e357d48aa856865eb01ec2e4.bindTooltip(
+                `<div>
+                     Eryaman 1-2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14994e4d3ec62c0c0b2b2eeaf1b17ea5 = L.circleMarker(
+                [39.9698, 32.6371],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_1cee9b799de277987a94c658cbe5ec46 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_aaddef204342d66237a09ad55ec2e1c0 = $(`<div id="html_aaddef204342d66237a09ad55ec2e1c0" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Eryaman 5</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_1cee9b799de277987a94c658cbe5ec46.setContent(html_aaddef204342d66237a09ad55ec2e1c0);
+            
+        
+
+        circle_marker_14994e4d3ec62c0c0b2b2eeaf1b17ea5.bindPopup(popup_1cee9b799de277987a94c658cbe5ec46)
+        ;
+
+        
+    
+    
+            circle_marker_14994e4d3ec62c0c0b2b2eeaf1b17ea5.bindTooltip(
+                `<div>
+                     Eryaman 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7ecabf8d41abd92d819a84850a9bb15 = L.circleMarker(
+                [39.9661, 32.616],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_2c9f2563b4b0c76bf9c7d0b814ae028e = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_9cb76a02cb3d27cf099b206b786d8374 = $(`<div id="html_9cb76a02cb3d27cf099b206b786d8374" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Devlet Mah.</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_2c9f2563b4b0c76bf9c7d0b814ae028e.setContent(html_9cb76a02cb3d27cf099b206b786d8374);
+            
+        
+
+        circle_marker_a7ecabf8d41abd92d819a84850a9bb15.bindPopup(popup_2c9f2563b4b0c76bf9c7d0b814ae028e)
+        ;
+
+        
+    
+    
+            circle_marker_a7ecabf8d41abd92d819a84850a9bb15.bindTooltip(
+                `<div>
+                     Devlet Mah.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ccd18d56ef3f65d09e8e8383f4506942 = L.circleMarker(
+                [39.9632, 32.5993],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_d41fc20a2cad57022c99149958272c85 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_97e7225c20c48a8b077ed0e0bf2695ef = $(`<div id="html_97e7225c20c48a8b077ed0e0bf2695ef" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Elvankent</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_d41fc20a2cad57022c99149958272c85.setContent(html_97e7225c20c48a8b077ed0e0bf2695ef);
+            
+        
+
+        circle_marker_ccd18d56ef3f65d09e8e8383f4506942.bindPopup(popup_d41fc20a2cad57022c99149958272c85)
+        ;
+
+        
+    
+    
+            circle_marker_ccd18d56ef3f65d09e8e8383f4506942.bindTooltip(
+                `<div>
+                     Elvankent
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1bce28aa40d975f9f8998fe5518c4b1 = L.circleMarker(
+                [39.9569, 32.5838],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_4a3061ca65b31f57530afaafbfdd0ade = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_98880beaff04a563eb772f3141e8dc5e = $(`<div id="html_98880beaff04a563eb772f3141e8dc5e" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Fatih</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_4a3061ca65b31f57530afaafbfdd0ade.setContent(html_98880beaff04a563eb772f3141e8dc5e);
+            
+        
+
+        circle_marker_d1bce28aa40d975f9f8998fe5518c4b1.bindPopup(popup_4a3061ca65b31f57530afaafbfdd0ade)
+        ;
+
+        
+    
+    
+            circle_marker_d1bce28aa40d975f9f8998fe5518c4b1.bindTooltip(
+                `<div>
+                     Fatih
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4888e6861834fab3e9cb57f302db1919 = L.circleMarker(
+                [39.9525, 32.5717],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_fed267507b970cc3492e1777da3ce4ab = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_050407bc9b93b2ca70a8e2c710b9c2ed = $(`<div id="html_050407bc9b93b2ca70a8e2c710b9c2ed" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#E63946">Sincan Belediyesi</b><br>                 <small>M1-M2-M3 Çayyolu-Batıkent-Sincan Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 331,526<br>                 🚇 Sefer: 320<br>                 📊 Doluluk: %64<br>                 💺 Kapasite: 515,138             </div></div>`)[0];
+                popup_fed267507b970cc3492e1777da3ce4ab.setContent(html_050407bc9b93b2ca70a8e2c710b9c2ed);
+            
+        
+
+        circle_marker_4888e6861834fab3e9cb57f302db1919.bindPopup(popup_fed267507b970cc3492e1777da3ce4ab)
+        ;
+
+        
+    
+    
+            circle_marker_4888e6861834fab3e9cb57f302db1919.bindTooltip(
+                `<div>
+                     Sincan Belediyesi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e85e3b1d63502b6fa14fe0a4fa1a39d8 = L.polyline(
+                [[39.9549, 32.8483], [39.9625, 32.8527], [39.9682, 32.8607], [39.9726, 32.869], [39.9815, 32.8699], [39.9888, 32.873], [39.9954, 32.8755], [40.0016, 32.8769], [40.0085, 32.8803]],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#457B9D", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_db5f42f668a3c0d133c0f1e3a17ab0c2 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_0a09fdfeaf764a82c2937e2c77254e9a = $(`<div id="html_0a09fdfeaf764a82c2937e2c77254e9a" style="width: 100.0%; height: 100.0%;"><b>M4 Keçiören Metro</b></div>`)[0];
+                popup_db5f42f668a3c0d133c0f1e3a17ab0c2.setContent(html_0a09fdfeaf764a82c2937e2c77254e9a);
+            
+        
+
+        poly_line_e85e3b1d63502b6fa14fe0a4fa1a39d8.bindPopup(popup_db5f42f668a3c0d133c0f1e3a17ab0c2)
+        ;
+
+        
+    
+    
+            var circle_marker_773ca8130ec0e3232ed12a708cd557d7 = L.circleMarker(
+                [39.9549, 32.8483],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_62aada94d37a6bc7d02dfe3957a7d47a = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b41b843b1b6deb66e920667eb08a84b8 = $(`<div id="html_b41b843b1b6deb66e920667eb08a84b8" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Atatürk Kültür Merkezi</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_62aada94d37a6bc7d02dfe3957a7d47a.setContent(html_b41b843b1b6deb66e920667eb08a84b8);
+            
+        
+
+        circle_marker_773ca8130ec0e3232ed12a708cd557d7.bindPopup(popup_62aada94d37a6bc7d02dfe3957a7d47a)
+        ;
+
+        
+    
+    
+            circle_marker_773ca8130ec0e3232ed12a708cd557d7.bindTooltip(
+                `<div>
+                     Atatürk Kültür Merkezi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_637531785f74320e250358933f047ab0 = L.circleMarker(
+                [39.9625, 32.8527],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_542dc30613a6cb9eb33664efc1adb757 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_56a88864b956244f3cfb4574ee93642d = $(`<div id="html_56a88864b956244f3cfb4574ee93642d" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">ASKİ</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_542dc30613a6cb9eb33664efc1adb757.setContent(html_56a88864b956244f3cfb4574ee93642d);
+            
+        
+
+        circle_marker_637531785f74320e250358933f047ab0.bindPopup(popup_542dc30613a6cb9eb33664efc1adb757)
+        ;
+
+        
+    
+    
+            circle_marker_637531785f74320e250358933f047ab0.bindTooltip(
+                `<div>
+                     ASKİ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e870a9750933e8df1171707e4c4f658d = L.circleMarker(
+                [39.9682, 32.8607],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_3ba0d5fba9d5e893c69b5231e2a1750a = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_94ace32fa0e9afb574005801da44a8d2 = $(`<div id="html_94ace32fa0e9afb574005801da44a8d2" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Dışkapı</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_3ba0d5fba9d5e893c69b5231e2a1750a.setContent(html_94ace32fa0e9afb574005801da44a8d2);
+            
+        
+
+        circle_marker_e870a9750933e8df1171707e4c4f658d.bindPopup(popup_3ba0d5fba9d5e893c69b5231e2a1750a)
+        ;
+
+        
+    
+    
+            circle_marker_e870a9750933e8df1171707e4c4f658d.bindTooltip(
+                `<div>
+                     Dışkapı
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98f7a517c653485474902f08b4f1c4dd = L.circleMarker(
+                [39.9726, 32.869],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_6f3855a69b0ed12933ff46bcbae3e6d1 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_5cf60322ab83efbb6003ef464bc80588 = $(`<div id="html_5cf60322ab83efbb6003ef464bc80588" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Meteoroloji</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_6f3855a69b0ed12933ff46bcbae3e6d1.setContent(html_5cf60322ab83efbb6003ef464bc80588);
+            
+        
+
+        circle_marker_98f7a517c653485474902f08b4f1c4dd.bindPopup(popup_6f3855a69b0ed12933ff46bcbae3e6d1)
+        ;
+
+        
+    
+    
+            circle_marker_98f7a517c653485474902f08b4f1c4dd.bindTooltip(
+                `<div>
+                     Meteoroloji
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0274464abe7eff1cebdf204f3c4e43d3 = L.circleMarker(
+                [39.9815, 32.8699],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_8cba599b5b0d0db51e97bb1214a6ea7b = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3076de8333946d92e151a186db868aae = $(`<div id="html_3076de8333946d92e151a186db868aae" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Belediye</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_8cba599b5b0d0db51e97bb1214a6ea7b.setContent(html_3076de8333946d92e151a186db868aae);
+            
+        
+
+        circle_marker_0274464abe7eff1cebdf204f3c4e43d3.bindPopup(popup_8cba599b5b0d0db51e97bb1214a6ea7b)
+        ;
+
+        
+    
+    
+            circle_marker_0274464abe7eff1cebdf204f3c4e43d3.bindTooltip(
+                `<div>
+                     Belediye
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_466cd0d6d3d8c003700d734a671dac96 = L.circleMarker(
+                [39.9888, 32.873],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_8fd1d36a596a7f177e97df9e2e9854d3 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_aeb47f459498ae5389f764d2f3c72ae8 = $(`<div id="html_aeb47f459498ae5389f764d2f3c72ae8" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Mecidiye</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_8fd1d36a596a7f177e97df9e2e9854d3.setContent(html_aeb47f459498ae5389f764d2f3c72ae8);
+            
+        
+
+        circle_marker_466cd0d6d3d8c003700d734a671dac96.bindPopup(popup_8fd1d36a596a7f177e97df9e2e9854d3)
+        ;
+
+        
+    
+    
+            circle_marker_466cd0d6d3d8c003700d734a671dac96.bindTooltip(
+                `<div>
+                     Mecidiye
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74b52f51390411f6dab936800c9e3cdc = L.circleMarker(
+                [39.9954, 32.8755],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_1108f5a9198dcc0e63365b841d39d955 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_54ab6b24c106d25aa5fb63d47e377a60 = $(`<div id="html_54ab6b24c106d25aa5fb63d47e377a60" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Kuyubaşı</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_1108f5a9198dcc0e63365b841d39d955.setContent(html_54ab6b24c106d25aa5fb63d47e377a60);
+            
+        
+
+        circle_marker_74b52f51390411f6dab936800c9e3cdc.bindPopup(popup_1108f5a9198dcc0e63365b841d39d955)
+        ;
+
+        
+    
+    
+            circle_marker_74b52f51390411f6dab936800c9e3cdc.bindTooltip(
+                `<div>
+                     Kuyubaşı
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed87c73a9eedd88734cc352804490654 = L.circleMarker(
+                [40.0016, 32.8769],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_33f6ebba8f070bec740bee9717163831 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_665adbaac048ee2cdad9fdf4f0478b36 = $(`<div id="html_665adbaac048ee2cdad9fdf4f0478b36" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Dutluk</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_33f6ebba8f070bec740bee9717163831.setContent(html_665adbaac048ee2cdad9fdf4f0478b36);
+            
+        
+
+        circle_marker_ed87c73a9eedd88734cc352804490654.bindPopup(popup_33f6ebba8f070bec740bee9717163831)
+        ;
+
+        
+    
+    
+            circle_marker_ed87c73a9eedd88734cc352804490654.bindTooltip(
+                `<div>
+                     Dutluk
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a5e76c7b0e7256cbf35480a4cb5d3f9 = L.circleMarker(
+                [40.0085, 32.8803],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_a3c7e67bc9bbd7e5827cf2f3d7c7e246 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_746ad5a509aa27867a495e4ddcf7276c = $(`<div id="html_746ad5a509aa27867a495e4ddcf7276c" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#457B9D">Şehitler</b><br>                 <small>M4 Keçiören Metro</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 39,691<br>                 🚇 Sefer: 218<br>                 📊 Doluluk: %11<br>                 💺 Kapasite: 351,450             </div></div>`)[0];
+                popup_a3c7e67bc9bbd7e5827cf2f3d7c7e246.setContent(html_746ad5a509aa27867a495e4ddcf7276c);
+            
+        
+
+        circle_marker_6a5e76c7b0e7256cbf35480a4cb5d3f9.bindPopup(popup_a3c7e67bc9bbd7e5827cf2f3d7c7e246)
+        ;
+
+        
+    
+    
+            circle_marker_6a5e76c7b0e7256cbf35480a4cb5d3f9.bindTooltip(
+                `<div>
+                     Şehitler
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_544753ec4d165995877a1330ac6f2673 = L.polyline(
+                [[39.9095, 32.8139], [39.9116, 32.8228], [39.9139, 32.8321], [39.9153, 32.8381], [39.9177, 32.847], [39.9205, 32.8537], [39.9226, 32.8567], [39.9214, 32.8537], [39.9212, 32.865], [39.9209, 32.8755], [39.922, 32.8855]],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2A9D8F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_9047659e257d07889b04c1f4dd8182c7 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_05b5b0db70341a71b41350cb03f1a5c8 = $(`<div id="html_05b5b0db70341a71b41350cb03f1a5c8" style="width: 100.0%; height: 100.0%;"><b>A1 Ankaray</b></div>`)[0];
+                popup_9047659e257d07889b04c1f4dd8182c7.setContent(html_05b5b0db70341a71b41350cb03f1a5c8);
+            
+        
+
+        poly_line_544753ec4d165995877a1330ac6f2673.bindPopup(popup_9047659e257d07889b04c1f4dd8182c7)
+        ;
+
+        
+    
+    
+            var circle_marker_20faa848417031a467dc6c4c762e37cd = L.circleMarker(
+                [39.9095, 32.8139],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_04fe1dfab24cd085bd09a8d67040bd73 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_ad0a405004b4a7252e73a805dff3f28b = $(`<div id="html_ad0a405004b4a7252e73a805dff3f28b" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">AŞTİ</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_04fe1dfab24cd085bd09a8d67040bd73.setContent(html_ad0a405004b4a7252e73a805dff3f28b);
+            
+        
+
+        circle_marker_20faa848417031a467dc6c4c762e37cd.bindPopup(popup_04fe1dfab24cd085bd09a8d67040bd73)
+        ;
+
+        
+    
+    
+            circle_marker_20faa848417031a467dc6c4c762e37cd.bindTooltip(
+                `<div>
+                     AŞTİ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3ee12ddc3a3d50890e2e3cd9aab43ad = L.circleMarker(
+                [39.9116, 32.8228],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_b5915ef3ae8c148f5d97ce5c4a407c98 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_83fb9ad9066db20c23b6403912d30932 = $(`<div id="html_83fb9ad9066db20c23b6403912d30932" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Emek</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_b5915ef3ae8c148f5d97ce5c4a407c98.setContent(html_83fb9ad9066db20c23b6403912d30932);
+            
+        
+
+        circle_marker_c3ee12ddc3a3d50890e2e3cd9aab43ad.bindPopup(popup_b5915ef3ae8c148f5d97ce5c4a407c98)
+        ;
+
+        
+    
+    
+            circle_marker_c3ee12ddc3a3d50890e2e3cd9aab43ad.bindTooltip(
+                `<div>
+                     Emek
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_727b20c85e37be4e9f36b970c1839c6b = L.circleMarker(
+                [39.9139, 32.8321],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_5ee25a2987aa71c7c00d9b186ad5239d = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_79d11109bf0570c1b8ceebdb90d61433 = $(`<div id="html_79d11109bf0570c1b8ceebdb90d61433" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Bahçelievler</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_5ee25a2987aa71c7c00d9b186ad5239d.setContent(html_79d11109bf0570c1b8ceebdb90d61433);
+            
+        
+
+        circle_marker_727b20c85e37be4e9f36b970c1839c6b.bindPopup(popup_5ee25a2987aa71c7c00d9b186ad5239d)
+        ;
+
+        
+    
+    
+            circle_marker_727b20c85e37be4e9f36b970c1839c6b.bindTooltip(
+                `<div>
+                     Bahçelievler
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f66e7c69b312f2106133a52584485f0a = L.circleMarker(
+                [39.9153, 32.8381],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_a1f3f4f88b7a2625b606b9abc6cc0bd3 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_b575f65ac1c6ff91323ca304ff2af5c5 = $(`<div id="html_b575f65ac1c6ff91323ca304ff2af5c5" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Beşevler</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_a1f3f4f88b7a2625b606b9abc6cc0bd3.setContent(html_b575f65ac1c6ff91323ca304ff2af5c5);
+            
+        
+
+        circle_marker_f66e7c69b312f2106133a52584485f0a.bindPopup(popup_a1f3f4f88b7a2625b606b9abc6cc0bd3)
+        ;
+
+        
+    
+    
+            circle_marker_f66e7c69b312f2106133a52584485f0a.bindTooltip(
+                `<div>
+                     Beşevler
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc7e73820a1a3d89f7bb3463d033f858 = L.circleMarker(
+                [39.9177, 32.847],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_9b242ff764661584bc3109889cd4d057 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_e3ae195421dc611aee8889dc2e96e92f = $(`<div id="html_e3ae195421dc611aee8889dc2e96e92f" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Anadolu</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_9b242ff764661584bc3109889cd4d057.setContent(html_e3ae195421dc611aee8889dc2e96e92f);
+            
+        
+
+        circle_marker_cc7e73820a1a3d89f7bb3463d033f858.bindPopup(popup_9b242ff764661584bc3109889cd4d057)
+        ;
+
+        
+    
+    
+            circle_marker_cc7e73820a1a3d89f7bb3463d033f858.bindTooltip(
+                `<div>
+                     Anadolu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10fa1a5ef2197d2296df470907edad47 = L.circleMarker(
+                [39.9205, 32.8537],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_0455b54e38f4d8ce15897f70ef9bb2de = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_1cd23ade277d0f92fcde2672614b51bc = $(`<div id="html_1cd23ade277d0f92fcde2672614b51bc" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Maltepe</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_0455b54e38f4d8ce15897f70ef9bb2de.setContent(html_1cd23ade277d0f92fcde2672614b51bc);
+            
+        
+
+        circle_marker_10fa1a5ef2197d2296df470907edad47.bindPopup(popup_0455b54e38f4d8ce15897f70ef9bb2de)
+        ;
+
+        
+    
+    
+            circle_marker_10fa1a5ef2197d2296df470907edad47.bindTooltip(
+                `<div>
+                     Maltepe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3f2005ecda7634fe3a5ec113b0808a2 = L.circleMarker(
+                [39.9226, 32.8567],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_6f55bccb96b818103c9ff072ca9a57db = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_7f8edcdf0bafe15fd35a8234d1c8ee51 = $(`<div id="html_7f8edcdf0bafe15fd35a8234d1c8ee51" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Demirtepe</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_6f55bccb96b818103c9ff072ca9a57db.setContent(html_7f8edcdf0bafe15fd35a8234d1c8ee51);
+            
+        
+
+        circle_marker_c3f2005ecda7634fe3a5ec113b0808a2.bindPopup(popup_6f55bccb96b818103c9ff072ca9a57db)
+        ;
+
+        
+    
+    
+            circle_marker_c3f2005ecda7634fe3a5ec113b0808a2.bindTooltip(
+                `<div>
+                     Demirtepe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df4a8d7538e0be610d2054423090419f = L.circleMarker(
+                [39.9214, 32.8537],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_73473948061104229dc1b9490c8580ae = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3dcfd87ef7520e509f3e955a78dd2a96 = $(`<div id="html_3dcfd87ef7520e509f3e955a78dd2a96" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Kızılay</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_73473948061104229dc1b9490c8580ae.setContent(html_3dcfd87ef7520e509f3e955a78dd2a96);
+            
+        
+
+        circle_marker_df4a8d7538e0be610d2054423090419f.bindPopup(popup_73473948061104229dc1b9490c8580ae)
+        ;
+
+        
+    
+    
+            circle_marker_df4a8d7538e0be610d2054423090419f.bindTooltip(
+                `<div>
+                     Kızılay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90f0775e574cb20423f6204582e75b63 = L.circleMarker(
+                [39.9212, 32.865],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_151b11406cc84baa47594d8b6946af35 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_6d96e81d8c7b449198f04a5d8bcb99c5 = $(`<div id="html_6d96e81d8c7b449198f04a5d8bcb99c5" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Kolej</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_151b11406cc84baa47594d8b6946af35.setContent(html_6d96e81d8c7b449198f04a5d8bcb99c5);
+            
+        
+
+        circle_marker_90f0775e574cb20423f6204582e75b63.bindPopup(popup_151b11406cc84baa47594d8b6946af35)
+        ;
+
+        
+    
+    
+            circle_marker_90f0775e574cb20423f6204582e75b63.bindTooltip(
+                `<div>
+                     Kolej
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45a9b45eace3a2e8b86bfc37252e4aa1 = L.circleMarker(
+                [39.9209, 32.8755],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_c02c2dc53b2e0b703a43e9d95d7708ff = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d4138f7c62a96115d1df9f357f3c80c3 = $(`<div id="html_d4138f7c62a96115d1df9f357f3c80c3" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Kurtuluş</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_c02c2dc53b2e0b703a43e9d95d7708ff.setContent(html_d4138f7c62a96115d1df9f357f3c80c3);
+            
+        
+
+        circle_marker_45a9b45eace3a2e8b86bfc37252e4aa1.bindPopup(popup_c02c2dc53b2e0b703a43e9d95d7708ff)
+        ;
+
+        
+    
+    
+            circle_marker_45a9b45eace3a2e8b86bfc37252e4aa1.bindTooltip(
+                `<div>
+                     Kurtuluş
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7aee29e590adf9acce6da79a805f6125 = L.circleMarker(
+                [39.922, 32.8855],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_ac0b360fa17fecd4f60c8f58915ac912 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_8acb9652e492183cac88d676904c25d7 = $(`<div id="html_8acb9652e492183cac88d676904c25d7" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#2A9D8F">Dikimevi</b><br>                 <small>A1 Ankaray</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 105,978<br>                 🚇 Sefer: 174<br>                 📊 Doluluk: %61<br>                 💺 Kapasite: 171,801             </div></div>`)[0];
+                popup_ac0b360fa17fecd4f60c8f58915ac912.setContent(html_8acb9652e492183cac88d676904c25d7);
+            
+        
+
+        circle_marker_7aee29e590adf9acce6da79a805f6125.bindPopup(popup_ac0b360fa17fecd4f60c8f58915ac912)
+        ;
+
+        
+    
+    
+            circle_marker_7aee29e590adf9acce6da79a805f6125.bindTooltip(
+                `<div>
+                     Dikimevi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3a226462e30ff775ce76b753bbdd7775 = L.polyline(
+                [[39.9783, 32.8081], [39.995, 32.795]],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F4A261", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_f3a24e4a78364432e775b20a6dadb8d8 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_3c012547853f1c0ac7a823a63be46b37 = $(`<div id="html_3c012547853f1c0ac7a823a63be46b37" style="width: 100.0%; height: 100.0%;"><b>T1 Teleferik</b></div>`)[0];
+                popup_f3a24e4a78364432e775b20a6dadb8d8.setContent(html_3c012547853f1c0ac7a823a63be46b37);
+            
+        
+
+        poly_line_3a226462e30ff775ce76b753bbdd7775.bindPopup(popup_f3a24e4a78364432e775b20a6dadb8d8)
+        ;
+
+        
+    
+    
+            var circle_marker_95327e7d06041852190991f1a36e6e70 = L.circleMarker(
+                [39.9783, 32.8081],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_1c87eb80e36c6a3a0605777c7bbbb1af = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_4d40b18353ee7633ccb0ab4ff7b492c3 = $(`<div id="html_4d40b18353ee7633ccb0ab4ff7b492c3" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#F4A261">Yenimahalle</b><br>                 <small>T1 Teleferik</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 2,248<br>                 🚇 Sefer: 31<br>                 📊 Doluluk: %37<br>                 💺 Kapasite: 23,967             </div></div>`)[0];
+                popup_1c87eb80e36c6a3a0605777c7bbbb1af.setContent(html_4d40b18353ee7633ccb0ab4ff7b492c3);
+            
+        
+
+        circle_marker_95327e7d06041852190991f1a36e6e70.bindPopup(popup_1c87eb80e36c6a3a0605777c7bbbb1af)
+        ;
+
+        
+    
+    
+            circle_marker_95327e7d06041852190991f1a36e6e70.bindTooltip(
+                `<div>
+                     Yenimahalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92c8db161eb4586a971b55f5beb8e662 = L.circleMarker(
+                [39.995, 32.795],
+                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1adf78886fcdcd4edb56c41d0009ce9d);
+        
+    
+        var popup_ed34012e8a7ab188cceb2e5d52e8cba9 = L.popup({
+  "maxWidth": 250,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_1536a5b2f2aa38ea7ff25d942135226c = $(`<div id="html_1536a5b2f2aa38ea7ff25d942135226c" style="width: 100.0%; height: 100.0%;">             <div style="font-family:Arial;min-width:200px;">                 <b style="color:#F4A261">Şentepe</b><br>                 <small>T1 Teleferik</small><hr>                 <b>Günlük Ortalama:</b><br>                 👥 Yolcu: 2,248<br>                 🚇 Sefer: 31<br>                 📊 Doluluk: %37<br>                 💺 Kapasite: 23,967             </div></div>`)[0];
+                popup_ed34012e8a7ab188cceb2e5d52e8cba9.setContent(html_1536a5b2f2aa38ea7ff25d942135226c);
+            
+        
+
+        circle_marker_92c8db161eb4586a971b55f5beb8e662.bindPopup(popup_ed34012e8a7ab188cceb2e5d52e8cba9)
+        ;
+
+        
+    
+    
+            circle_marker_92c8db161eb4586a971b55f5beb8e662.bindTooltip(
+                `<div>
+                     Şentepe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

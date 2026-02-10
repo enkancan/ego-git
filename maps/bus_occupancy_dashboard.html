@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EGO Otobüs - Doluluk Oranı Analizi</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap; }
+        .stat-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; min-width: 180px; margin: 10px; }
+        .stat-number { font-size: 36px; font-weight: bold; color: #3498db; }
+        .stat-label { font-size: 14px; color: #7f8c8d; margin-top: 5px; }
+        .links { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .links h2 { color: #2c3e50; }
+        .links a { display: block; padding: 10px; margin: 5px 0; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+        .links a:hover { background: #2980b9; }
+        .warning { background: #e74c3c; color: white; padding: 15px; margin: 20px 0; border-radius: 8px; }
+        .info { background: #ecf0f1; padding: 15px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #3498db; }
+        .red { color: #e74c3c; }
+        .orange { color: #e67e22; }
+        .green { color: #27ae60; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚌 EGO Otobüs - Doluluk Oranı Analizi</h1>
+        <p>1km x 1km Grid Bazlı - Sadece Otobüs Hatları (Metro Hariç)</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number">1,382</div>
+            <div class="stat-label">Grid Hücresi</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">38.1%</div>
+            <div class="stat-label">Ortalama Doluluk</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number red">2</div>
+            <div class="stat-label">Çok Yoğun (>85%)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number orange">9</div>
+            <div class="stat-label">Yoğun (70-85%)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number green">1371</div>
+            <div class="stat-label">Normal (<70%)</div>
+        </div>
+    </div>
+
+    <div class="links">
+        <h2>🗺️ İnteraktif Haritalar</h2>
+        <a href="interactive_grid_bus_occupancy.html" target="_blank">
+            🚌 Otobüs Doluluk Oranı Haritası (1km Grid)
+        </a>
+    </div>
+
+    <div class="links">
+        <h2>📊 İnteraktif Analizler</h2>
+        <a href="interactive_top20_bus_occupancy.html" target="_blank">
+            📊 En Yoğun 20 Grid Hücresi
+        </a>
+        <a href="interactive_bus_occupancy_distribution.html" target="_blank">
+            📉 Doluluk Oranı Dağılımı
+        </a>
+        <a href="interactive_scatter_bus_occupancy.html" target="_blank">
+            📈 Yolcu Sayısı vs Doluluk Oranı
+        </a>
+    </div>
+
+    <div class="warning">
+        <h3>⚠️ Kritik Yoğun Bölgeler (Doluluk >85%)</h3>
+        <p>Bu bölgelerde otobüsler aşırı dolu. Ek araç ya da sefer gerekebilir:</p>
+        <p><strong>•</strong> (39.973, 32.918) - <strong>91.2%</strong> doluluk, 1.0 durak, 56 yolcu/gün</p>
+        <p><strong>•</strong> (39.982, 32.918) - <strong>91.2%</strong> doluluk, 8.0 durak, 451 yolcu/gün</p>
+
+    </div>
+
+    <div class="info">
+        <h3>ℹ️ Doluluk Oranı Açıklaması</h3>
+        <p><strong>Doluluk Oranı:</strong> Otobüsteki yolcu sayısının araç kapasitesine oranı</p>
+        <p><strong><70%:</strong> Normal doluluk - rahat yolculuk</p>
+        <p><strong>70-85%:</strong> Yoğun - yolcular ayakta olabilir</p>
+        <p><strong>>85%:</strong> Çok yoğun - kapasite aşımı riski</p>
+        <p><strong>Grid Boyutu:</strong> 1km x 1km</p>
+        <p><strong>Not:</strong> Bu analiz sadece otobüs hatlarını içerir, metro dahil değildir</p>
+    </div>
+
+    <div class="links">
+        <h2>🏆 En Yoğun 15 Grid Hücresi</h2>
+        <p><strong>900.</strong> (39.973, 32.918) - <span class="red"><strong>91.2%</strong></span> (Cok Yogun), 1.0 durak</p>
+        <p><strong>942.</strong> (39.982, 32.918) - <span class="red"><strong>91.2%</strong></span> (Cok Yogun), 8.0 durak</p>
+        <p><strong>482.</strong> (39.865, 32.729) - <span class="orange"><strong>80.8%</strong></span> (Yogun), 4.0 durak</p>
+        <p><strong>534.</strong> (39.883, 32.729) - <span class="orange"><strong>80.8%</strong></span> (Yogun), 2.0 durak</p>
+        <p><strong>459.</strong> (39.856, 32.765) - <span class="orange"><strong>77.0%</strong></span> (Yogun), 1.0 durak</p>
+        <p><strong>1090.</strong> (40.027, 32.741) - <span class="orange"><strong>73.9%</strong></span> (Yogun), 3.0 durak</p>
+        <p><strong>1091.</strong> (40.027, 32.753) - <span class="orange"><strong>73.9%</strong></span> (Yogun), 10.0 durak</p>
+        <p><strong>1118.</strong> (40.036, 32.741) - <span class="orange"><strong>73.9%</strong></span> (Yogun), 1.0 durak</p>
+        <p><strong>1087.</strong> (40.027, 32.682) - <span class="orange"><strong>71.0%</strong></span> (Yogun), 13.0 durak</p>
+        <p><strong>684.</strong> (39.928, 32.600) - <span class="orange"><strong>70.6%</strong></span> (Yogun), 1.0 durak</p>
+        <p><strong>993.</strong> (40.000, 32.588) - <span class="orange"><strong>70.5%</strong></span> (Yogun), 4.0 durak</p>
+        <p><strong>964.</strong> (39.991, 32.706) - <span class="green"><strong>68.3%</strong></span> (Normal), 21.0 durak</p>
+        <p><strong>994.</strong> (40.000, 32.600) - <span class="green"><strong>68.2%</strong></span> (Normal), 43.0 durak</p>
+        <p><strong>899.</strong> (39.973, 32.906) - <span class="green"><strong>67.4%</strong></span> (Normal), 21.0 durak</p>
+        <p><strong>918.</strong> (39.982, 32.624) - <span class="green"><strong>67.0%</strong></span> (Normal), 29.0 durak</p>
+
+    </div>
+</body>
+</html>

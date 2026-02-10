@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Anomaly & Regime Shift Analysis</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                   color: white; padding: 30px; text-align: center; border-radius: 10px; }
+        .header h1 { margin: 0; font-size: 32px; }
+        .header p { margin: 5px 0 0 0; font-size: 16px; opacity: 0.9; }
+        .stats { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; }
+        .stat-box { background: white; padding: 25px; border-radius: 10px;
+                     box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center;
+                     min-width: 180px; margin: 10px; }
+        .stat-number { font-size: 42px; font-weight: bold; margin-bottom: 5px; }
+        .stat-label { font-size: 14px; color: #7f8c8d; }
+        .red { color: #e74c3c; }
+        .orange { color: #f39c12; }
+        .blue { color: #3498db; }
+        .purple { color: #8e44ad; }
+        .section { background: white; padding: 25px; margin: 20px 0; border-radius: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .section h2 { color: #2c3e50; margin-top: 0; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; }
+        .links a { display: block; padding: 12px 20px; margin: 8px 0; background: #3498db;
+                    color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; }
+        .links a:hover { background: #2980b9; transform: translateX(5px); }
+        .info { background: #ecf0f1; padding: 20px; margin: 20px 0; border-radius: 8px;
+                 border-left: 4px solid #3498db; }
+        .warning { background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 8px;
+                    border-left: 4px solid #f39c12; }
+        .critical { background: #f8d7da; padding: 20px; margin: 20px 0; border-radius: 8px;
+                     border-left: 4px solid #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Grid Anomaly & Regime Shift Analysis</h1>
+        <p>Hizmet-Talep Uyuşmazlığı ve Temporal İstikrarsızlık Analizi</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number">1382</div>
+            <div class="stat-label">Toplam Grid</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number orange">46</div>
+            <div class="stat-label">Anomali (Uyuşmazlık)</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number blue">102</div>
+            <div class="stat-label">Rejim Kayması</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number red">13</div>
+            <div class="stat-label">KRİTİK (Her İkisi)</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🗺️ İnteraktif Haritalar</h2>
+        <div class="links">
+            <a href="grid_anomaly_map.html" target="_blank">
+                🔴 Anomaly Detection Map (Hizmet-Talep Uyuşmazlığı)
+            </a>
+            <a href="grid_regime_shift_map.html" target="_blank">
+                🔵 Regime Shift Map (Temporal İstikrarsızlık)
+            </a>
+            <a href="grid_critical_map.html" target="_blank">
+                ⚠️ Critical Grids Map (Anomali + Rejim Kayması)
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📊 İnteraktif Analizler</h2>
+        <div class="links">
+            <a href="anomaly_methods_comparison.html" target="_blank">
+                📊 Anomaly Method Comparison
+            </a>
+            <a href="anomaly_score_distributions.html" target="_blank">
+                📈 Anomaly Score Distributions
+            </a>
+            <a href="regime_shift_distribution.html" target="_blank">
+                🥧 Regime Shift Distribution
+            </a>
+            <a href="instability_vs_anomaly_scatter.html" target="_blank">
+                🔍 Instability vs Anomaly Scatter
+            </a>
+            <a href="top20_critical_grids.html" target="_blank">
+                🏆 Top 20 Critical Grids
+            </a>
+        </div>
+    </div>
+
+    <div class="critical">
+        <h3>⚠️ KRİTİK BULGULAR</h3>
+        <p><strong>13 grid</strong> hem hizmet-talep uyuşmazlığı hem de temporal istikrarsızlık gösteriyor.</p>
+        <p>Bu gridler:</p>
+        <ul>
+            <li>Sistemin "normal" kabul ettiği talep-hizmet ilişkisine uymuyorlar</li>
+            <li>Günler boyunca tutarsız davranış sergiliyorlar (rejim kayması)</li>
+            <li>Öncelikli müdahale gerektiriyorlar</li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <h3>ℹ️ METODOLOJI</h3>
+        <h4>Bölüm 1: Hizmet-Talep Uyuşmazlığı (Unsupervised Anomaly Detection)</h4>
+        <p><strong>Autoencoder (PCA):</strong> Sistemin "normal" talep-hizmet ilişkisini öğrenir. Yüksek reconstruction error = uyumsuzluk</p>
+        <p><strong>Isolation Forest:</strong> Çok boyutlu uzayda izole gridleri tespit eder</p>
+        <p><strong>Local Outlier Factor (LOF):</strong> Benzer gridlere göre anormal olanları bulur</p>
+        <p><strong>Graph-based:</strong> Komşu gridlerle karşılaştırarak mekânsal uyumsuzlukları ortaya çıkarır</p>
+
+        <h4>Bölüm 2: Rejim Kayması (Temporal Stability Analysis)</h4>
+        <p><strong>Embedding Stability:</strong> Her gridin günlük embedding'leri arasındaki mesafeyi ölçer. Yüksek mesafe = istikrarsızlık</p>
+        <p><strong>Daily Clustering:</strong> Her gün gridleri kümeler, küme değişim oranını hesaplar. Sık değişim = rejim kayması</p>
+    </div>
+
+    <div class="warning">
+        <h3>💡 YORUMLAMA</h3>
+        <p><strong>Anomali:</strong> Grid'in talep-hizmet dengesi sistemin normu dışında</p>
+        <p><strong>Rejim Kayması:</strong> Grid aynı mekân olmasına rağmen, sistemin temsil uzayında stabil değil</p>
+        <p><strong>Kritik Grid:</strong> Hem uyumsuz hem istikrarsız - makine semiyotiği açısından eşik problemi</p>
+        <p style="margin-top:15px;"><em>"Sistem aynı mekânı her gün farklı bir kategoriye itiyor"</em></p>
+    </div>
+
+    <div class="section">
+        <h2>📁 Veri Dosyaları</h2>
+        <ul>
+            <li><code>data/grid_anomaly_results.csv</code> - Anomaly detection sonuçları</li>
+            <li><code>data/grid_regime_shift_results.csv</code> - Regime shift sonuçları</li>
+            <li><code>data/grid_combined_analysis.csv</code> - Birleştirilmiş analiz</li>
+        </ul>
+    </div>
+</body>
+</html>

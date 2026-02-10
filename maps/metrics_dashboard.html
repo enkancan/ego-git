@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EGO Ulaşım - Sefer ve Kapasite Analizi</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap; }
+        .stat-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; min-width: 200px; margin: 10px; }
+        .stat-number { font-size: 36px; font-weight: bold; color: #3498db; }
+        .stat-label { font-size: 14px; color: #7f8c8d; margin-top: 5px; }
+        .links { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .links h2 { color: #2c3e50; }
+        .links a { display: block; padding: 10px; margin: 5px 0; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+        .links a:hover { background: #2980b9; }
+        .info { background: #ecf0f1; padding: 15px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #3498db; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚌 EGO Ulaşım - Sefer Sayısı ve Araç Kapasitesi Analizi</h1>
+        <p>1km x 1km Grid Bazlı İnteraktif Görselleştirmeler</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number">1,410</div>
+            <div class="stat-label">Grid Hücresi</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">12,090</div>
+            <div class="stat-label">Toplam Sefer/Gün</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">9</div>
+            <div class="stat-label">Ortalama Sefer/Grid</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">2,984</div>
+            <div class="stat-label">Ortalama Kapasite/Grid</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">49,199</div>
+            <div class="stat-label">Toplam Durak</div>
+        </div>
+    </div>
+
+    <div class="links">
+        <h2>🗺️ İnteraktif Grid Haritaları</h2>
+        <a href="interactive_grid_trip_count.html" target="_blank">
+            🚌 Sefer Sayısı Yoğunluk Haritası (1km Grid)
+        </a>
+        <a href="interactive_grid_capacity.html" target="_blank">
+            🚍 Araç Kapasitesi Yoğunluk Haritası (1km Grid)
+        </a>
+        <a href="interactive_transit_density.html" target="_blank">
+            👥 Yolcu Sayısı Yoğunluk Haritası (1km Grid)
+        </a>
+    </div>
+
+    <div class="links">
+        <h2>📊 İnteraktif Karşılaştırma Grafikleri</h2>
+        <a href="interactive_top20_trips.html" target="_blank">
+            📊 En Yoğun 20 Grid - Sefer Sayısı
+        </a>
+        <a href="interactive_top20_capacity.html" target="_blank">
+            📊 En Yüksek 20 Grid - Araç Kapasitesi
+        </a>
+        <a href="interactive_scatter_trips_capacity.html" target="_blank">
+            📈 Sefer vs Kapasite - Scatter Plot
+        </a>
+    </div>
+
+    <div class="info">
+        <h3>ℹ️ Metrik Açıklamaları</h3>
+        <p><strong>Sefer Sayısı:</strong> Her grid hücresindeki tüm hatların günlük toplam sefer sayısı</p>
+        <p><strong>Araç Kapasitesi:</strong> Yolcu sayısı ve doluluk oranından hesaplanan tahmini araç kapasitesi</p>
+        <p><strong>Normalizasyon:</strong> Z-score kullanılarak tüm grid hücreleri normalize edilmiştir</p>
+        <p><strong>Grid Boyutu:</strong> 1km x 1km (Ankara sınırları içinde)</p>
+    </div>
+
+    <div class="links">
+        <h2>🏆 En Yoğun 10 Grid Hücresi (Sefer Sayısı)</h2>
+        <p><strong>677.</strong> (39.919, 32.847) - 268 sefer/gün, 549 durak (Metro+Bus)</p>
+        <p><strong>710.</strong> (39.928, 32.847) - 256 sefer/gün, 763 durak (Metro+Bus)</p>
+        <p><strong>745.</strong> (39.937, 32.847) - 219 sefer/gün, 573 durak (Metro+Bus)</p>
+        <p><strong>781.</strong> (39.946, 32.847) - 143 sefer/gün, 431 durak (Metro+Bus)</p>
+        <p><strong>821.</strong> (39.955, 32.859) - 124 sefer/gün, 309 durak (Metro+Bus)</p>
+        <p><strong>712.</strong> (39.928, 32.871) - 120 sefer/gün, 270 durak (Metro+Bus)</p>
+        <p><strong>713.</strong> (39.928, 32.882) - 96 sefer/gün, 298 durak (Metro+Bus)</p>
+        <p><strong>955.</strong> (39.982, 32.871) - 93 sefer/gün, 110 durak (Metro+Bus)</p>
+        <p><strong>852.</strong> (39.964, 32.718) - 79 sefer/gün, 122 durak (Metro+Bus)</p>
+        <p><strong>711.</strong> (39.928, 32.859) - 79 sefer/gün, 241 durak (Metro+Bus)</p>
+
+    </div>
+
+    <div class="links">
+        <h2>🏆 En Yüksek 10 Grid Hücresi (Kapasite)</h2>
+        <p><strong>677.</strong> (39.919, 32.847) - 156,016 kapasite, 36.8% doluluk (Metro+Bus)</p>
+        <p><strong>609.</strong> (39.901, 32.741) - 108,084 kapasite, 21.9% doluluk (Metro+Bus)</p>
+        <p><strong>745.</strong> (39.937, 32.847) - 102,381 kapasite, 34.9% doluluk (Metro+Bus)</p>
+        <p><strong>710.</strong> (39.928, 32.847) - 94,888 kapasite, 38.2% doluluk (Metro+Bus)</p>
+        <p><strong>779.</strong> (39.946, 32.824) - 91,529 kapasite, 33.2% doluluk (Metro+Bus)</p>
+        <p><strong>854.</strong> (39.964, 32.741) - 90,058 kapasite, 19.8% doluluk (Metro+Bus)</p>
+        <p><strong>712.</strong> (39.928, 32.871) - 88,085 kapasite, 37.7% doluluk (Metro+Bus)</p>
+        <p><strong>816.</strong> (39.955, 32.800) - 81,030 kapasite, 31.7% doluluk (Metro+Bus)</p>
+        <p><strong>648.</strong> (39.910, 32.824) - 68,468 kapasite, 38.3% doluluk (Metro+Bus)</p>
+        <p><strong>674.</strong> (39.919, 32.812) - 67,426 kapasite, 49.9% doluluk (Metro+Bus)</p>
+
+    </div>
+</body>
+</html>
