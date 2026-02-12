@@ -1,0 +1,138 @@
+﻿osm_id,name,lat,lon,railway,station,line,network,operator
+412341358,Akköprü,39.9515913,32.834168,station,subway,,,
+412341361,Atatürk Kültür Merkezi,39.9435727,32.8451553,station,subway,,Ankara Metrosu,
+413398214,Macunköy,39.9718746,32.7666244,station,subway,,,
+610320351,Hastane,39.9691716,32.7834458,station,subway,,,
+610320358,Yenimahalle,39.9619089,32.8045448,station,subway,,,
+610320364,İvedik,39.9572395,32.8170492,station,subway,,,
+670243216,Sıhhiye,39.9281643,32.8550777,station,subway,,,
+670243519,Ulus,39.9392197,32.8506708,station,subway,,,
+670245629,Demetevler,39.9655407,32.7935884,station,subway,,,
+670246271,OSTİM,39.9702293,32.7449331,station,subway,,,
+670252468,Emek,39.9232031,32.8148986,station,subway,,,
+1339863753,Etimesgut,39.9492467,32.6630925,station,,,TR-railway,TCDD Taşımacılık
+1339958347,Özgüneş,39.9517529,32.6492715,station,,,TR-railway,TCDD Taşımacılık
+1437395978,Bahçelievler,39.9311256,32.8199646,station,subway,,,
+1437395982,Beşevler,39.9326548,32.8288782,station,subway,,,
+2400068302,Anadolu/Anıtkabir,39.9347287,32.8373663,station,subway,,,
+2588336390,Devlet Mahallesi/1910 Ankaragücü,39.9814919,32.6132155,stop,subway,,,
+2588336393,Eryaman 5,39.981109,32.6274057,station,subway,,,
+2588336399,İstanbul Yolu,39.9796442,32.6627671,station,subway,,,
+2588377331,Batı Merkez,39.9677059,32.7153974,station,subway,,,
+2588377342,Botanik,39.9807579,32.6941504,station,subway,,,
+2715588436,Ümitköy,39.9053491,32.7078663,station,subway,,,
+2715588449,Bilkent,39.907552,32.7654021,station,subway,,,
+2715588455,Beytepe,39.9062214,32.7332714,station,subway,,,
+2715588472,MTA,39.9088993,32.7963315,station,subway,,,
+2715588478,Koru,39.886843,32.6863129,station,subway,,,
+2715588508,ODTÜ,39.9083599,32.7845691,station,subway,,,
+2715588517,Tarım Bakanlığı-Danıştay,39.9069407,32.750084,station,subway,,,
+2722447843,Dikimevi,39.9325882,32.8780219,station,subway,,,EGO Genel Müdürlüğü
+2722447845,Kurtuluş,39.9283131,32.8684395,station,subway,,,
+2722494903,AŞTİ,39.9182467,32.8143741,station,subway,,,
+4347223415,Demirtepe,39.9257178,32.8476875,station,subway,,,
+4540821444,Kolej,39.9234186,32.861441,station,subway,,A1,Ankara Büyükşehir Belediyesi
+4544835059,Maltepe,39.9323856,32.8426667,station,subway,,,
+4592026953,Belediye,39.9779333,32.8682339,stop,subway,,,
+4592026960,Mecidiye,39.983749,32.8753776,stop,subway,,,
+4592030298,Kuyubaşı,39.9903583,32.8755143,stop,subway,,,
+4592030313,Duygu Eczanesi,39.9998417,32.8703296,stop,subway,,,
+4597987421,Dışkapı,39.955386,32.8587618,stop,subway,,,
+4597987424,ASKİ,39.9477148,32.8504913,stop,subway,,,
+5322442817,Mesa,39.9716935,32.7030788,station,subway,,,
+5377335269,Fatih,39.9840727,32.5853008,station,subway,,,
+5377342267,GOP,39.9855529,32.5743392,station,subway,,,
+5377342886,OSB-Törekent,39.9876684,32.5587016,station,subway,,,
+5388669628,Batıkent,39.9681734,32.7267398,station,subway,,,
+6080817083,Gazi,39.9403072,32.7963138,station,,,TR-railway,TCDD Taşımacılık
+6554580491,15 Temmuz Kızılay Millî İrade,39.920537,32.8539508,station,subway,,,
+6942688137,Yenişehir,39.9291091,32.857846,station,,,TR-railway,TCDD Taşımacılık
+6942688138,Kurtuluş,39.9288155,32.8678929,station,,,TR-railway,TCDD Taşımacılık
+6942688149,Cebeci,39.9332701,32.875965,station,,,TR-railway,TCDD Taşımacılık
+6942688150,Demirlibahçe,39.9400682,32.8831855,station,,,TR-railway,TCDD Taşımacılık
+6942688151,Saimekadın,39.9375596,32.8947918,station,,,TR-railway,TCDD Taşımacılık
+6942688152,Mamak,39.9313985,32.9116115,station,,,TR-railway,TCDD Taşımacılık
+6942688153,Bağderesi,39.9260014,32.9229894,station,,,TR-railway,TCDD Taşımacılık
+6942688154,Üreğil,39.9225045,32.9321733,station,,,TR-railway,TCDD Taşımacılık
+6981627649,Gazi Mahallesi,39.9440165,32.8125362,station,,,TR-railway,TCDD Taşımacılık
+6981627650,Motor,39.9342115,32.7784715,station,,,TR-railway,TCDD Taşımacılık
+6981627652,Behiçbey,39.9314992,32.7501306,station,,,TR-railway,TCDD Taşımacılık
+6981627663,Yıldırım,39.9323547,32.7045927,station,,,TR-railway,TCDD Taşımacılık
+6981627664,Hava,39.9420923,32.6883198,station,,,TR-railway,TCDD Taşımacılık
+6982425707,Eryaman,39.9557565,32.6302888,station,,,Türkiye Cumhuriyeti Devlet Demiryolları,TCDD Taşımacılık
+7481815085,Çayyolu,39.8978291,32.6910711,station,subway,,Metro-Çayyolu-Sincan,Ankara Büyükşehir Belediyesi
+7528826155,Hipodrom,39.9449971,32.8260009,station,,,TR-railway,TCDD Taşımacılık
+8004018090,Sincan,39.9645375,32.5839944,station,,,Türkiye Cumhuriyeti Devlet Demiryolları,TCDD Taşımacılık
+8004018093,Lale,39.9614599,32.5986952,station,,,TR-railway,TCDD Taşımacılık
+8004018096,Elvankent,39.958563,32.612193,station,,,Türkiye Cumhuriyeti Devlet Demiryolları,TCDD Taşımacılık
+8100388143,Batı Merkez,39.9677178,32.7153226,stop,subway,,,
+8100473444,Harikalar Diyarı,39.9822637,32.5984079,station,subway,,,
+8100504872,Devlet Mahallesi/1910 Ankaragücü,39.9815285,32.6132533,station,subway,,,
+8100531118,Eryaman 1-2,39.9805004,32.6478121,station,subway,,,
+8231524673,Necatibey,39.9150973,32.8443864,station,subway,,Sincan-Çayyolu Metro Line (Former M2),
+8231524677,Millî Kütüphane,39.9152297,32.8272158,station,subway,,Sincan-Çayyolu Metro Line (Former M2),
+8231524680,Söğütözü,39.910638,32.8081227,station,subway,,Sincan-Çayyolu Metro Line (Former M2),
+9261381500,ASKİ,39.9478098,32.8503224,stop,subway,,,
+9261381501,Dışkapı,39.9555083,32.8585713,stop,subway,,,
+9261381503,Belediye,39.9780784,32.8681769,stop,subway,,,
+9261381505,Mecidiye,39.9837613,32.8751775,stop,subway,,,
+9261381506,Kuyubaşı,39.9902911,32.8751242,stop,subway,,,
+9261381507,Dutluk,39.9995399,32.8704178,stop,subway,,,
+9261381509,Şehitler,39.9962226,32.8609972,station,subway,,M4,
+9261381510,ASKİ,39.9477975,32.8504836,station,subway,,Ankara Metrosu,
+9261381511,Dışkapı,39.9554587,32.8586755,station,subway,,M4,
+9261381512,Meteoroloji,39.9663951,32.8639206,station,subway,,M4,
+9261381513,Belediye,39.9779993,32.8682013,station,subway,,M4,
+9261381514,Mecidiye,39.9837526,32.8752968,station,subway,,M4,
+9261381515,Kuyubaşı,39.9903649,32.8753538,station,subway,,M4,
+9261381516,Dutluk,39.9997261,32.8703472,station,subway,,M4,EGO
+9747501490,Ankara,39.9359609,32.8434244,station,,,Türkiye Cumhuriyeti Devlet Demiryolları,TCDD Taşımacılık
+9828505028,Abidin Paşa,39.9296829,32.8883747,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505047,Aşık Veysel,39.9258988,32.8963022,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505072,Tuzluçayır,39.9235402,32.903569,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505087,General Zeki Doğan,39.9176302,32.9109723,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505134,Fahri Korutürk,39.911671,32.9160858,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505162,Cengizhan,39.901201,32.9190449,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505200,Akşemsettin,39.8958446,32.9241966,proposed,subway,,A2,EGO Genel Müdürlüğü
+9828505218,Natoyolu,39.8919347,32.9344054,proposed,subway,,A2,EGO Genel Müdürlüğü
+9834000455,Sanatoryum,40.003552,32.8534592,proposed,subway,,M4,
+9834000456,Ufuktepe,40.0145969,32.8583083,proposed,subway,,M4,
+9834000470,Forum,40.0150163,32.8347019,proposed,subway,,M4,
+9834000472,Ovacık,40.0194026,32.8476036,proposed,subway,,M4,
+9834000947,Esat,39.9093237,32.8597262,proposed,subway,,M5,
+9834000948,Kuğulu,39.9018111,32.8598307,proposed,subway,,M5,
+9834000950,Dikmen Vadisi,39.8967841,32.844129,proposed,subway,,M5,
+9834000951,Öveçler,39.8862183,32.8253992,proposed,subway,,M5,
+9834000952,Dikmen,39.8818995,32.8365507,proposed,subway,,M5,
+9834000953,Malazgirt,39.8726283,32.8312733,proposed,subway,,M5,
+9834000954,Keklik Pınarı,39.8681102,32.8219144,proposed,subway,,M5,
+9834000955,Akpınar,39.8585287,32.8150023,proposed,subway,,M5,
+9836027180,Gar,39.9339453,32.8425824,station,subway,,Ankara Metrosu,
+9836027181,Adliye,39.9305582,32.850394,station,subway,,Ankara Metrosu,
+9838414554,Konutkent,39.8785728,32.6754636,proposed,subway,,M2,
+9838414555,Yaşamkent Giriş,39.8726683,32.6479606,proposed,subway,,M2,
+9838414556,Yaşamkent Merkez,39.8608447,32.6439758,proposed,subway,,M2,
+9838414568,Başkent Üniversitesi,39.8838872,32.6575775,proposed,subway,,M2,
+9838414569,Bağlıca,39.8968362,32.6468463,proposed,subway,,M2,
+10724418208,Çetin Emeç,39.8954111,32.8312655,proposed,subway,,M5,
+11056845809,Ankara YHT Garı,39.9349345,32.843351,station,,,Türkiye Cumhuriyeti Devlet Demiryolları,TCDD Taşımacılık
+12453188227,Şapka Devrimi,39.9710341,32.6092331,proposed,subway,,M2,
+12453188232,Eryaman YHT,39.9551826,32.6302282,proposed,subway,,M2,
+12453188237,Ahi Evran,39.9394841,32.6389754,proposed,subway,,M2,
+12453188242,Alsancak,39.9300555,32.6547998,proposed,subway,,M2,
+12453188247,Ahi Mesut,39.9102455,32.6494178,proposed,subway,,M2,
+12748869525,İlkbahar Mahallesi,39.8565852,32.8527474,proposed,subway,,M5,
+13246774221,YHT Gar,39.9338447,32.8421572,proposed,subway,,,
+13246774222,Ankara Büyükşehir Belediyesi,39.940599,32.8365723,proposed,subway,,,
+13246774223,Ankamall,39.9505488,32.8338472,proposed,subway,,,
+13246774224,Etlik Şehir Hastanesi,39.9615335,32.82914,proposed,subway,,,
+13246774225,Antares,39.9696006,32.8252009,proposed,subway,,,
+13246774226,Etlik,39.9790201,32.8242736,proposed,subway,,,
+13246774227,Ayvalı,39.9878474,32.8196778,proposed,subway,,,
+13246774228,Ovacık,40.0042694,32.8236045,proposed,subway,,,
+13246774229,Ankara Forum,40.0134651,32.826611,proposed,subway,,,
+13368141522,Hastaneler İstasyonu,39.9309142,32.8590452,proposed,subway,,,
+13368141523,Demirlibahçe İstasyonu,39.9412737,32.8853542,proposed,subway,,,
+13368141524,Siteler İstasyonu,39.9608265,32.8967422,proposed,subway,,,
+13368141525,Güneşevler-Solfasol İstasyonu,39.972845,32.8878696,proposed,subway,,,
+13368141526,Kuyubaşı İstasyonu,39.9911233,32.876204,proposed,subway,,,

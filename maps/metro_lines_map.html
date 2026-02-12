@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_733b83525b6d4b2ab3cbbb627893445f {
+                #map_6eb79e0ff3b6fa9182d42e04d1f91967 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -38,39 +38,19 @@
 </head>
 <body>
     
-    <div style="position:fixed;top:10px;left:50%;transform:translateX(-50%);
-    z-index:9999;background:rgba(0,0,0,0.85);padding:14px 28px;border-radius:10px;
-    color:white;font-size:20px;font-weight:bold;font-family:Arial;
-    box-shadow:0 4px 12px rgba(0,0,0,0.4);">
-    🚇 Ankara Raylı Sistem Ağı</div>
+    <div style="position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(0,0,0,0.85);padding:14px 28px;border-radius:10px;color:white;font-size:20px;font-weight:bold;font-family:Arial;">Ankara Metro/Rail - OSM Coordinates</div>
+    <div style="position:fixed;bottom:20px;right:20px;z-index:9999;background:rgba(20,20,20,0.92);padding:16px;border-radius:10px;color:white;font-family:Arial;font-size:12px;line-height:1.7;"><b>Metro Hatlari (OSM)</b><br><span style="color:#E63946;">---</span> M1 Kizilay-Batikent<br><span style="color:#D62828;">---</span> M2 Kizilay-Koru<br><span style="color:#C1121F;">---</span> M3 Batikent-OSB<br><span style="color:#457B9D;">---</span> M4 Kecioren<br><span style="color:#2A9D8F;">---</span> A1 Ankaray</div>
     
-<div style="position:fixed;bottom:30px;right:30px;z-index:9999;
-    background:rgba(30,30,30,0.95);padding:18px;border-radius:10px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.5);font-size:13px;color:white;
-    font-family:Arial;line-height:1.7;">
-    <b style="font-size:15px;">🚇 Metro Hatları</b><br>
-    <span style="color:#E63946;">━━━</span> M1 Kızılay–Batıkent<br>
-    <span style="color:#D62828;">━━━</span> M2 Kızılay–Koru<br>
-    <span style="color:#C1121F;">━━━</span> M3 Batıkent–OSB<br>
-    <span style="color:#457B9D;">━━━</span> M4 Kızılay–Şehitler<br>
-    <span style="color:#2A9D8F;">━━━</span> A1 Ankaray<br>
-    <span style="color:#F4A261;">━━━</span> T1 Teleferik<br>
-    <hr style="border-color:#555;margin:6px 0;">
-    <span style="color:#FFD700;">●</span> Transfer &nbsp;
-    <span style="color:#E63946;">●</span> Terminal &nbsp;
-    ○ İstasyon
-</div>
-    
-            <div class="folium-map" id="map_733b83525b6d4b2ab3cbbb627893445f" ></div>
+            <div class="folium-map" id="map_6eb79e0ff3b6fa9182d42e04d1f91967" ></div>
         
 </body>
 <script>
     
     
-            var map_733b83525b6d4b2ab3cbbb627893445f = L.map(
-                "map_733b83525b6d4b2ab3cbbb627893445f",
+            var map_6eb79e0ff3b6fa9182d42e04d1f91967 = L.map(
+                "map_6eb79e0ff3b6fa9182d42e04d1f91967",
                 {
-                    center: [39.935, 32.79],
+                    center: [39.94, 32.8],
                     crs: L.CRS.EPSG3857,
                     ...{
   "maxBounds": null,
@@ -86,7 +66,7 @@
 
         
     
-            var tile_layer_b01221ed1540c70ecdf3d46a320f2335 = L.tileLayer(
+            var tile_layer_f8de4618111109e12f76609dc49d4421 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -103,37 +83,18 @@
             );
         
     
-            tile_layer_b01221ed1540c70ecdf3d46a320f2335.addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            tile_layer_f8de4618111109e12f76609dc49d4421.addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-            var poly_line_a5110477a09e46f3d146b1caafa8c0e5 = L.polyline(
-                [[39.9214, 32.8537], [39.9274, 32.8596], [39.9413, 32.857], [39.9549, 32.8483], [39.9621, 32.8437], [39.9728, 32.8168], [39.9783, 32.8081], [39.984, 32.7919], [39.9873, 32.7779], [39.9893, 32.7621], [39.9904, 32.7483], [39.9716, 32.7217]],
+            var poly_line_8f7a129472716d4c874037a9795c5979 = L.polyline(
+                [[39.920537, 32.8539508], [39.9281643, 32.8550777], [39.9392197, 32.8506708], [39.9435727, 32.8451553], [39.9515913, 32.834168], [39.9572395, 32.8170492], [39.9619089, 32.8045448], [39.9655407, 32.7935884], [39.9691716, 32.7834458], [39.9718746, 32.7666244], [39.9702293, 32.7449331], [39.9681734, 32.7267398]],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#E63946", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_4e6eebf6361940ce6fa16f7d8c9b0624 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_676dac8ebbcb329b1ddd21b9b0af3901 = $(`<div id="html_676dac8ebbcb329b1ddd21b9b0af3901" style="width: 100.0%; height: 100.0%;"><b>M1 Kızılay – Batıkent</b></div>`)[0];
-                popup_4e6eebf6361940ce6fa16f7d8c9b0624.setContent(html_676dac8ebbcb329b1ddd21b9b0af3901);
-            
-        
-
-        poly_line_a5110477a09e46f3d146b1caafa8c0e5.bindPopup(popup_4e6eebf6361940ce6fa16f7d8c9b0624)
-        ;
-
-        
-    
-    
-            poly_line_a5110477a09e46f3d146b1caafa8c0e5.bindTooltip(
+            poly_line_8f7a129472716d4c874037a9795c5979.bindTooltip(
                 `<div>
-                     M1 Kızılay – Batıkent
+                     M1
                  </div>`,
                 {
   "sticky": true,
@@ -141,34 +102,34 @@
             );
         
     
-            var circle_marker_a86236270d3dad00c6e1742d38f11d11 = L.circleMarker(
-                [39.9214, 32.8537],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_a0a8070efb607eedf0044e8d9df030a2 = L.circleMarker(
+                [39.920537, 32.8539508],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_241f47f687c13750fe8f96721759befe = L.popup({
-  "maxWidth": 280,
+        var popup_ccbe9108ddb138795c5aae2ffb5d51e6 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_896c91deb8edee3c13e8608cd5040b7a = $(`<div id="html_896c91deb8edee3c13e8608cd5040b7a" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Kızılay</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_241f47f687c13750fe8f96721759befe.setContent(html_896c91deb8edee3c13e8608cd5040b7a);
+                var html_031fb3c3d7a6ca0f64cb13c3d7cb16f8 = $(`<div id="html_031fb3c3d7a6ca0f64cb13c3d7cb16f8" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Kızılay</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_ccbe9108ddb138795c5aae2ffb5d51e6.setContent(html_031fb3c3d7a6ca0f64cb13c3d7cb16f8);
             
         
 
-        circle_marker_a86236270d3dad00c6e1742d38f11d11.bindPopup(popup_241f47f687c13750fe8f96721759befe)
+        circle_marker_a0a8070efb607eedf0044e8d9df030a2.bindPopup(popup_ccbe9108ddb138795c5aae2ffb5d51e6)
         ;
 
         
     
     
-            circle_marker_a86236270d3dad00c6e1742d38f11d11.bindTooltip(
+            circle_marker_a0a8070efb607eedf0044e8d9df030a2.bindTooltip(
                 `<div>
-                     🔄 Kızılay
+                     Kızılay
                  </div>`,
                 {
   "sticky": true,
@@ -176,32 +137,32 @@
             );
         
     
-            var circle_marker_ea98abc305e8249409fb351653d0da17 = L.circleMarker(
-                [39.9274, 32.8596],
+            var circle_marker_dea19e49142e032cefe668de38d8d297 = L.circleMarker(
+                [39.9281643, 32.8550777],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_3b1e54c536c80b5e621e5ffb8956128e = L.popup({
-  "maxWidth": 280,
+        var popup_1638210beade8822600632b0730840cd = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_934fbb111db7ad125e4194ea7ad4cc01 = $(`<div id="html_934fbb111db7ad125e4194ea7ad4cc01" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Sıhhiye</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_3b1e54c536c80b5e621e5ffb8956128e.setContent(html_934fbb111db7ad125e4194ea7ad4cc01);
+                var html_e21f59f468c306341ea6ab650ed1cbfa = $(`<div id="html_e21f59f468c306341ea6ab650ed1cbfa" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Sıhhiye</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_1638210beade8822600632b0730840cd.setContent(html_e21f59f468c306341ea6ab650ed1cbfa);
             
         
 
-        circle_marker_ea98abc305e8249409fb351653d0da17.bindPopup(popup_3b1e54c536c80b5e621e5ffb8956128e)
+        circle_marker_dea19e49142e032cefe668de38d8d297.bindPopup(popup_1638210beade8822600632b0730840cd)
         ;
 
         
     
     
-            circle_marker_ea98abc305e8249409fb351653d0da17.bindTooltip(
+            circle_marker_dea19e49142e032cefe668de38d8d297.bindTooltip(
                 `<div>
                      Sıhhiye
                  </div>`,
@@ -211,32 +172,32 @@
             );
         
     
-            var circle_marker_70c46bc0fd0eb1b7dec64b7d17cccf90 = L.circleMarker(
-                [39.9413, 32.857],
+            var circle_marker_dfdb864dbe76f4fd2eb565d173ae11e5 = L.circleMarker(
+                [39.9392197, 32.8506708],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_3eaa9b625e367ac31f191ae7001836fc = L.popup({
-  "maxWidth": 280,
+        var popup_33fde79888a978f113c1e410fe9bf934 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_a56bfb7fa261b9c255295cbe5b12c8c9 = $(`<div id="html_a56bfb7fa261b9c255295cbe5b12c8c9" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Ulus</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_3eaa9b625e367ac31f191ae7001836fc.setContent(html_a56bfb7fa261b9c255295cbe5b12c8c9);
+                var html_689b4fa23cbc6e2a39b6722baeaae635 = $(`<div id="html_689b4fa23cbc6e2a39b6722baeaae635" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Ulus</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_33fde79888a978f113c1e410fe9bf934.setContent(html_689b4fa23cbc6e2a39b6722baeaae635);
             
         
 
-        circle_marker_70c46bc0fd0eb1b7dec64b7d17cccf90.bindPopup(popup_3eaa9b625e367ac31f191ae7001836fc)
+        circle_marker_dfdb864dbe76f4fd2eb565d173ae11e5.bindPopup(popup_33fde79888a978f113c1e410fe9bf934)
         ;
 
         
     
     
-            circle_marker_70c46bc0fd0eb1b7dec64b7d17cccf90.bindTooltip(
+            circle_marker_dfdb864dbe76f4fd2eb565d173ae11e5.bindTooltip(
                 `<div>
                      Ulus
                  </div>`,
@@ -246,32 +207,32 @@
             );
         
     
-            var circle_marker_dea5b6171f165fb460c8fc51daadbcc1 = L.circleMarker(
-                [39.9549, 32.8483],
+            var circle_marker_285d2ca9500c62d9523bd3c2927fd074 = L.circleMarker(
+                [39.9435727, 32.8451553],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_3059c24d62b06e7b53dd3a4cddcaabff = L.popup({
-  "maxWidth": 280,
+        var popup_3aaf5ce3de6f261587c1121440210f97 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_e6a508953da92b13bf170a9d568785c5 = $(`<div id="html_e6a508953da92b13bf170a9d568785c5" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Atatürk Kültür Merkezi</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_3059c24d62b06e7b53dd3a4cddcaabff.setContent(html_e6a508953da92b13bf170a9d568785c5);
+                var html_f4413f669b84b10187c3640a49b25efa = $(`<div id="html_f4413f669b84b10187c3640a49b25efa" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Atatürk Kültür Merkezi</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_3aaf5ce3de6f261587c1121440210f97.setContent(html_f4413f669b84b10187c3640a49b25efa);
             
         
 
-        circle_marker_dea5b6171f165fb460c8fc51daadbcc1.bindPopup(popup_3059c24d62b06e7b53dd3a4cddcaabff)
+        circle_marker_285d2ca9500c62d9523bd3c2927fd074.bindPopup(popup_3aaf5ce3de6f261587c1121440210f97)
         ;
 
         
     
     
-            circle_marker_dea5b6171f165fb460c8fc51daadbcc1.bindTooltip(
+            circle_marker_285d2ca9500c62d9523bd3c2927fd074.bindTooltip(
                 `<div>
                      Atatürk Kültür Merkezi
                  </div>`,
@@ -281,32 +242,32 @@
             );
         
     
-            var circle_marker_43aabcb58489d46a045efb2228573d2c = L.circleMarker(
-                [39.9621, 32.8437],
+            var circle_marker_6f921df50d1cea4d2918f95555427100 = L.circleMarker(
+                [39.9515913, 32.834168],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_a86ba1a4b066218ea5a1e554f3c8939d = L.popup({
-  "maxWidth": 280,
+        var popup_6f4a9db35319b48ceabdda5490802359 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_098976176cf27a4ba65294f879041f7e = $(`<div id="html_098976176cf27a4ba65294f879041f7e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Akköprü</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_a86ba1a4b066218ea5a1e554f3c8939d.setContent(html_098976176cf27a4ba65294f879041f7e);
+                var html_cb93ac342a5fc9786b98bc99911c8a37 = $(`<div id="html_cb93ac342a5fc9786b98bc99911c8a37" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Akköprü</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_6f4a9db35319b48ceabdda5490802359.setContent(html_cb93ac342a5fc9786b98bc99911c8a37);
             
         
 
-        circle_marker_43aabcb58489d46a045efb2228573d2c.bindPopup(popup_a86ba1a4b066218ea5a1e554f3c8939d)
+        circle_marker_6f921df50d1cea4d2918f95555427100.bindPopup(popup_6f4a9db35319b48ceabdda5490802359)
         ;
 
         
     
     
-            circle_marker_43aabcb58489d46a045efb2228573d2c.bindTooltip(
+            circle_marker_6f921df50d1cea4d2918f95555427100.bindTooltip(
                 `<div>
                      Akköprü
                  </div>`,
@@ -316,32 +277,32 @@
             );
         
     
-            var circle_marker_4cd1fa989006117a89bedd4d7f2b8db4 = L.circleMarker(
-                [39.9728, 32.8168],
+            var circle_marker_4c6e81e81d0ca1ea0faffe9d1b7e5cdb = L.circleMarker(
+                [39.9572395, 32.8170492],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_ff50b6f53f6f54695594d56795ab2f87 = L.popup({
-  "maxWidth": 280,
+        var popup_eaaafe824931ddcf41e729dc1138bd46 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_ed1074760075a8ac7c75c038dc387015 = $(`<div id="html_ed1074760075a8ac7c75c038dc387015" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">İvedik</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_ff50b6f53f6f54695594d56795ab2f87.setContent(html_ed1074760075a8ac7c75c038dc387015);
+                var html_6cb7cb7238a1407b7e84a31f9dd49bb8 = $(`<div id="html_6cb7cb7238a1407b7e84a31f9dd49bb8" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">İvedik</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_eaaafe824931ddcf41e729dc1138bd46.setContent(html_6cb7cb7238a1407b7e84a31f9dd49bb8);
             
         
 
-        circle_marker_4cd1fa989006117a89bedd4d7f2b8db4.bindPopup(popup_ff50b6f53f6f54695594d56795ab2f87)
+        circle_marker_4c6e81e81d0ca1ea0faffe9d1b7e5cdb.bindPopup(popup_eaaafe824931ddcf41e729dc1138bd46)
         ;
 
         
     
     
-            circle_marker_4cd1fa989006117a89bedd4d7f2b8db4.bindTooltip(
+            circle_marker_4c6e81e81d0ca1ea0faffe9d1b7e5cdb.bindTooltip(
                 `<div>
                      İvedik
                  </div>`,
@@ -351,34 +312,34 @@
             );
         
     
-            var circle_marker_57896b485a55b60d12ab16e5cd4819c5 = L.circleMarker(
-                [39.9783, 32.8081],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_30ea261d274d275aac0d8c3e8efdb8d4 = L.circleMarker(
+                [39.9619089, 32.8045448],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_242f2cdd300caa9e1639b7744ed5ab6d = L.popup({
-  "maxWidth": 280,
+        var popup_f8e77adae67f786af6464ab22b639c19 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_19e110b7c9c890a25098c76a62494197 = $(`<div id="html_19e110b7c9c890a25098c76a62494197" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Yenimahalle</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_242f2cdd300caa9e1639b7744ed5ab6d.setContent(html_19e110b7c9c890a25098c76a62494197);
+                var html_775713d389af02b1297c23f72cba5390 = $(`<div id="html_775713d389af02b1297c23f72cba5390" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Yenimahalle</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_f8e77adae67f786af6464ab22b639c19.setContent(html_775713d389af02b1297c23f72cba5390);
             
         
 
-        circle_marker_57896b485a55b60d12ab16e5cd4819c5.bindPopup(popup_242f2cdd300caa9e1639b7744ed5ab6d)
+        circle_marker_30ea261d274d275aac0d8c3e8efdb8d4.bindPopup(popup_f8e77adae67f786af6464ab22b639c19)
         ;
 
         
     
     
-            circle_marker_57896b485a55b60d12ab16e5cd4819c5.bindTooltip(
+            circle_marker_30ea261d274d275aac0d8c3e8efdb8d4.bindTooltip(
                 `<div>
-                     🔄 Yenimahalle
+                     Yenimahalle
                  </div>`,
                 {
   "sticky": true,
@@ -386,32 +347,32 @@
             );
         
     
-            var circle_marker_7b19e5d9b593bd66791d09f87e19edb6 = L.circleMarker(
-                [39.984, 32.7919],
+            var circle_marker_6f1e6a5e2a5492c6e66569c0a3249dfa = L.circleMarker(
+                [39.9655407, 32.7935884],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_e04065353eba88afdaf3cbf5e7daee04 = L.popup({
-  "maxWidth": 280,
+        var popup_cc476baa85919ba158bcbf41ef2fb029 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_fe601e66e1ecb41de009bfad3ebb94d6 = $(`<div id="html_fe601e66e1ecb41de009bfad3ebb94d6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Demetevler</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_e04065353eba88afdaf3cbf5e7daee04.setContent(html_fe601e66e1ecb41de009bfad3ebb94d6);
+                var html_91e94c65d7c47d953fed07e8f6ff5d80 = $(`<div id="html_91e94c65d7c47d953fed07e8f6ff5d80" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Demetevler</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_cc476baa85919ba158bcbf41ef2fb029.setContent(html_91e94c65d7c47d953fed07e8f6ff5d80);
             
         
 
-        circle_marker_7b19e5d9b593bd66791d09f87e19edb6.bindPopup(popup_e04065353eba88afdaf3cbf5e7daee04)
+        circle_marker_6f1e6a5e2a5492c6e66569c0a3249dfa.bindPopup(popup_cc476baa85919ba158bcbf41ef2fb029)
         ;
 
         
     
     
-            circle_marker_7b19e5d9b593bd66791d09f87e19edb6.bindTooltip(
+            circle_marker_6f1e6a5e2a5492c6e66569c0a3249dfa.bindTooltip(
                 `<div>
                      Demetevler
                  </div>`,
@@ -421,32 +382,32 @@
             );
         
     
-            var circle_marker_a906d60f6115f020ca48b5dd0faf1e6d = L.circleMarker(
-                [39.9873, 32.7779],
+            var circle_marker_cc75e95e7f6db85db929c30a5c306154 = L.circleMarker(
+                [39.9691716, 32.7834458],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_bf072d001453aa7f7935c6a98abb35e2 = L.popup({
-  "maxWidth": 280,
+        var popup_da117e297710d0fe71683a4bad33641c = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_fe7f0e4bbf9f0e1cf7a9745357e49ba6 = $(`<div id="html_fe7f0e4bbf9f0e1cf7a9745357e49ba6" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Hastane</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_bf072d001453aa7f7935c6a98abb35e2.setContent(html_fe7f0e4bbf9f0e1cf7a9745357e49ba6);
+                var html_d026fc362e365b63057f2bc8ac74e1f0 = $(`<div id="html_d026fc362e365b63057f2bc8ac74e1f0" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Hastane</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_da117e297710d0fe71683a4bad33641c.setContent(html_d026fc362e365b63057f2bc8ac74e1f0);
             
         
 
-        circle_marker_a906d60f6115f020ca48b5dd0faf1e6d.bindPopup(popup_bf072d001453aa7f7935c6a98abb35e2)
+        circle_marker_cc75e95e7f6db85db929c30a5c306154.bindPopup(popup_da117e297710d0fe71683a4bad33641c)
         ;
 
         
     
     
-            circle_marker_a906d60f6115f020ca48b5dd0faf1e6d.bindTooltip(
+            circle_marker_cc75e95e7f6db85db929c30a5c306154.bindTooltip(
                 `<div>
                      Hastane
                  </div>`,
@@ -456,32 +417,32 @@
             );
         
     
-            var circle_marker_0a60ba5681f21d576cc2e496deada23b = L.circleMarker(
-                [39.9893, 32.7621],
+            var circle_marker_eed9a317f775b7ad63d0c51ee2b4184c = L.circleMarker(
+                [39.9718746, 32.7666244],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_d0cd280e822330dd3b56f5774cd0b206 = L.popup({
-  "maxWidth": 280,
+        var popup_cf50d12bc0360f4ce9ecbdf9c8a2a7aa = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_b8186258c00d3dad026eaac2f248397b = $(`<div id="html_b8186258c00d3dad026eaac2f248397b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Macunköy</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_d0cd280e822330dd3b56f5774cd0b206.setContent(html_b8186258c00d3dad026eaac2f248397b);
+                var html_db5228269182061f9f9218b1fb924a64 = $(`<div id="html_db5228269182061f9f9218b1fb924a64" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Macunköy</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_cf50d12bc0360f4ce9ecbdf9c8a2a7aa.setContent(html_db5228269182061f9f9218b1fb924a64);
             
         
 
-        circle_marker_0a60ba5681f21d576cc2e496deada23b.bindPopup(popup_d0cd280e822330dd3b56f5774cd0b206)
+        circle_marker_eed9a317f775b7ad63d0c51ee2b4184c.bindPopup(popup_cf50d12bc0360f4ce9ecbdf9c8a2a7aa)
         ;
 
         
     
     
-            circle_marker_0a60ba5681f21d576cc2e496deada23b.bindTooltip(
+            circle_marker_eed9a317f775b7ad63d0c51ee2b4184c.bindTooltip(
                 `<div>
                      Macunköy
                  </div>`,
@@ -491,32 +452,32 @@
             );
         
     
-            var circle_marker_3148042e9371a16c44e9fa3b1cd42bd6 = L.circleMarker(
-                [39.9904, 32.7483],
+            var circle_marker_d6017b62d2ee6265929df4c1c8ca864f = L.circleMarker(
+                [39.9702293, 32.7449331],
                 {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_4910e5200f7cd3ad895d920a7983e994 = L.popup({
-  "maxWidth": 280,
+        var popup_c495248a22352ee1b6264f9a26f579a9 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_f5030acbd13bb6b2ddc667bc564bd80f = $(`<div id="html_f5030acbd13bb6b2ddc667bc564bd80f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">OSTİM</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_4910e5200f7cd3ad895d920a7983e994.setContent(html_f5030acbd13bb6b2ddc667bc564bd80f);
+                var html_295502d2363cdd83d705177b779378c4 = $(`<div id="html_295502d2363cdd83d705177b779378c4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">OSTİM</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_c495248a22352ee1b6264f9a26f579a9.setContent(html_295502d2363cdd83d705177b779378c4);
             
         
 
-        circle_marker_3148042e9371a16c44e9fa3b1cd42bd6.bindPopup(popup_4910e5200f7cd3ad895d920a7983e994)
+        circle_marker_d6017b62d2ee6265929df4c1c8ca864f.bindPopup(popup_c495248a22352ee1b6264f9a26f579a9)
         ;
 
         
     
     
-            circle_marker_3148042e9371a16c44e9fa3b1cd42bd6.bindTooltip(
+            circle_marker_d6017b62d2ee6265929df4c1c8ca864f.bindTooltip(
                 `<div>
                      OSTİM
                  </div>`,
@@ -526,34 +487,34 @@
             );
         
     
-            var circle_marker_8d9d901c60378349049d76cfecab564e = L.circleMarker(
-                [39.9716, 32.7217],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_b55ccfb4e18d1790b212175772609731 = L.circleMarker(
+                [39.9681734, 32.7267398],
+                {"bubblingMouseEvents": true, "color": "#E63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E63946", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_77d46a8151bd68f39d2344cc4aaea57b = L.popup({
-  "maxWidth": 280,
+        var popup_b76967cca6c68f2b31a4d68e7c4d66ff = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_3afb5c35d8fa6d0595efe5f43a5d4c12 = $(`<div id="html_3afb5c35d8fa6d0595efe5f43a5d4c12" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#E63946;font-size:14px;">Batıkent</b><br><small style="color:#888;">M1 Kızılay – Batıkent</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_77d46a8151bd68f39d2344cc4aaea57b.setContent(html_3afb5c35d8fa6d0595efe5f43a5d4c12);
+                var html_35707c1b97a52c1025553977c0998443 = $(`<div id="html_35707c1b97a52c1025553977c0998443" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#E63946;font-size:14px;">Batıkent</b><br><small>M1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_b76967cca6c68f2b31a4d68e7c4d66ff.setContent(html_35707c1b97a52c1025553977c0998443);
             
         
 
-        circle_marker_8d9d901c60378349049d76cfecab564e.bindPopup(popup_77d46a8151bd68f39d2344cc4aaea57b)
+        circle_marker_b55ccfb4e18d1790b212175772609731.bindPopup(popup_b76967cca6c68f2b31a4d68e7c4d66ff)
         ;
 
         
     
     
-            circle_marker_8d9d901c60378349049d76cfecab564e.bindTooltip(
+            circle_marker_b55ccfb4e18d1790b212175772609731.bindTooltip(
                 `<div>
-                     🔄 Batıkent
+                     Batıkent
                  </div>`,
                 {
   "sticky": true,
@@ -561,34 +522,15 @@
             );
         
     
-            var poly_line_8b68a05c1b5ec7b36eee6ae89c7bf6db = L.polyline(
-                [[39.9214, 32.8537], [39.9197, 32.8429], [39.9144, 32.8277], [39.9017, 32.8101], [39.8886, 32.791], [39.8807, 32.7765], [39.8743, 32.7495], [39.866, 32.7295], [39.8722, 32.7192], [39.8819, 32.6977], [39.8768, 32.6849], [39.8714, 32.6703]],
+            var poly_line_7fbdffad127d33500d04d003ade684fe = L.polyline(
+                [[39.920537, 32.8539508], [39.9150973, 32.8443864], [39.9152297, 32.8272158], [39.910638, 32.8081227], [39.9088993, 32.7963315], [39.9083599, 32.7845691], [39.907552, 32.7654021], [39.9069407, 32.750084], [39.9062214, 32.7332714], [39.9053491, 32.7078663], [39.8978291, 32.6910711], [39.886843, 32.6863129]],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#D62828", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_d8fb3c2c5b8205b4dcc98e18dfc633b4 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_e52e55cb5622dd0b3cc62d184e07b305 = $(`<div id="html_e52e55cb5622dd0b3cc62d184e07b305" style="width: 100.0%; height: 100.0%;"><b>M2 Kızılay – Çayyolu/Koru</b></div>`)[0];
-                popup_d8fb3c2c5b8205b4dcc98e18dfc633b4.setContent(html_e52e55cb5622dd0b3cc62d184e07b305);
-            
-        
-
-        poly_line_8b68a05c1b5ec7b36eee6ae89c7bf6db.bindPopup(popup_d8fb3c2c5b8205b4dcc98e18dfc633b4)
-        ;
-
-        
-    
-    
-            poly_line_8b68a05c1b5ec7b36eee6ae89c7bf6db.bindTooltip(
+            poly_line_7fbdffad127d33500d04d003ade684fe.bindTooltip(
                 `<div>
-                     M2 Kızılay – Çayyolu/Koru
+                     M2
                  </div>`,
                 {
   "sticky": true,
@@ -596,34 +538,34 @@
             );
         
     
-            var circle_marker_e32f04b982b33ab53600ce0d460bb6be = L.circleMarker(
-                [39.9214, 32.8537],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_583b82551094e235622615d550a3b78b = L.circleMarker(
+                [39.920537, 32.8539508],
+                {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D62828", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_10d57a75057bc019f45d8a625cbbf93f = L.popup({
-  "maxWidth": 280,
+        var popup_292960715799766d4580095a9816d8b0 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_a78766bbed15ec7a93e8e33c640c51a3 = $(`<div id="html_a78766bbed15ec7a93e8e33c640c51a3" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Kızılay</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_10d57a75057bc019f45d8a625cbbf93f.setContent(html_a78766bbed15ec7a93e8e33c640c51a3);
+                var html_7d753ff3c13adea6f2535947e30e92d9 = $(`<div id="html_7d753ff3c13adea6f2535947e30e92d9" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Kızılay</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_292960715799766d4580095a9816d8b0.setContent(html_7d753ff3c13adea6f2535947e30e92d9);
             
         
 
-        circle_marker_e32f04b982b33ab53600ce0d460bb6be.bindPopup(popup_10d57a75057bc019f45d8a625cbbf93f)
+        circle_marker_583b82551094e235622615d550a3b78b.bindPopup(popup_292960715799766d4580095a9816d8b0)
         ;
 
         
     
     
-            circle_marker_e32f04b982b33ab53600ce0d460bb6be.bindTooltip(
+            circle_marker_583b82551094e235622615d550a3b78b.bindTooltip(
                 `<div>
-                     🔄 Kızılay
+                     Kızılay
                  </div>`,
                 {
   "sticky": true,
@@ -631,32 +573,32 @@
             );
         
     
-            var circle_marker_b0b26dee1f32154fa54fceed904a3b06 = L.circleMarker(
-                [39.9197, 32.8429],
+            var circle_marker_4761533c66efeb745b6cce769dfa3d88 = L.circleMarker(
+                [39.9150973, 32.8443864],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_9253e2ab17ca3b9fb85a3a323f8b9773 = L.popup({
-  "maxWidth": 280,
+        var popup_79358421406262a5fc8c9f76c26bdf6e = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_b75b05fcba3592c136233e79dfc3c76e = $(`<div id="html_b75b05fcba3592c136233e79dfc3c76e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Necatibey</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_9253e2ab17ca3b9fb85a3a323f8b9773.setContent(html_b75b05fcba3592c136233e79dfc3c76e);
+                var html_e9c07a4c6854a331030f01c5d8c46dc5 = $(`<div id="html_e9c07a4c6854a331030f01c5d8c46dc5" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Necatibey</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_79358421406262a5fc8c9f76c26bdf6e.setContent(html_e9c07a4c6854a331030f01c5d8c46dc5);
             
         
 
-        circle_marker_b0b26dee1f32154fa54fceed904a3b06.bindPopup(popup_9253e2ab17ca3b9fb85a3a323f8b9773)
+        circle_marker_4761533c66efeb745b6cce769dfa3d88.bindPopup(popup_79358421406262a5fc8c9f76c26bdf6e)
         ;
 
         
     
     
-            circle_marker_b0b26dee1f32154fa54fceed904a3b06.bindTooltip(
+            circle_marker_4761533c66efeb745b6cce769dfa3d88.bindTooltip(
                 `<div>
                      Necatibey
                  </div>`,
@@ -666,34 +608,34 @@
             );
         
     
-            var circle_marker_f4f0124326628cac711f836ac62cf523 = L.circleMarker(
-                [39.9144, 32.8277],
+            var circle_marker_ea88267f373369e12ff3dcabb12f7608 = L.circleMarker(
+                [39.9152297, 32.8272158],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_cb1d692dc2a3b7d1155cc4159a180bf1 = L.popup({
-  "maxWidth": 280,
+        var popup_48de7a5bb72c24a7fb349df2a633c3e9 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_4a734354c498af9fc86dd71b82f49a32 = $(`<div id="html_4a734354c498af9fc86dd71b82f49a32" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Milli Kütüphane</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_cb1d692dc2a3b7d1155cc4159a180bf1.setContent(html_4a734354c498af9fc86dd71b82f49a32);
+                var html_e516de9faffaf4a11070fc5f9b261f48 = $(`<div id="html_e516de9faffaf4a11070fc5f9b261f48" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Millî Kütüphane</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_48de7a5bb72c24a7fb349df2a633c3e9.setContent(html_e516de9faffaf4a11070fc5f9b261f48);
             
         
 
-        circle_marker_f4f0124326628cac711f836ac62cf523.bindPopup(popup_cb1d692dc2a3b7d1155cc4159a180bf1)
+        circle_marker_ea88267f373369e12ff3dcabb12f7608.bindPopup(popup_48de7a5bb72c24a7fb349df2a633c3e9)
         ;
 
         
     
     
-            circle_marker_f4f0124326628cac711f836ac62cf523.bindTooltip(
+            circle_marker_ea88267f373369e12ff3dcabb12f7608.bindTooltip(
                 `<div>
-                     Milli Kütüphane
+                     Millî Kütüphane
                  </div>`,
                 {
   "sticky": true,
@@ -701,32 +643,32 @@
             );
         
     
-            var circle_marker_cfac3be04b74fec2706f774c939f789f = L.circleMarker(
-                [39.9017, 32.8101],
+            var circle_marker_7645f61782a3c7b2b42c3e8c3bbfca56 = L.circleMarker(
+                [39.910638, 32.8081227],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_3db4ded80d3f052586ea8f3d8eb2b28c = L.popup({
-  "maxWidth": 280,
+        var popup_4a44acd471ed1f06cea03b957be9f0b8 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_98f6f05596869cd3f1799cdd3310be6d = $(`<div id="html_98f6f05596869cd3f1799cdd3310be6d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Söğütözü</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_3db4ded80d3f052586ea8f3d8eb2b28c.setContent(html_98f6f05596869cd3f1799cdd3310be6d);
+                var html_4699ccb9a20ca62acbdbdb02c5fea591 = $(`<div id="html_4699ccb9a20ca62acbdbdb02c5fea591" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Söğütözü</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_4a44acd471ed1f06cea03b957be9f0b8.setContent(html_4699ccb9a20ca62acbdbdb02c5fea591);
             
         
 
-        circle_marker_cfac3be04b74fec2706f774c939f789f.bindPopup(popup_3db4ded80d3f052586ea8f3d8eb2b28c)
+        circle_marker_7645f61782a3c7b2b42c3e8c3bbfca56.bindPopup(popup_4a44acd471ed1f06cea03b957be9f0b8)
         ;
 
         
     
     
-            circle_marker_cfac3be04b74fec2706f774c939f789f.bindTooltip(
+            circle_marker_7645f61782a3c7b2b42c3e8c3bbfca56.bindTooltip(
                 `<div>
                      Söğütözü
                  </div>`,
@@ -736,32 +678,32 @@
             );
         
     
-            var circle_marker_f585c0bc4f190157d7084770b9b37373 = L.circleMarker(
-                [39.8886, 32.791],
+            var circle_marker_a6d6d1c8c4db181e885f65f47474fc11 = L.circleMarker(
+                [39.9088993, 32.7963315],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_d3341cf0270ba30ed6188be26e46200e = L.popup({
-  "maxWidth": 280,
+        var popup_b6498f6b4f1afe0949e31e5b2bdadea6 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_ffbe57424b445e9796cb1d900e998b0d = $(`<div id="html_ffbe57424b445e9796cb1d900e998b0d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">MTA</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_d3341cf0270ba30ed6188be26e46200e.setContent(html_ffbe57424b445e9796cb1d900e998b0d);
+                var html_5ddb9045d16f0dddd63a606a73f5d961 = $(`<div id="html_5ddb9045d16f0dddd63a606a73f5d961" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">MTA</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_b6498f6b4f1afe0949e31e5b2bdadea6.setContent(html_5ddb9045d16f0dddd63a606a73f5d961);
             
         
 
-        circle_marker_f585c0bc4f190157d7084770b9b37373.bindPopup(popup_d3341cf0270ba30ed6188be26e46200e)
+        circle_marker_a6d6d1c8c4db181e885f65f47474fc11.bindPopup(popup_b6498f6b4f1afe0949e31e5b2bdadea6)
         ;
 
         
     
     
-            circle_marker_f585c0bc4f190157d7084770b9b37373.bindTooltip(
+            circle_marker_a6d6d1c8c4db181e885f65f47474fc11.bindTooltip(
                 `<div>
                      MTA
                  </div>`,
@@ -771,32 +713,32 @@
             );
         
     
-            var circle_marker_b4a49826feac518924e9e791476ec219 = L.circleMarker(
-                [39.8807, 32.7765],
+            var circle_marker_1a1ee42a7bbb0f4bab679e065081014c = L.circleMarker(
+                [39.9083599, 32.7845691],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_c7bbc631f73984342fab720eb9823967 = L.popup({
-  "maxWidth": 280,
+        var popup_05ca640b1b58c80a4bc55a9960960121 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_fcb630df496a2609011ac5f8be540f79 = $(`<div id="html_fcb630df496a2609011ac5f8be540f79" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">ODTÜ</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_c7bbc631f73984342fab720eb9823967.setContent(html_fcb630df496a2609011ac5f8be540f79);
+                var html_144f01006cfa76926918d238cfe6e413 = $(`<div id="html_144f01006cfa76926918d238cfe6e413" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">ODTÜ</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_05ca640b1b58c80a4bc55a9960960121.setContent(html_144f01006cfa76926918d238cfe6e413);
             
         
 
-        circle_marker_b4a49826feac518924e9e791476ec219.bindPopup(popup_c7bbc631f73984342fab720eb9823967)
+        circle_marker_1a1ee42a7bbb0f4bab679e065081014c.bindPopup(popup_05ca640b1b58c80a4bc55a9960960121)
         ;
 
         
     
     
-            circle_marker_b4a49826feac518924e9e791476ec219.bindTooltip(
+            circle_marker_1a1ee42a7bbb0f4bab679e065081014c.bindTooltip(
                 `<div>
                      ODTÜ
                  </div>`,
@@ -806,32 +748,32 @@
             );
         
     
-            var circle_marker_647a7b430d1320ea872e3fb69df6c6a1 = L.circleMarker(
-                [39.8743, 32.7495],
+            var circle_marker_1cdc84d2f49b7920d56e5e69c3a5c980 = L.circleMarker(
+                [39.907552, 32.7654021],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_b2bf3a0d119bda2841b7f9f7f7b75122 = L.popup({
-  "maxWidth": 280,
+        var popup_fb44a8ea8db1def264add6a896d62037 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_82cabdf274259a41555b7bae6c31c3e4 = $(`<div id="html_82cabdf274259a41555b7bae6c31c3e4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Bilkent</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_b2bf3a0d119bda2841b7f9f7f7b75122.setContent(html_82cabdf274259a41555b7bae6c31c3e4);
+                var html_32a6de88ce5a017f5a1a2ad30959a505 = $(`<div id="html_32a6de88ce5a017f5a1a2ad30959a505" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Bilkent</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_fb44a8ea8db1def264add6a896d62037.setContent(html_32a6de88ce5a017f5a1a2ad30959a505);
             
         
 
-        circle_marker_647a7b430d1320ea872e3fb69df6c6a1.bindPopup(popup_b2bf3a0d119bda2841b7f9f7f7b75122)
+        circle_marker_1cdc84d2f49b7920d56e5e69c3a5c980.bindPopup(popup_fb44a8ea8db1def264add6a896d62037)
         ;
 
         
     
     
-            circle_marker_647a7b430d1320ea872e3fb69df6c6a1.bindTooltip(
+            circle_marker_1cdc84d2f49b7920d56e5e69c3a5c980.bindTooltip(
                 `<div>
                      Bilkent
                  </div>`,
@@ -841,34 +783,34 @@
             );
         
     
-            var circle_marker_b21a12fa33ec0c0c467e22418ff78ce8 = L.circleMarker(
-                [39.866, 32.7295],
+            var circle_marker_37ee5f2cab0481997ecb7952385dd37c = L.circleMarker(
+                [39.9069407, 32.750084],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_82ee07bc0468941007450e3a7ee2d5e2 = L.popup({
-  "maxWidth": 280,
+        var popup_9191442b0640f1064b0b76068c1cfa55 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_3cabd9102abc5eacc698dd3c367e3d18 = $(`<div id="html_3cabd9102abc5eacc698dd3c367e3d18" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Tarım Bakanlığı</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_82ee07bc0468941007450e3a7ee2d5e2.setContent(html_3cabd9102abc5eacc698dd3c367e3d18);
+                var html_9d3bab62f6a1c0d514ae1cea2520990c = $(`<div id="html_9d3bab62f6a1c0d514ae1cea2520990c" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Tarım Bakanlığı-Danıştay</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_9191442b0640f1064b0b76068c1cfa55.setContent(html_9d3bab62f6a1c0d514ae1cea2520990c);
             
         
 
-        circle_marker_b21a12fa33ec0c0c467e22418ff78ce8.bindPopup(popup_82ee07bc0468941007450e3a7ee2d5e2)
+        circle_marker_37ee5f2cab0481997ecb7952385dd37c.bindPopup(popup_9191442b0640f1064b0b76068c1cfa55)
         ;
 
         
     
     
-            circle_marker_b21a12fa33ec0c0c467e22418ff78ce8.bindTooltip(
+            circle_marker_37ee5f2cab0481997ecb7952385dd37c.bindTooltip(
                 `<div>
-                     Tarım Bakanlığı
+                     Tarım Bakanlığı-Danıştay
                  </div>`,
                 {
   "sticky": true,
@@ -876,32 +818,32 @@
             );
         
     
-            var circle_marker_35634dca3cb71506367744cb1b466be1 = L.circleMarker(
-                [39.8722, 32.7192],
+            var circle_marker_4d84e1f9a1a020330d16b80fd063f023 = L.circleMarker(
+                [39.9062214, 32.7332714],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_8f78b8bd93e40d71aee00e78853d4f8a = L.popup({
-  "maxWidth": 280,
+        var popup_65f0bccd8902cdaecd3a37add6ca06f9 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_53adb36efe022f53c33f0c2c0dd94f83 = $(`<div id="html_53adb36efe022f53c33f0c2c0dd94f83" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Beytepe</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_8f78b8bd93e40d71aee00e78853d4f8a.setContent(html_53adb36efe022f53c33f0c2c0dd94f83);
+                var html_471a3138888a41f279597f0551bd49b3 = $(`<div id="html_471a3138888a41f279597f0551bd49b3" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Beytepe</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_65f0bccd8902cdaecd3a37add6ca06f9.setContent(html_471a3138888a41f279597f0551bd49b3);
             
         
 
-        circle_marker_35634dca3cb71506367744cb1b466be1.bindPopup(popup_8f78b8bd93e40d71aee00e78853d4f8a)
+        circle_marker_4d84e1f9a1a020330d16b80fd063f023.bindPopup(popup_65f0bccd8902cdaecd3a37add6ca06f9)
         ;
 
         
     
     
-            circle_marker_35634dca3cb71506367744cb1b466be1.bindTooltip(
+            circle_marker_4d84e1f9a1a020330d16b80fd063f023.bindTooltip(
                 `<div>
                      Beytepe
                  </div>`,
@@ -911,32 +853,32 @@
             );
         
     
-            var circle_marker_3f91571d4a093e907660f62902a44a62 = L.circleMarker(
-                [39.8819, 32.6977],
+            var circle_marker_145cd6d95fbdbd9da8d37f584cd02cc5 = L.circleMarker(
+                [39.9053491, 32.7078663],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_960339b609bff0f5c7a15c5864868586 = L.popup({
-  "maxWidth": 280,
+        var popup_05687a9bbfa7ff212737df35e018112d = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_a9b980c4290f595a0c354fb1d9f18766 = $(`<div id="html_a9b980c4290f595a0c354fb1d9f18766" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Ümitköy</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_960339b609bff0f5c7a15c5864868586.setContent(html_a9b980c4290f595a0c354fb1d9f18766);
+                var html_dda5671f3120191ad5c3cb9af912d85c = $(`<div id="html_dda5671f3120191ad5c3cb9af912d85c" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Ümitköy</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_05687a9bbfa7ff212737df35e018112d.setContent(html_dda5671f3120191ad5c3cb9af912d85c);
             
         
 
-        circle_marker_3f91571d4a093e907660f62902a44a62.bindPopup(popup_960339b609bff0f5c7a15c5864868586)
+        circle_marker_145cd6d95fbdbd9da8d37f584cd02cc5.bindPopup(popup_05687a9bbfa7ff212737df35e018112d)
         ;
 
         
     
     
-            circle_marker_3f91571d4a093e907660f62902a44a62.bindTooltip(
+            circle_marker_145cd6d95fbdbd9da8d37f584cd02cc5.bindTooltip(
                 `<div>
                      Ümitköy
                  </div>`,
@@ -946,32 +888,32 @@
             );
         
     
-            var circle_marker_f4924e88c0fed6bcc5d2f134dc1d540a = L.circleMarker(
-                [39.8768, 32.6849],
+            var circle_marker_6b01982968a99f0866c34788e67a1d9a = L.circleMarker(
+                [39.8978291, 32.6910711],
                 {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_d9b8431cc2d123fa4fe17cd1a2e0b7a3 = L.popup({
-  "maxWidth": 280,
+        var popup_fa565d450def3236fffb9fb9b66fd7ad = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_c6c38a9150a93d905ef2606974400217 = $(`<div id="html_c6c38a9150a93d905ef2606974400217" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Çayyolu</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_d9b8431cc2d123fa4fe17cd1a2e0b7a3.setContent(html_c6c38a9150a93d905ef2606974400217);
+                var html_30a2e26c2ac03867df00a962ad295274 = $(`<div id="html_30a2e26c2ac03867df00a962ad295274" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Çayyolu</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_fa565d450def3236fffb9fb9b66fd7ad.setContent(html_30a2e26c2ac03867df00a962ad295274);
             
         
 
-        circle_marker_f4924e88c0fed6bcc5d2f134dc1d540a.bindPopup(popup_d9b8431cc2d123fa4fe17cd1a2e0b7a3)
+        circle_marker_6b01982968a99f0866c34788e67a1d9a.bindPopup(popup_fa565d450def3236fffb9fb9b66fd7ad)
         ;
 
         
     
     
-            circle_marker_f4924e88c0fed6bcc5d2f134dc1d540a.bindTooltip(
+            circle_marker_6b01982968a99f0866c34788e67a1d9a.bindTooltip(
                 `<div>
                      Çayyolu
                  </div>`,
@@ -981,32 +923,32 @@
             );
         
     
-            var circle_marker_7c7aed40874e0c27d94d765aa0c62517 = L.circleMarker(
-                [39.8714, 32.6703],
-                {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D62828", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_f3d90174c9d73a271e971e4abf7a98dc = L.circleMarker(
+                [39.886843, 32.6863129],
+                {"bubblingMouseEvents": true, "color": "#D62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D62828", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_7e4028c7b040b66fadf3ebf8b194c0f7 = L.popup({
-  "maxWidth": 280,
+        var popup_3f2b6a2261da3dcc3b328af4bfecf8b1 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_a250004cc494a6573e66eb299326ea72 = $(`<div id="html_a250004cc494a6573e66eb299326ea72" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#D62828;font-size:14px;">Koru</b><br><small style="color:#888;">M2 Kızılay – Çayyolu/Koru</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_7e4028c7b040b66fadf3ebf8b194c0f7.setContent(html_a250004cc494a6573e66eb299326ea72);
+                var html_753e879ff55be9a67c35718bd2cb75a2 = $(`<div id="html_753e879ff55be9a67c35718bd2cb75a2" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#D62828;font-size:14px;">Koru</b><br><small>M2</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_3f2b6a2261da3dcc3b328af4bfecf8b1.setContent(html_753e879ff55be9a67c35718bd2cb75a2);
             
         
 
-        circle_marker_7c7aed40874e0c27d94d765aa0c62517.bindPopup(popup_7e4028c7b040b66fadf3ebf8b194c0f7)
+        circle_marker_f3d90174c9d73a271e971e4abf7a98dc.bindPopup(popup_3f2b6a2261da3dcc3b328af4bfecf8b1)
         ;
 
         
     
     
-            circle_marker_7c7aed40874e0c27d94d765aa0c62517.bindTooltip(
+            circle_marker_f3d90174c9d73a271e971e4abf7a98dc.bindTooltip(
                 `<div>
                      Koru
                  </div>`,
@@ -1016,34 +958,15 @@
             );
         
     
-            var poly_line_d5c649b8467c12cf9d32740ac5b4a878 = L.polyline(
-                [[39.9716, 32.7217], [39.9762, 32.7118], [39.9789, 32.7011], [39.9803, 32.6895], [39.978, 32.6775], [39.9741, 32.6577], [39.9698, 32.6371], [39.9661, 32.616], [39.961, 32.5995], [39.9569, 32.5838], [39.9525, 32.5717], [39.9478, 32.5558]],
+            var poly_line_69ab32f474a15ffcb76b148ff1d4663f = L.polyline(
+                [[39.9681734, 32.7267398], [39.9677059, 32.7153974], [39.9716935, 32.7030788], [39.9807579, 32.6941504], [39.9796442, 32.6627671], [39.9805004, 32.6478121], [39.981109, 32.6274057], [39.9814919, 32.6132155], [39.9822637, 32.5984079], [39.9840727, 32.5853008], [39.9855529, 32.5743392], [39.9876684, 32.5587016]],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#C1121F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_35a4dd2093cf9adea35d5fea8cc87178 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_8dc57cf88a5b9254a63edd130c8b4b2b = $(`<div id="html_8dc57cf88a5b9254a63edd130c8b4b2b" style="width: 100.0%; height: 100.0%;"><b>M3 Batıkent – OSB/Törekent</b></div>`)[0];
-                popup_35a4dd2093cf9adea35d5fea8cc87178.setContent(html_8dc57cf88a5b9254a63edd130c8b4b2b);
-            
-        
-
-        poly_line_d5c649b8467c12cf9d32740ac5b4a878.bindPopup(popup_35a4dd2093cf9adea35d5fea8cc87178)
-        ;
-
-        
-    
-    
-            poly_line_d5c649b8467c12cf9d32740ac5b4a878.bindTooltip(
+            poly_line_69ab32f474a15ffcb76b148ff1d4663f.bindTooltip(
                 `<div>
-                     M3 Batıkent – OSB/Törekent
+                     M3
                  </div>`,
                 {
   "sticky": true,
@@ -1051,34 +974,34 @@
             );
         
     
-            var circle_marker_93a50445dd809e29bc0380037395ccb5 = L.circleMarker(
-                [39.9716, 32.7217],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_51e86ca0e12b1ed870c6440e2aba8fc0 = L.circleMarker(
+                [39.9681734, 32.7267398],
+                {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C1121F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_6df77dde05844cae1283448f36c08484 = L.popup({
-  "maxWidth": 280,
+        var popup_103ada32de9ba43da02a55195a525fd8 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_801ef6a758bc540817b7144e4cf8685e = $(`<div id="html_801ef6a758bc540817b7144e4cf8685e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Batıkent</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_6df77dde05844cae1283448f36c08484.setContent(html_801ef6a758bc540817b7144e4cf8685e);
+                var html_9f0147872e545cacfee40836a813ccd5 = $(`<div id="html_9f0147872e545cacfee40836a813ccd5" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Batıkent</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_103ada32de9ba43da02a55195a525fd8.setContent(html_9f0147872e545cacfee40836a813ccd5);
             
         
 
-        circle_marker_93a50445dd809e29bc0380037395ccb5.bindPopup(popup_6df77dde05844cae1283448f36c08484)
+        circle_marker_51e86ca0e12b1ed870c6440e2aba8fc0.bindPopup(popup_103ada32de9ba43da02a55195a525fd8)
         ;
 
         
     
     
-            circle_marker_93a50445dd809e29bc0380037395ccb5.bindTooltip(
+            circle_marker_51e86ca0e12b1ed870c6440e2aba8fc0.bindTooltip(
                 `<div>
-                     🔄 Batıkent
+                     Batıkent
                  </div>`,
                 {
   "sticky": true,
@@ -1086,32 +1009,32 @@
             );
         
     
-            var circle_marker_7f10c36dc885f6868c70325c1fa4c8ea = L.circleMarker(
-                [39.9762, 32.7118],
+            var circle_marker_d80994b03972e156d5ef3d5e03726a89 = L.circleMarker(
+                [39.9677059, 32.7153974],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_e2d3c728e98a716fe4fa8e82d288230a = L.popup({
-  "maxWidth": 280,
+        var popup_2341ed3b74e9dd958a3f095aafa58524 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_b218282e02e8c45e61e387ea7aedad7f = $(`<div id="html_b218282e02e8c45e61e387ea7aedad7f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Batı Merkez</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_e2d3c728e98a716fe4fa8e82d288230a.setContent(html_b218282e02e8c45e61e387ea7aedad7f);
+                var html_9b6562af5184aa08e480646dda05ca09 = $(`<div id="html_9b6562af5184aa08e480646dda05ca09" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Batı Merkez</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_2341ed3b74e9dd958a3f095aafa58524.setContent(html_9b6562af5184aa08e480646dda05ca09);
             
         
 
-        circle_marker_7f10c36dc885f6868c70325c1fa4c8ea.bindPopup(popup_e2d3c728e98a716fe4fa8e82d288230a)
+        circle_marker_d80994b03972e156d5ef3d5e03726a89.bindPopup(popup_2341ed3b74e9dd958a3f095aafa58524)
         ;
 
         
     
     
-            circle_marker_7f10c36dc885f6868c70325c1fa4c8ea.bindTooltip(
+            circle_marker_d80994b03972e156d5ef3d5e03726a89.bindTooltip(
                 `<div>
                      Batı Merkez
                  </div>`,
@@ -1121,32 +1044,32 @@
             );
         
     
-            var circle_marker_ee5f98d514e5cbbe7fa47c7973d4eeb4 = L.circleMarker(
-                [39.9789, 32.7011],
+            var circle_marker_5ef0d70c219de372e5f9fb4558e8454b = L.circleMarker(
+                [39.9716935, 32.7030788],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_dcdb9721985aa2e6ba6279ed4651a6c6 = L.popup({
-  "maxWidth": 280,
+        var popup_a7c18eb05f6e6ee10d8868bebe1fe578 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_9d5fedb340d0739c56b54acad2e9a77b = $(`<div id="html_9d5fedb340d0739c56b54acad2e9a77b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Mesa</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_dcdb9721985aa2e6ba6279ed4651a6c6.setContent(html_9d5fedb340d0739c56b54acad2e9a77b);
+                var html_2829a5101965c42412850e8861d2fe21 = $(`<div id="html_2829a5101965c42412850e8861d2fe21" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Mesa</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_a7c18eb05f6e6ee10d8868bebe1fe578.setContent(html_2829a5101965c42412850e8861d2fe21);
             
         
 
-        circle_marker_ee5f98d514e5cbbe7fa47c7973d4eeb4.bindPopup(popup_dcdb9721985aa2e6ba6279ed4651a6c6)
+        circle_marker_5ef0d70c219de372e5f9fb4558e8454b.bindPopup(popup_a7c18eb05f6e6ee10d8868bebe1fe578)
         ;
 
         
     
     
-            circle_marker_ee5f98d514e5cbbe7fa47c7973d4eeb4.bindTooltip(
+            circle_marker_5ef0d70c219de372e5f9fb4558e8454b.bindTooltip(
                 `<div>
                      Mesa
                  </div>`,
@@ -1156,32 +1079,32 @@
             );
         
     
-            var circle_marker_e15ce8d50c8766510109da4f034e2524 = L.circleMarker(
-                [39.9803, 32.6895],
+            var circle_marker_d7b8b2e1e1b1062ef4efd43296c1d2bd = L.circleMarker(
+                [39.9807579, 32.6941504],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_31cfeedf50f8f48fa1d6808d2c32994a = L.popup({
-  "maxWidth": 280,
+        var popup_c01fc0660471a4c58ca55ff4bf6ad35d = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_ef1e37c1b89aa64e4008026af4882e42 = $(`<div id="html_ef1e37c1b89aa64e4008026af4882e42" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Botanik</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_31cfeedf50f8f48fa1d6808d2c32994a.setContent(html_ef1e37c1b89aa64e4008026af4882e42);
+                var html_2c2b3ddcca51ccb3a282d2eb750fbb3f = $(`<div id="html_2c2b3ddcca51ccb3a282d2eb750fbb3f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Botanik</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_c01fc0660471a4c58ca55ff4bf6ad35d.setContent(html_2c2b3ddcca51ccb3a282d2eb750fbb3f);
             
         
 
-        circle_marker_e15ce8d50c8766510109da4f034e2524.bindPopup(popup_31cfeedf50f8f48fa1d6808d2c32994a)
+        circle_marker_d7b8b2e1e1b1062ef4efd43296c1d2bd.bindPopup(popup_c01fc0660471a4c58ca55ff4bf6ad35d)
         ;
 
         
     
     
-            circle_marker_e15ce8d50c8766510109da4f034e2524.bindTooltip(
+            circle_marker_d7b8b2e1e1b1062ef4efd43296c1d2bd.bindTooltip(
                 `<div>
                      Botanik
                  </div>`,
@@ -1191,32 +1114,32 @@
             );
         
     
-            var circle_marker_174fb88b76ae5ac7cc18b56f72d98560 = L.circleMarker(
-                [39.978, 32.6775],
+            var circle_marker_cea35dc78e220d0762c642722db07882 = L.circleMarker(
+                [39.9796442, 32.6627671],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_40fb16448fc83f95df2e8f49efe040b5 = L.popup({
-  "maxWidth": 280,
+        var popup_1d8405834d09adb75fca55a227575a27 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_98d5a13881dcb7671e24166d308b6136 = $(`<div id="html_98d5a13881dcb7671e24166d308b6136" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">İstanbul Yolu</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_40fb16448fc83f95df2e8f49efe040b5.setContent(html_98d5a13881dcb7671e24166d308b6136);
+                var html_0744b0336aeb5e637c8a924821a0438c = $(`<div id="html_0744b0336aeb5e637c8a924821a0438c" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">İstanbul Yolu</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_1d8405834d09adb75fca55a227575a27.setContent(html_0744b0336aeb5e637c8a924821a0438c);
             
         
 
-        circle_marker_174fb88b76ae5ac7cc18b56f72d98560.bindPopup(popup_40fb16448fc83f95df2e8f49efe040b5)
+        circle_marker_cea35dc78e220d0762c642722db07882.bindPopup(popup_1d8405834d09adb75fca55a227575a27)
         ;
 
         
     
     
-            circle_marker_174fb88b76ae5ac7cc18b56f72d98560.bindTooltip(
+            circle_marker_cea35dc78e220d0762c642722db07882.bindTooltip(
                 `<div>
                      İstanbul Yolu
                  </div>`,
@@ -1226,32 +1149,32 @@
             );
         
     
-            var circle_marker_dd827396b4972a676d5cf45431bd2921 = L.circleMarker(
-                [39.9741, 32.6577],
+            var circle_marker_5954d10d81f4df24e0e7b3ea1042c435 = L.circleMarker(
+                [39.9805004, 32.6478121],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_a158187a6367703b944e9e7eef0ffebd = L.popup({
-  "maxWidth": 280,
+        var popup_6d887fdeb0625a6cc4853cdeb39a4dfb = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_94bcd45a80b673b77ff43867111243a9 = $(`<div id="html_94bcd45a80b673b77ff43867111243a9" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Eryaman 1-2</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_a158187a6367703b944e9e7eef0ffebd.setContent(html_94bcd45a80b673b77ff43867111243a9);
+                var html_20d0abb8c6ce6241e8676f0176fa1fbd = $(`<div id="html_20d0abb8c6ce6241e8676f0176fa1fbd" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Eryaman 1-2</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_6d887fdeb0625a6cc4853cdeb39a4dfb.setContent(html_20d0abb8c6ce6241e8676f0176fa1fbd);
             
         
 
-        circle_marker_dd827396b4972a676d5cf45431bd2921.bindPopup(popup_a158187a6367703b944e9e7eef0ffebd)
+        circle_marker_5954d10d81f4df24e0e7b3ea1042c435.bindPopup(popup_6d887fdeb0625a6cc4853cdeb39a4dfb)
         ;
 
         
     
     
-            circle_marker_dd827396b4972a676d5cf45431bd2921.bindTooltip(
+            circle_marker_5954d10d81f4df24e0e7b3ea1042c435.bindTooltip(
                 `<div>
                      Eryaman 1-2
                  </div>`,
@@ -1261,32 +1184,32 @@
             );
         
     
-            var circle_marker_35e5c3ff812d4b10ae4affa6f34f64a9 = L.circleMarker(
-                [39.9698, 32.6371],
+            var circle_marker_b66aeb5e4502bd8086b04f97278e89fd = L.circleMarker(
+                [39.981109, 32.6274057],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_4e6f370467dc7cb7620806946e57f316 = L.popup({
-  "maxWidth": 280,
+        var popup_c1d42320bcadd549fc484443b95178de = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_841ca28f897520f77579a3564308077e = $(`<div id="html_841ca28f897520f77579a3564308077e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Eryaman 5</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_4e6f370467dc7cb7620806946e57f316.setContent(html_841ca28f897520f77579a3564308077e);
+                var html_ceb746408f4e7a1d5244adeb1ad45679 = $(`<div id="html_ceb746408f4e7a1d5244adeb1ad45679" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Eryaman 5</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_c1d42320bcadd549fc484443b95178de.setContent(html_ceb746408f4e7a1d5244adeb1ad45679);
             
         
 
-        circle_marker_35e5c3ff812d4b10ae4affa6f34f64a9.bindPopup(popup_4e6f370467dc7cb7620806946e57f316)
+        circle_marker_b66aeb5e4502bd8086b04f97278e89fd.bindPopup(popup_c1d42320bcadd549fc484443b95178de)
         ;
 
         
     
     
-            circle_marker_35e5c3ff812d4b10ae4affa6f34f64a9.bindTooltip(
+            circle_marker_b66aeb5e4502bd8086b04f97278e89fd.bindTooltip(
                 `<div>
                      Eryaman 5
                  </div>`,
@@ -1296,32 +1219,32 @@
             );
         
     
-            var circle_marker_8908a4731cb1efb11bc4e4dc85d0a904 = L.circleMarker(
-                [39.9661, 32.616],
+            var circle_marker_95803094a9f15fe36edb3ad20606dd69 = L.circleMarker(
+                [39.9814919, 32.6132155],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_6e4962f900da47729f36d0685909a98b = L.popup({
-  "maxWidth": 280,
+        var popup_bad4fe6700e8507a23c5328461def6a0 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_94ef049a08488d59abe7b101c306c6da = $(`<div id="html_94ef049a08488d59abe7b101c306c6da" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Devlet Mah.</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_6e4962f900da47729f36d0685909a98b.setContent(html_94ef049a08488d59abe7b101c306c6da);
+                var html_18885fdcc24b4e3a10546efa242a9f3d = $(`<div id="html_18885fdcc24b4e3a10546efa242a9f3d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Devlet Mah.</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_bad4fe6700e8507a23c5328461def6a0.setContent(html_18885fdcc24b4e3a10546efa242a9f3d);
             
         
 
-        circle_marker_8908a4731cb1efb11bc4e4dc85d0a904.bindPopup(popup_6e4962f900da47729f36d0685909a98b)
+        circle_marker_95803094a9f15fe36edb3ad20606dd69.bindPopup(popup_bad4fe6700e8507a23c5328461def6a0)
         ;
 
         
     
     
-            circle_marker_8908a4731cb1efb11bc4e4dc85d0a904.bindTooltip(
+            circle_marker_95803094a9f15fe36edb3ad20606dd69.bindTooltip(
                 `<div>
                      Devlet Mah.
                  </div>`,
@@ -1331,32 +1254,32 @@
             );
         
     
-            var circle_marker_ba50644964ca0f4adcfc0ea15ad2bfcf = L.circleMarker(
-                [39.961, 32.5995],
+            var circle_marker_8efb335a4cea567f3b9da17c1b880db6 = L.circleMarker(
+                [39.9822637, 32.5984079],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_77c3c445625b9544a76daf76defa676a = L.popup({
-  "maxWidth": 280,
+        var popup_edce5086e209cf99b204694de5697592 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_3df036c81bc246ffc3792b970c97cdb8 = $(`<div id="html_3df036c81bc246ffc3792b970c97cdb8" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Harikalar Diyarı</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_77c3c445625b9544a76daf76defa676a.setContent(html_3df036c81bc246ffc3792b970c97cdb8);
+                var html_a515b80bb56c9b62745aabf7962f2de4 = $(`<div id="html_a515b80bb56c9b62745aabf7962f2de4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Harikalar Diyarı</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_edce5086e209cf99b204694de5697592.setContent(html_a515b80bb56c9b62745aabf7962f2de4);
             
         
 
-        circle_marker_ba50644964ca0f4adcfc0ea15ad2bfcf.bindPopup(popup_77c3c445625b9544a76daf76defa676a)
+        circle_marker_8efb335a4cea567f3b9da17c1b880db6.bindPopup(popup_edce5086e209cf99b204694de5697592)
         ;
 
         
     
     
-            circle_marker_ba50644964ca0f4adcfc0ea15ad2bfcf.bindTooltip(
+            circle_marker_8efb335a4cea567f3b9da17c1b880db6.bindTooltip(
                 `<div>
                      Harikalar Diyarı
                  </div>`,
@@ -1366,32 +1289,32 @@
             );
         
     
-            var circle_marker_97e59f8c84f9782ab185676548c39020 = L.circleMarker(
-                [39.9569, 32.5838],
+            var circle_marker_ff6812933cb7247cd4625bb374c9e07b = L.circleMarker(
+                [39.9840727, 32.5853008],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_0a088ed6fe648fa38c6d7b593fc7bf52 = L.popup({
-  "maxWidth": 280,
+        var popup_73095eefaa8d1ada2abd344a101897e0 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_bf18f78032e77d3fd654071f003fb08e = $(`<div id="html_bf18f78032e77d3fd654071f003fb08e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">Fatih</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_0a088ed6fe648fa38c6d7b593fc7bf52.setContent(html_bf18f78032e77d3fd654071f003fb08e);
+                var html_380aa08235211bcdd18f3c982a048b03 = $(`<div id="html_380aa08235211bcdd18f3c982a048b03" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">Fatih</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_73095eefaa8d1ada2abd344a101897e0.setContent(html_380aa08235211bcdd18f3c982a048b03);
             
         
 
-        circle_marker_97e59f8c84f9782ab185676548c39020.bindPopup(popup_0a088ed6fe648fa38c6d7b593fc7bf52)
+        circle_marker_ff6812933cb7247cd4625bb374c9e07b.bindPopup(popup_73095eefaa8d1ada2abd344a101897e0)
         ;
 
         
     
     
-            circle_marker_97e59f8c84f9782ab185676548c39020.bindTooltip(
+            circle_marker_ff6812933cb7247cd4625bb374c9e07b.bindTooltip(
                 `<div>
                      Fatih
                  </div>`,
@@ -1401,34 +1324,34 @@
             );
         
     
-            var circle_marker_3cec7d57373d8afd7717a6578278acd9 = L.circleMarker(
-                [39.9525, 32.5717],
+            var circle_marker_1f9db792bbdf4b6fbb6057c7b8d3b85d = L.circleMarker(
+                [39.9855529, 32.5743392],
                 {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_93ea41b3ccd6b5b47978ec9395151949 = L.popup({
-  "maxWidth": 280,
+        var popup_e6ff0b9e91deb19571071bef823c3d5c = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_4eec37bb0808832691255a5a59685c1e = $(`<div id="html_4eec37bb0808832691255a5a59685c1e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">GOP/Sincan</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_93ea41b3ccd6b5b47978ec9395151949.setContent(html_4eec37bb0808832691255a5a59685c1e);
+                var html_d12ea057020521920f1ed4b77c6c5846 = $(`<div id="html_d12ea057020521920f1ed4b77c6c5846" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">GOP</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_e6ff0b9e91deb19571071bef823c3d5c.setContent(html_d12ea057020521920f1ed4b77c6c5846);
             
         
 
-        circle_marker_3cec7d57373d8afd7717a6578278acd9.bindPopup(popup_93ea41b3ccd6b5b47978ec9395151949)
+        circle_marker_1f9db792bbdf4b6fbb6057c7b8d3b85d.bindPopup(popup_e6ff0b9e91deb19571071bef823c3d5c)
         ;
 
         
     
     
-            circle_marker_3cec7d57373d8afd7717a6578278acd9.bindTooltip(
+            circle_marker_1f9db792bbdf4b6fbb6057c7b8d3b85d.bindTooltip(
                 `<div>
-                     GOP/Sincan
+                     GOP
                  </div>`,
                 {
   "sticky": true,
@@ -1436,32 +1359,32 @@
             );
         
     
-            var circle_marker_3c4a590fdfcb24d005720a200922c0b8 = L.circleMarker(
-                [39.9478, 32.5558],
-                {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C1121F", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_c9f83c3fcf19e66611eacd0d5512f6b0 = L.circleMarker(
+                [39.9876684, 32.5587016],
+                {"bubblingMouseEvents": true, "color": "#C1121F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C1121F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_db0f0067a03912a1b58317fdf6fc1e25 = L.popup({
-  "maxWidth": 280,
+        var popup_554c33023f1d0ceee7b5c12e8bd2987d = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_60b7dbdf0e6062b8af8cdcaa53ad40be = $(`<div id="html_60b7dbdf0e6062b8af8cdcaa53ad40be" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#C1121F;font-size:14px;">OSB-Törekent</b><br><small style="color:#888;">M3 Batıkent – OSB/Törekent</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 331,526<br>🚇 Sefer: 320<br>📊 Doluluk: %64<br>💺 Kapasite: 515,138</div></div>`)[0];
-                popup_db0f0067a03912a1b58317fdf6fc1e25.setContent(html_60b7dbdf0e6062b8af8cdcaa53ad40be);
+                var html_d9010eaa69fac413835061028a02dea0 = $(`<div id="html_d9010eaa69fac413835061028a02dea0" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#C1121F;font-size:14px;">OSB-Törekent</b><br><small>M3</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 331,526<br>Doluluk: %64</div></div>`)[0];
+                popup_554c33023f1d0ceee7b5c12e8bd2987d.setContent(html_d9010eaa69fac413835061028a02dea0);
             
         
 
-        circle_marker_3c4a590fdfcb24d005720a200922c0b8.bindPopup(popup_db0f0067a03912a1b58317fdf6fc1e25)
+        circle_marker_c9f83c3fcf19e66611eacd0d5512f6b0.bindPopup(popup_554c33023f1d0ceee7b5c12e8bd2987d)
         ;
 
         
     
     
-            circle_marker_3c4a590fdfcb24d005720a200922c0b8.bindTooltip(
+            circle_marker_c9f83c3fcf19e66611eacd0d5512f6b0.bindTooltip(
                 `<div>
                      OSB-Törekent
                  </div>`,
@@ -1471,34 +1394,15 @@
             );
         
     
-            var poly_line_edb255a451e3f522ef349e54d0e77298 = L.polyline(
-                [[39.9214, 32.8537], [39.9307, 32.8568], [39.937, 32.856], [39.9549, 32.8483], [39.9625, 32.8527], [39.9682, 32.8607], [39.9726, 32.869], [39.9778, 32.8695], [39.9848, 32.873], [39.9914, 32.8755], [39.9986, 32.8769], [40.0065, 32.8803]],
+            var poly_line_ec533819cf0a2acf4b6e35d0a6429277 = L.polyline(
+                [[39.920537, 32.8539508], [39.9305582, 32.850394], [39.9339453, 32.8425824], [39.9435727, 32.8451553], [39.9477148, 32.8504913], [39.955386, 32.8587618], [39.9663951, 32.8639206], [39.9779333, 32.8682339], [39.983749, 32.8753776], [39.9903583, 32.8755143], [39.9995399, 32.8704178], [39.9962226, 32.8609972]],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#457B9D", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_e51cd744f9cce0e88c6c0641de905580 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_75d9bf1fb399bfbacab435072a3c118a = $(`<div id="html_75d9bf1fb399bfbacab435072a3c118a" style="width: 100.0%; height: 100.0%;"><b>M4 Kızılay – Şehitler (Keçiören)</b></div>`)[0];
-                popup_e51cd744f9cce0e88c6c0641de905580.setContent(html_75d9bf1fb399bfbacab435072a3c118a);
-            
-        
-
-        poly_line_edb255a451e3f522ef349e54d0e77298.bindPopup(popup_e51cd744f9cce0e88c6c0641de905580)
-        ;
-
-        
-    
-    
-            poly_line_edb255a451e3f522ef349e54d0e77298.bindTooltip(
+            poly_line_ec533819cf0a2acf4b6e35d0a6429277.bindTooltip(
                 `<div>
-                     M4 Kızılay – Şehitler (Keçiören)
+                     M4
                  </div>`,
                 {
   "sticky": true,
@@ -1506,34 +1410,34 @@
             );
         
     
-            var circle_marker_16d269a19835192a50916c2941ac26b3 = L.circleMarker(
-                [39.9214, 32.8537],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_e2ab11404e107d517189f38c2eedbd89 = L.circleMarker(
+                [39.920537, 32.8539508],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_829a8cd03e9e4be5570a477cf3c5f774 = L.popup({
-  "maxWidth": 280,
+        var popup_686e59085fa5440da4b02ade1c5e26a3 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_4553db27fc5e5bdd2875849e36685a95 = $(`<div id="html_4553db27fc5e5bdd2875849e36685a95" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Kızılay</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_829a8cd03e9e4be5570a477cf3c5f774.setContent(html_4553db27fc5e5bdd2875849e36685a95);
+                var html_e0a45d826d11cfc214fba7fcbb8f60f2 = $(`<div id="html_e0a45d826d11cfc214fba7fcbb8f60f2" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Kızılay</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_686e59085fa5440da4b02ade1c5e26a3.setContent(html_e0a45d826d11cfc214fba7fcbb8f60f2);
             
         
 
-        circle_marker_16d269a19835192a50916c2941ac26b3.bindPopup(popup_829a8cd03e9e4be5570a477cf3c5f774)
+        circle_marker_e2ab11404e107d517189f38c2eedbd89.bindPopup(popup_686e59085fa5440da4b02ade1c5e26a3)
         ;
 
         
     
     
-            circle_marker_16d269a19835192a50916c2941ac26b3.bindTooltip(
+            circle_marker_e2ab11404e107d517189f38c2eedbd89.bindTooltip(
                 `<div>
-                     🔄 Kızılay
+                     Kızılay
                  </div>`,
                 {
   "sticky": true,
@@ -1541,32 +1445,32 @@
             );
         
     
-            var circle_marker_83ba331d7312ab20fdf28eae679eb19e = L.circleMarker(
-                [39.9307, 32.8568],
+            var circle_marker_fd444f939cac89191fbaf2344ef9400a = L.circleMarker(
+                [39.9305582, 32.850394],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_e05de2ca82a3d413f241eb57e4139e54 = L.popup({
-  "maxWidth": 280,
+        var popup_51ddb4786c2db2854f5ca9b16ea12b59 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_ecb30365ce3471fd218167a118c9a633 = $(`<div id="html_ecb30365ce3471fd218167a118c9a633" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Adliye</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_e05de2ca82a3d413f241eb57e4139e54.setContent(html_ecb30365ce3471fd218167a118c9a633);
+                var html_abed218b8850dc6420b02163e1d1ac2f = $(`<div id="html_abed218b8850dc6420b02163e1d1ac2f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Adliye</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_51ddb4786c2db2854f5ca9b16ea12b59.setContent(html_abed218b8850dc6420b02163e1d1ac2f);
             
         
 
-        circle_marker_83ba331d7312ab20fdf28eae679eb19e.bindPopup(popup_e05de2ca82a3d413f241eb57e4139e54)
+        circle_marker_fd444f939cac89191fbaf2344ef9400a.bindPopup(popup_51ddb4786c2db2854f5ca9b16ea12b59)
         ;
 
         
     
     
-            circle_marker_83ba331d7312ab20fdf28eae679eb19e.bindTooltip(
+            circle_marker_fd444f939cac89191fbaf2344ef9400a.bindTooltip(
                 `<div>
                      Adliye
                  </div>`,
@@ -1576,32 +1480,32 @@
             );
         
     
-            var circle_marker_5cb7a12f8b52cf91af8f2e663e9a714c = L.circleMarker(
-                [39.937, 32.856],
+            var circle_marker_9041dda37f38af5e70aaccad5553d20c = L.circleMarker(
+                [39.9339453, 32.8425824],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_fc653b003eb295a54ce4d33c293f6131 = L.popup({
-  "maxWidth": 280,
+        var popup_4c2b0498987640e5db6aefc74e8e5503 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_e1ee9c134c7b8cc7ae04f0fbcb8c98e0 = $(`<div id="html_e1ee9c134c7b8cc7ae04f0fbcb8c98e0" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Gar</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_fc653b003eb295a54ce4d33c293f6131.setContent(html_e1ee9c134c7b8cc7ae04f0fbcb8c98e0);
+                var html_fb5f4e8a02ef6adaa2b5525d37ac2950 = $(`<div id="html_fb5f4e8a02ef6adaa2b5525d37ac2950" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Gar</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_4c2b0498987640e5db6aefc74e8e5503.setContent(html_fb5f4e8a02ef6adaa2b5525d37ac2950);
             
         
 
-        circle_marker_5cb7a12f8b52cf91af8f2e663e9a714c.bindPopup(popup_fc653b003eb295a54ce4d33c293f6131)
+        circle_marker_9041dda37f38af5e70aaccad5553d20c.bindPopup(popup_4c2b0498987640e5db6aefc74e8e5503)
         ;
 
         
     
     
-            circle_marker_5cb7a12f8b52cf91af8f2e663e9a714c.bindTooltip(
+            circle_marker_9041dda37f38af5e70aaccad5553d20c.bindTooltip(
                 `<div>
                      Gar
                  </div>`,
@@ -1611,34 +1515,34 @@
             );
         
     
-            var circle_marker_f5dd2a557db1b6cb73e19f604df5962b = L.circleMarker(
-                [39.9549, 32.8483],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_75b6e4a905ff93d924e48f6b7048618c = L.circleMarker(
+                [39.9435727, 32.8451553],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_eb2ed3943ebe5786d00f356aa97d116b = L.popup({
-  "maxWidth": 280,
+        var popup_bab81bff28b7809e4649d4628dd0b04d = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_4573f2a91ce52aff23d1c722582f4f62 = $(`<div id="html_4573f2a91ce52aff23d1c722582f4f62" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">AKM</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_eb2ed3943ebe5786d00f356aa97d116b.setContent(html_4573f2a91ce52aff23d1c722582f4f62);
+                var html_98eb82d91b6c8b7ebfa8f2af66a7d41d = $(`<div id="html_98eb82d91b6c8b7ebfa8f2af66a7d41d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Atatürk Kültür Merkezi</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_bab81bff28b7809e4649d4628dd0b04d.setContent(html_98eb82d91b6c8b7ebfa8f2af66a7d41d);
             
         
 
-        circle_marker_f5dd2a557db1b6cb73e19f604df5962b.bindPopup(popup_eb2ed3943ebe5786d00f356aa97d116b)
+        circle_marker_75b6e4a905ff93d924e48f6b7048618c.bindPopup(popup_bab81bff28b7809e4649d4628dd0b04d)
         ;
 
         
     
     
-            circle_marker_f5dd2a557db1b6cb73e19f604df5962b.bindTooltip(
+            circle_marker_75b6e4a905ff93d924e48f6b7048618c.bindTooltip(
                 `<div>
-                     🔄 AKM
+                     Atatürk Kültür Merkezi
                  </div>`,
                 {
   "sticky": true,
@@ -1646,32 +1550,32 @@
             );
         
     
-            var circle_marker_a674ef985a0063a52d82394f62f11923 = L.circleMarker(
-                [39.9625, 32.8527],
+            var circle_marker_be978ceb801ffa858b28d40023b8b6c2 = L.circleMarker(
+                [39.9477148, 32.8504913],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_543b737a393b2afbb0a7a377e616f34e = L.popup({
-  "maxWidth": 280,
+        var popup_0aeb8a35050ad2a19f8b9fa441ceca80 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_5037c6a4d8a281d9b62c5328ba0fc510 = $(`<div id="html_5037c6a4d8a281d9b62c5328ba0fc510" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">ASKİ</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_543b737a393b2afbb0a7a377e616f34e.setContent(html_5037c6a4d8a281d9b62c5328ba0fc510);
+                var html_1b3b76abf1408008b65a1cf97e6cb035 = $(`<div id="html_1b3b76abf1408008b65a1cf97e6cb035" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">ASKİ</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_0aeb8a35050ad2a19f8b9fa441ceca80.setContent(html_1b3b76abf1408008b65a1cf97e6cb035);
             
         
 
-        circle_marker_a674ef985a0063a52d82394f62f11923.bindPopup(popup_543b737a393b2afbb0a7a377e616f34e)
+        circle_marker_be978ceb801ffa858b28d40023b8b6c2.bindPopup(popup_0aeb8a35050ad2a19f8b9fa441ceca80)
         ;
 
         
     
     
-            circle_marker_a674ef985a0063a52d82394f62f11923.bindTooltip(
+            circle_marker_be978ceb801ffa858b28d40023b8b6c2.bindTooltip(
                 `<div>
                      ASKİ
                  </div>`,
@@ -1681,32 +1585,32 @@
             );
         
     
-            var circle_marker_3e290713bfa11a4148f8577975d1dbf0 = L.circleMarker(
-                [39.9682, 32.8607],
+            var circle_marker_8d6448c0cd2b5c0638b6c44bfc737621 = L.circleMarker(
+                [39.955386, 32.8587618],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_bcbfd50afae9cf8a0a142e29b596562e = L.popup({
-  "maxWidth": 280,
+        var popup_b54dd70c814c19e1870f1ec5e9beb2e0 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_048d80538391757a9340276f4b76a5f9 = $(`<div id="html_048d80538391757a9340276f4b76a5f9" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Dışkapı</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_bcbfd50afae9cf8a0a142e29b596562e.setContent(html_048d80538391757a9340276f4b76a5f9);
+                var html_2fcfdaf1c571e7fef920a78475c66773 = $(`<div id="html_2fcfdaf1c571e7fef920a78475c66773" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Dışkapı</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_b54dd70c814c19e1870f1ec5e9beb2e0.setContent(html_2fcfdaf1c571e7fef920a78475c66773);
             
         
 
-        circle_marker_3e290713bfa11a4148f8577975d1dbf0.bindPopup(popup_bcbfd50afae9cf8a0a142e29b596562e)
+        circle_marker_8d6448c0cd2b5c0638b6c44bfc737621.bindPopup(popup_b54dd70c814c19e1870f1ec5e9beb2e0)
         ;
 
         
     
     
-            circle_marker_3e290713bfa11a4148f8577975d1dbf0.bindTooltip(
+            circle_marker_8d6448c0cd2b5c0638b6c44bfc737621.bindTooltip(
                 `<div>
                      Dışkapı
                  </div>`,
@@ -1716,32 +1620,32 @@
             );
         
     
-            var circle_marker_82a37b0ba85367fcfe32847a0b6dd4bc = L.circleMarker(
-                [39.9726, 32.869],
+            var circle_marker_35a36892b9ca3fd1af8d4f1618e527ee = L.circleMarker(
+                [39.9663951, 32.8639206],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_5dd3a0d42d1204efbaf7d849b51d2625 = L.popup({
-  "maxWidth": 280,
+        var popup_a68d324e97e325346bf160f111c259af = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_77f2c6a44ebf26c205b1b8f544b6b527 = $(`<div id="html_77f2c6a44ebf26c205b1b8f544b6b527" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Meteoroloji</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_5dd3a0d42d1204efbaf7d849b51d2625.setContent(html_77f2c6a44ebf26c205b1b8f544b6b527);
+                var html_545776f72def7fb8a4965337049414f7 = $(`<div id="html_545776f72def7fb8a4965337049414f7" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Meteoroloji</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_a68d324e97e325346bf160f111c259af.setContent(html_545776f72def7fb8a4965337049414f7);
             
         
 
-        circle_marker_82a37b0ba85367fcfe32847a0b6dd4bc.bindPopup(popup_5dd3a0d42d1204efbaf7d849b51d2625)
+        circle_marker_35a36892b9ca3fd1af8d4f1618e527ee.bindPopup(popup_a68d324e97e325346bf160f111c259af)
         ;
 
         
     
     
-            circle_marker_82a37b0ba85367fcfe32847a0b6dd4bc.bindTooltip(
+            circle_marker_35a36892b9ca3fd1af8d4f1618e527ee.bindTooltip(
                 `<div>
                      Meteoroloji
                  </div>`,
@@ -1751,32 +1655,32 @@
             );
         
     
-            var circle_marker_7b8ecf4dd6841d6090c3fa071a0d067f = L.circleMarker(
-                [39.9778, 32.8695],
+            var circle_marker_690ae7dd4e1d7353e6ec8a99493b42b9 = L.circleMarker(
+                [39.9779333, 32.8682339],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_9a8bbee9c5feef7b0f872f98f570fd2e = L.popup({
-  "maxWidth": 280,
+        var popup_5e250faeffc47aaf28cb1069e19ef10c = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_28244c2e38b3c343544f4864be4f0b3a = $(`<div id="html_28244c2e38b3c343544f4864be4f0b3a" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Belediye</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_9a8bbee9c5feef7b0f872f98f570fd2e.setContent(html_28244c2e38b3c343544f4864be4f0b3a);
+                var html_84c81ab5a8a25ebb808307b0741614bd = $(`<div id="html_84c81ab5a8a25ebb808307b0741614bd" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Belediye</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_5e250faeffc47aaf28cb1069e19ef10c.setContent(html_84c81ab5a8a25ebb808307b0741614bd);
             
         
 
-        circle_marker_7b8ecf4dd6841d6090c3fa071a0d067f.bindPopup(popup_9a8bbee9c5feef7b0f872f98f570fd2e)
+        circle_marker_690ae7dd4e1d7353e6ec8a99493b42b9.bindPopup(popup_5e250faeffc47aaf28cb1069e19ef10c)
         ;
 
         
     
     
-            circle_marker_7b8ecf4dd6841d6090c3fa071a0d067f.bindTooltip(
+            circle_marker_690ae7dd4e1d7353e6ec8a99493b42b9.bindTooltip(
                 `<div>
                      Belediye
                  </div>`,
@@ -1786,32 +1690,32 @@
             );
         
     
-            var circle_marker_27364b7a4ad0ed67437b7b18a94bc827 = L.circleMarker(
-                [39.9848, 32.873],
+            var circle_marker_caad21b4426b0083931e362f7599c420 = L.circleMarker(
+                [39.983749, 32.8753776],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_2f0609edbb3a076720555805df0db37f = L.popup({
-  "maxWidth": 280,
+        var popup_4033bee3a466003bd98bb034731b239e = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_c70948484eaac0b15613e219d02576ba = $(`<div id="html_c70948484eaac0b15613e219d02576ba" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Mecidiye</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_2f0609edbb3a076720555805df0db37f.setContent(html_c70948484eaac0b15613e219d02576ba);
+                var html_adac0198a77600b7f9d352b7d17c2d32 = $(`<div id="html_adac0198a77600b7f9d352b7d17c2d32" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Mecidiye</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_4033bee3a466003bd98bb034731b239e.setContent(html_adac0198a77600b7f9d352b7d17c2d32);
             
         
 
-        circle_marker_27364b7a4ad0ed67437b7b18a94bc827.bindPopup(popup_2f0609edbb3a076720555805df0db37f)
+        circle_marker_caad21b4426b0083931e362f7599c420.bindPopup(popup_4033bee3a466003bd98bb034731b239e)
         ;
 
         
     
     
-            circle_marker_27364b7a4ad0ed67437b7b18a94bc827.bindTooltip(
+            circle_marker_caad21b4426b0083931e362f7599c420.bindTooltip(
                 `<div>
                      Mecidiye
                  </div>`,
@@ -1821,32 +1725,32 @@
             );
         
     
-            var circle_marker_6d566a4245a1a7950962dc6faf157233 = L.circleMarker(
-                [39.9914, 32.8755],
+            var circle_marker_b3f91e0c4405876f8c150712e902188c = L.circleMarker(
+                [39.9903583, 32.8755143],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_d6967b9c5c4d0e00eb43b7702e4c99b1 = L.popup({
-  "maxWidth": 280,
+        var popup_f6d2a147e3865dafd3a3b99c1e6179b3 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_023ef4622c740744456027014051721b = $(`<div id="html_023ef4622c740744456027014051721b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Kuyubaşı</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_d6967b9c5c4d0e00eb43b7702e4c99b1.setContent(html_023ef4622c740744456027014051721b);
+                var html_3603e3112f475d4e430db796285c4ffa = $(`<div id="html_3603e3112f475d4e430db796285c4ffa" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Kuyubaşı</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_f6d2a147e3865dafd3a3b99c1e6179b3.setContent(html_3603e3112f475d4e430db796285c4ffa);
             
         
 
-        circle_marker_6d566a4245a1a7950962dc6faf157233.bindPopup(popup_d6967b9c5c4d0e00eb43b7702e4c99b1)
+        circle_marker_b3f91e0c4405876f8c150712e902188c.bindPopup(popup_f6d2a147e3865dafd3a3b99c1e6179b3)
         ;
 
         
     
     
-            circle_marker_6d566a4245a1a7950962dc6faf157233.bindTooltip(
+            circle_marker_b3f91e0c4405876f8c150712e902188c.bindTooltip(
                 `<div>
                      Kuyubaşı
                  </div>`,
@@ -1856,32 +1760,32 @@
             );
         
     
-            var circle_marker_3cb5a5073bdc72864a70a68293f89fa7 = L.circleMarker(
-                [39.9986, 32.8769],
+            var circle_marker_88b1e95816f9457aba50a06505e0b104 = L.circleMarker(
+                [39.9995399, 32.8704178],
                 {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_a7d08de2b2cef702186a52f87c9dda94 = L.popup({
-  "maxWidth": 280,
+        var popup_0d2d980255c3225abafdbd8eb1ffc015 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_4b3ff127cf08e2039db27d3377171a67 = $(`<div id="html_4b3ff127cf08e2039db27d3377171a67" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Dutluk</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_a7d08de2b2cef702186a52f87c9dda94.setContent(html_4b3ff127cf08e2039db27d3377171a67);
+                var html_6fc788bf8368c18ec8cd20a6ea8831ba = $(`<div id="html_6fc788bf8368c18ec8cd20a6ea8831ba" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Dutluk</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_0d2d980255c3225abafdbd8eb1ffc015.setContent(html_6fc788bf8368c18ec8cd20a6ea8831ba);
             
         
 
-        circle_marker_3cb5a5073bdc72864a70a68293f89fa7.bindPopup(popup_a7d08de2b2cef702186a52f87c9dda94)
+        circle_marker_88b1e95816f9457aba50a06505e0b104.bindPopup(popup_0d2d980255c3225abafdbd8eb1ffc015)
         ;
 
         
     
     
-            circle_marker_3cb5a5073bdc72864a70a68293f89fa7.bindTooltip(
+            circle_marker_88b1e95816f9457aba50a06505e0b104.bindTooltip(
                 `<div>
                      Dutluk
                  </div>`,
@@ -1891,32 +1795,32 @@
             );
         
     
-            var circle_marker_03cb547960a0712a9cffd204b1286cc7 = L.circleMarker(
-                [40.0065, 32.8803],
-                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_6265182bb6f6580a7bff69a70747dcbc = L.circleMarker(
+                [39.9962226, 32.8609972],
+                {"bubblingMouseEvents": true, "color": "#457B9D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457B9D", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_12c95277ab232bf9b84f58c0a63dd5f3 = L.popup({
-  "maxWidth": 280,
+        var popup_d90d385e752825315e68825265a1251c = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_a79d98d0877f210d70e5d06ffc0b4206 = $(`<div id="html_a79d98d0877f210d70e5d06ffc0b4206" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#457B9D;font-size:14px;">Şehitler</b><br><small style="color:#888;">M4 Kızılay – Şehitler (Keçiören)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 39,691<br>🚇 Sefer: 218<br>📊 Doluluk: %11<br>💺 Kapasite: 351,450</div></div>`)[0];
-                popup_12c95277ab232bf9b84f58c0a63dd5f3.setContent(html_a79d98d0877f210d70e5d06ffc0b4206);
+                var html_21b46a6d7fffd74c3bcca9c6eb241148 = $(`<div id="html_21b46a6d7fffd74c3bcca9c6eb241148" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#457B9D;font-size:14px;">Şehitler</b><br><small>M4</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 39,691<br>Doluluk: %11</div></div>`)[0];
+                popup_d90d385e752825315e68825265a1251c.setContent(html_21b46a6d7fffd74c3bcca9c6eb241148);
             
         
 
-        circle_marker_03cb547960a0712a9cffd204b1286cc7.bindPopup(popup_12c95277ab232bf9b84f58c0a63dd5f3)
+        circle_marker_6265182bb6f6580a7bff69a70747dcbc.bindPopup(popup_d90d385e752825315e68825265a1251c)
         ;
 
         
     
     
-            circle_marker_03cb547960a0712a9cffd204b1286cc7.bindTooltip(
+            circle_marker_6265182bb6f6580a7bff69a70747dcbc.bindTooltip(
                 `<div>
                      Şehitler
                  </div>`,
@@ -1926,34 +1830,15 @@
             );
         
     
-            var poly_line_870a3eb66bf2f10210d8d3e499d05b19 = L.polyline(
-                [[39.9095, 32.8139], [39.9116, 32.8228], [39.9139, 32.8321], [39.9153, 32.8381], [39.9177, 32.847], [39.9196, 32.8505], [39.921, 32.8537], [39.9214, 32.8537], [39.9212, 32.865], [39.9209, 32.8755], [39.922, 32.8855]],
+            var poly_line_0d9991e1e7a4fe87d3ca5d12c90fc8e5 = L.polyline(
+                [[39.9182467, 32.8143741], [39.9232031, 32.8148986], [39.9311256, 32.8199646], [39.9326548, 32.8288782], [39.9347287, 32.8373663], [39.9323856, 32.8426667], [39.9257178, 32.8476875], [39.920537, 32.8539508], [39.9234186, 32.861441], [39.9283131, 32.8684395], [39.9325882, 32.8780219]],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2A9D8F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_a4edd19cda05149dafaa75928d2a3f24 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_6958acb1e731203b689d0baa12d08504 = $(`<div id="html_6958acb1e731203b689d0baa12d08504" style="width: 100.0%; height: 100.0%;"><b>A1 Ankaray (AŞTİ – Dikimevi)</b></div>`)[0];
-                popup_a4edd19cda05149dafaa75928d2a3f24.setContent(html_6958acb1e731203b689d0baa12d08504);
-            
-        
-
-        poly_line_870a3eb66bf2f10210d8d3e499d05b19.bindPopup(popup_a4edd19cda05149dafaa75928d2a3f24)
-        ;
-
-        
-    
-    
-            poly_line_870a3eb66bf2f10210d8d3e499d05b19.bindTooltip(
+            poly_line_0d9991e1e7a4fe87d3ca5d12c90fc8e5.bindTooltip(
                 `<div>
-                     A1 Ankaray (AŞTİ – Dikimevi)
+                     A1
                  </div>`,
                 {
   "sticky": true,
@@ -1961,32 +1846,32 @@
             );
         
     
-            var circle_marker_81747a3e8f8898ec35b689a78fefcdf1 = L.circleMarker(
-                [39.9095, 32.8139],
-                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_66a12a65c82a9f093923a74b0a0d5fa7 = L.circleMarker(
+                [39.9182467, 32.8143741],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_767779f0837bfc0739eb3e4c1b4a3221 = L.popup({
-  "maxWidth": 280,
+        var popup_d238616d7036cb3925d278bfe992c4b5 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_25427815a9e3ba57d1b020909b9e229f = $(`<div id="html_25427815a9e3ba57d1b020909b9e229f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">AŞTİ</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_767779f0837bfc0739eb3e4c1b4a3221.setContent(html_25427815a9e3ba57d1b020909b9e229f);
+                var html_3a688dc47d4dca660c924c21d30b868b = $(`<div id="html_3a688dc47d4dca660c924c21d30b868b" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">AŞTİ</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_d238616d7036cb3925d278bfe992c4b5.setContent(html_3a688dc47d4dca660c924c21d30b868b);
             
         
 
-        circle_marker_81747a3e8f8898ec35b689a78fefcdf1.bindPopup(popup_767779f0837bfc0739eb3e4c1b4a3221)
+        circle_marker_66a12a65c82a9f093923a74b0a0d5fa7.bindPopup(popup_d238616d7036cb3925d278bfe992c4b5)
         ;
 
         
     
     
-            circle_marker_81747a3e8f8898ec35b689a78fefcdf1.bindTooltip(
+            circle_marker_66a12a65c82a9f093923a74b0a0d5fa7.bindTooltip(
                 `<div>
                      AŞTİ
                  </div>`,
@@ -1996,32 +1881,32 @@
             );
         
     
-            var circle_marker_78d161c332689a647da5d4fd41ca72af = L.circleMarker(
-                [39.9116, 32.8228],
+            var circle_marker_baef794ccb61182aa544d2fab856b1bd = L.circleMarker(
+                [39.9232031, 32.8148986],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_a0f9230c99794b28fcc702c42b1eefb6 = L.popup({
-  "maxWidth": 280,
+        var popup_03a5c99fa4811302c770bd9d9a96d772 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_8016efe1e8ecf404bd1cb5e0943d4701 = $(`<div id="html_8016efe1e8ecf404bd1cb5e0943d4701" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Emek</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_a0f9230c99794b28fcc702c42b1eefb6.setContent(html_8016efe1e8ecf404bd1cb5e0943d4701);
+                var html_7d52bf02588c2eb972d505bca676b156 = $(`<div id="html_7d52bf02588c2eb972d505bca676b156" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Emek</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_03a5c99fa4811302c770bd9d9a96d772.setContent(html_7d52bf02588c2eb972d505bca676b156);
             
         
 
-        circle_marker_78d161c332689a647da5d4fd41ca72af.bindPopup(popup_a0f9230c99794b28fcc702c42b1eefb6)
+        circle_marker_baef794ccb61182aa544d2fab856b1bd.bindPopup(popup_03a5c99fa4811302c770bd9d9a96d772)
         ;
 
         
     
     
-            circle_marker_78d161c332689a647da5d4fd41ca72af.bindTooltip(
+            circle_marker_baef794ccb61182aa544d2fab856b1bd.bindTooltip(
                 `<div>
                      Emek
                  </div>`,
@@ -2031,32 +1916,32 @@
             );
         
     
-            var circle_marker_4a1b0ffd281d44c9b2c43c858702eef1 = L.circleMarker(
-                [39.9139, 32.8321],
+            var circle_marker_57fe3ed46213b011201c9faa82d53703 = L.circleMarker(
+                [39.9311256, 32.8199646],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_ce88d153646e472ec334a39347c1c8ef = L.popup({
-  "maxWidth": 280,
+        var popup_1298a4e36fca1dee931c411d20413311 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_e5bfd90851e863d8ca71b70a8b1524d4 = $(`<div id="html_e5bfd90851e863d8ca71b70a8b1524d4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Bahçelievler</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_ce88d153646e472ec334a39347c1c8ef.setContent(html_e5bfd90851e863d8ca71b70a8b1524d4);
+                var html_96ddae2c4b262b1cb478bf29988d5305 = $(`<div id="html_96ddae2c4b262b1cb478bf29988d5305" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Bahçelievler</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_1298a4e36fca1dee931c411d20413311.setContent(html_96ddae2c4b262b1cb478bf29988d5305);
             
         
 
-        circle_marker_4a1b0ffd281d44c9b2c43c858702eef1.bindPopup(popup_ce88d153646e472ec334a39347c1c8ef)
+        circle_marker_57fe3ed46213b011201c9faa82d53703.bindPopup(popup_1298a4e36fca1dee931c411d20413311)
         ;
 
         
     
     
-            circle_marker_4a1b0ffd281d44c9b2c43c858702eef1.bindTooltip(
+            circle_marker_57fe3ed46213b011201c9faa82d53703.bindTooltip(
                 `<div>
                      Bahçelievler
                  </div>`,
@@ -2066,32 +1951,32 @@
             );
         
     
-            var circle_marker_43ef9259f855517366139a84986111cf = L.circleMarker(
-                [39.9153, 32.8381],
+            var circle_marker_8037ab57cb9ea4d25628e763c4ef7785 = L.circleMarker(
+                [39.9326548, 32.8288782],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_ef51623af867397355ed73b74cf46847 = L.popup({
-  "maxWidth": 280,
+        var popup_00704e121dba707c02f7d680be104c81 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_508895432ad90bfd618124be174b9ab3 = $(`<div id="html_508895432ad90bfd618124be174b9ab3" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Beşevler</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_ef51623af867397355ed73b74cf46847.setContent(html_508895432ad90bfd618124be174b9ab3);
+                var html_f06b3f663466c788cf9547d7e16e5267 = $(`<div id="html_f06b3f663466c788cf9547d7e16e5267" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Beşevler</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_00704e121dba707c02f7d680be104c81.setContent(html_f06b3f663466c788cf9547d7e16e5267);
             
         
 
-        circle_marker_43ef9259f855517366139a84986111cf.bindPopup(popup_ef51623af867397355ed73b74cf46847)
+        circle_marker_8037ab57cb9ea4d25628e763c4ef7785.bindPopup(popup_00704e121dba707c02f7d680be104c81)
         ;
 
         
     
     
-            circle_marker_43ef9259f855517366139a84986111cf.bindTooltip(
+            circle_marker_8037ab57cb9ea4d25628e763c4ef7785.bindTooltip(
                 `<div>
                      Beşevler
                  </div>`,
@@ -2101,32 +1986,32 @@
             );
         
     
-            var circle_marker_e90385b55b9c4d6ea7e11fef5e44bf3b = L.circleMarker(
-                [39.9177, 32.847],
+            var circle_marker_88a0d48d1afc588fb1c049e43bbe40ce = L.circleMarker(
+                [39.9347287, 32.8373663],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_8910d4e718cdfe6f92d0af97278c8c5d = L.popup({
-  "maxWidth": 280,
+        var popup_e1f9b97ea91a61b119725df3e9cb7dda = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_bb063b95a7dd9767c3a2078bdf3a6a29 = $(`<div id="html_bb063b95a7dd9767c3a2078bdf3a6a29" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Anadolu</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_8910d4e718cdfe6f92d0af97278c8c5d.setContent(html_bb063b95a7dd9767c3a2078bdf3a6a29);
+                var html_6f15455fb11b76b654dafca055d1e0d4 = $(`<div id="html_6f15455fb11b76b654dafca055d1e0d4" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Anadolu</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_e1f9b97ea91a61b119725df3e9cb7dda.setContent(html_6f15455fb11b76b654dafca055d1e0d4);
             
         
 
-        circle_marker_e90385b55b9c4d6ea7e11fef5e44bf3b.bindPopup(popup_8910d4e718cdfe6f92d0af97278c8c5d)
+        circle_marker_88a0d48d1afc588fb1c049e43bbe40ce.bindPopup(popup_e1f9b97ea91a61b119725df3e9cb7dda)
         ;
 
         
     
     
-            circle_marker_e90385b55b9c4d6ea7e11fef5e44bf3b.bindTooltip(
+            circle_marker_88a0d48d1afc588fb1c049e43bbe40ce.bindTooltip(
                 `<div>
                      Anadolu
                  </div>`,
@@ -2136,32 +2021,32 @@
             );
         
     
-            var circle_marker_4ef013709cecc17f69a909d6d70b82d8 = L.circleMarker(
-                [39.9196, 32.8505],
+            var circle_marker_27836f290ca8bc700cdea321b6dd80a3 = L.circleMarker(
+                [39.9323856, 32.8426667],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_6e79f17461533f9c486a93a60ef36204 = L.popup({
-  "maxWidth": 280,
+        var popup_eadb221d953c26d61592e4cd810e8300 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_af259ce53566fec4777217906cc1cc86 = $(`<div id="html_af259ce53566fec4777217906cc1cc86" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Maltepe</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_6e79f17461533f9c486a93a60ef36204.setContent(html_af259ce53566fec4777217906cc1cc86);
+                var html_97d3065ecab3b18de2b10cd297f891ce = $(`<div id="html_97d3065ecab3b18de2b10cd297f891ce" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Maltepe</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_eadb221d953c26d61592e4cd810e8300.setContent(html_97d3065ecab3b18de2b10cd297f891ce);
             
         
 
-        circle_marker_4ef013709cecc17f69a909d6d70b82d8.bindPopup(popup_6e79f17461533f9c486a93a60ef36204)
+        circle_marker_27836f290ca8bc700cdea321b6dd80a3.bindPopup(popup_eadb221d953c26d61592e4cd810e8300)
         ;
 
         
     
     
-            circle_marker_4ef013709cecc17f69a909d6d70b82d8.bindTooltip(
+            circle_marker_27836f290ca8bc700cdea321b6dd80a3.bindTooltip(
                 `<div>
                      Maltepe
                  </div>`,
@@ -2171,32 +2056,32 @@
             );
         
     
-            var circle_marker_91a8baea8b4a5cada118596570f05548 = L.circleMarker(
-                [39.921, 32.8537],
+            var circle_marker_71872f36207c4fb6ffcce9d78f5180d6 = L.circleMarker(
+                [39.9257178, 32.8476875],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_ee40c64876db6b9547108a30638c758e = L.popup({
-  "maxWidth": 280,
+        var popup_52a8bec7c05df49b42fdc99f4d743613 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_98ae5b34c7f3b08f73b408a341a4aea5 = $(`<div id="html_98ae5b34c7f3b08f73b408a341a4aea5" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Demirtepe</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_ee40c64876db6b9547108a30638c758e.setContent(html_98ae5b34c7f3b08f73b408a341a4aea5);
+                var html_6caefb92cf4e9a47198678b9d3b4d544 = $(`<div id="html_6caefb92cf4e9a47198678b9d3b4d544" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Demirtepe</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_52a8bec7c05df49b42fdc99f4d743613.setContent(html_6caefb92cf4e9a47198678b9d3b4d544);
             
         
 
-        circle_marker_91a8baea8b4a5cada118596570f05548.bindPopup(popup_ee40c64876db6b9547108a30638c758e)
+        circle_marker_71872f36207c4fb6ffcce9d78f5180d6.bindPopup(popup_52a8bec7c05df49b42fdc99f4d743613)
         ;
 
         
     
     
-            circle_marker_91a8baea8b4a5cada118596570f05548.bindTooltip(
+            circle_marker_71872f36207c4fb6ffcce9d78f5180d6.bindTooltip(
                 `<div>
                      Demirtepe
                  </div>`,
@@ -2206,34 +2091,34 @@
             );
         
     
-            var circle_marker_a35b13bfa1b00a2c45744257743d4773 = L.circleMarker(
-                [39.9214, 32.8537],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_98e369819e6b0160ccb4b5e8118128c4 = L.circleMarker(
+                [39.920537, 32.8539508],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_8cd41f3386c16ec61861c6aa29abddce = L.popup({
-  "maxWidth": 280,
+        var popup_12a4359340f03ed662cb1c7fcd4f856d = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_76a23152ff2fd342f760fc7358fa4983 = $(`<div id="html_76a23152ff2fd342f760fc7358fa4983" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Kızılay</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_8cd41f3386c16ec61861c6aa29abddce.setContent(html_76a23152ff2fd342f760fc7358fa4983);
+                var html_730e39875a8dd11a6ed0bb8eaf7a5d1d = $(`<div id="html_730e39875a8dd11a6ed0bb8eaf7a5d1d" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Kızılay</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_12a4359340f03ed662cb1c7fcd4f856d.setContent(html_730e39875a8dd11a6ed0bb8eaf7a5d1d);
             
         
 
-        circle_marker_a35b13bfa1b00a2c45744257743d4773.bindPopup(popup_8cd41f3386c16ec61861c6aa29abddce)
+        circle_marker_98e369819e6b0160ccb4b5e8118128c4.bindPopup(popup_12a4359340f03ed662cb1c7fcd4f856d)
         ;
 
         
     
     
-            circle_marker_a35b13bfa1b00a2c45744257743d4773.bindTooltip(
+            circle_marker_98e369819e6b0160ccb4b5e8118128c4.bindTooltip(
                 `<div>
-                     🔄 Kızılay
+                     Kızılay
                  </div>`,
                 {
   "sticky": true,
@@ -2241,32 +2126,32 @@
             );
         
     
-            var circle_marker_59d3b5489a12b0d65cdfb4ce4cde220d = L.circleMarker(
-                [39.9212, 32.865],
+            var circle_marker_13fff90c3a683edc6b8977416774d7de = L.circleMarker(
+                [39.9234186, 32.861441],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_779c9c5125a133e57fff855a36eeedf7 = L.popup({
-  "maxWidth": 280,
+        var popup_e4d13a51984aec18b75a879e1a300886 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_cbe3a80d14af734362523bbf1891dd67 = $(`<div id="html_cbe3a80d14af734362523bbf1891dd67" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Kolej</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_779c9c5125a133e57fff855a36eeedf7.setContent(html_cbe3a80d14af734362523bbf1891dd67);
+                var html_d8b4fda6714bacdf8e4c27dbe7e5b3bf = $(`<div id="html_d8b4fda6714bacdf8e4c27dbe7e5b3bf" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Kolej</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_e4d13a51984aec18b75a879e1a300886.setContent(html_d8b4fda6714bacdf8e4c27dbe7e5b3bf);
             
         
 
-        circle_marker_59d3b5489a12b0d65cdfb4ce4cde220d.bindPopup(popup_779c9c5125a133e57fff855a36eeedf7)
+        circle_marker_13fff90c3a683edc6b8977416774d7de.bindPopup(popup_e4d13a51984aec18b75a879e1a300886)
         ;
 
         
     
     
-            circle_marker_59d3b5489a12b0d65cdfb4ce4cde220d.bindTooltip(
+            circle_marker_13fff90c3a683edc6b8977416774d7de.bindTooltip(
                 `<div>
                      Kolej
                  </div>`,
@@ -2276,32 +2161,32 @@
             );
         
     
-            var circle_marker_a05d7c65d8713b40bf945f6e1eeac898 = L.circleMarker(
-                [39.9209, 32.8755],
+            var circle_marker_14d50e35e30c184a794e6e34f2378d14 = L.circleMarker(
+                [39.9283131, 32.8684395],
                 {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "white", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_e175742d7aff8ccccf42ca7f07a9c930 = L.popup({
-  "maxWidth": 280,
+        var popup_870aed14e36b1992518fbaf2f05daf68 = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_37d2897a083bc72ce534176ff1b0d0cb = $(`<div id="html_37d2897a083bc72ce534176ff1b0d0cb" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Kurtuluş</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_e175742d7aff8ccccf42ca7f07a9c930.setContent(html_37d2897a083bc72ce534176ff1b0d0cb);
+                var html_f117e63c99cebdaf653fb1397bff663e = $(`<div id="html_f117e63c99cebdaf653fb1397bff663e" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Kurtuluş</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_870aed14e36b1992518fbaf2f05daf68.setContent(html_f117e63c99cebdaf653fb1397bff663e);
             
         
 
-        circle_marker_a05d7c65d8713b40bf945f6e1eeac898.bindPopup(popup_e175742d7aff8ccccf42ca7f07a9c930)
+        circle_marker_14d50e35e30c184a794e6e34f2378d14.bindPopup(popup_870aed14e36b1992518fbaf2f05daf68)
         ;
 
         
     
     
-            circle_marker_a05d7c65d8713b40bf945f6e1eeac898.bindTooltip(
+            circle_marker_14d50e35e30c184a794e6e34f2378d14.bindTooltip(
                 `<div>
                      Kurtuluş
                  </div>`,
@@ -2311,139 +2196,34 @@
             );
         
     
-            var circle_marker_0c0cb9e7ba46c3656ff3185b4273d13e = L.circleMarker(
-                [39.922, 32.8855],
-                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
+            var circle_marker_b3ebe7c0bae22e429b0df14b37b72898 = L.circleMarker(
+                [39.9325882, 32.8780219],
+                {"bubblingMouseEvents": true, "color": "#2A9D8F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2A9D8F", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_6eb79e0ff3b6fa9182d42e04d1f91967);
         
     
-        var popup_ad66d5ce569f5da3ec505f05f6e4ac4b = L.popup({
-  "maxWidth": 280,
+        var popup_7c45dd0df300d0a87695a9fb870d49dd = L.popup({
+  "maxWidth": 250,
   "autoClose": null,
   "closeOnClick": null,
 });
 
         
             
-                var html_64ac4c32460ee862d0a42830ccc0151f = $(`<div id="html_64ac4c32460ee862d0a42830ccc0151f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#2A9D8F;font-size:14px;">Dikimevi</b><br><small style="color:#888;">A1 Ankaray (AŞTİ – Dikimevi)</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 105,978<br>🚇 Sefer: 174<br>📊 Doluluk: %61<br>💺 Kapasite: 171,801</div></div>`)[0];
-                popup_ad66d5ce569f5da3ec505f05f6e4ac4b.setContent(html_64ac4c32460ee862d0a42830ccc0151f);
+                var html_266dc80fe07ae93d18c63b73f30e8290 = $(`<div id="html_266dc80fe07ae93d18c63b73f30e8290" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:200px;"><b style="color:#2A9D8F;font-size:14px;">Dikimevi</b><br><small>A1</small><hr><b>Hat Gunluk Ort:</b><br>Yolcu: 105,978<br>Doluluk: %61</div></div>`)[0];
+                popup_7c45dd0df300d0a87695a9fb870d49dd.setContent(html_266dc80fe07ae93d18c63b73f30e8290);
             
         
 
-        circle_marker_0c0cb9e7ba46c3656ff3185b4273d13e.bindPopup(popup_ad66d5ce569f5da3ec505f05f6e4ac4b)
+        circle_marker_b3ebe7c0bae22e429b0df14b37b72898.bindPopup(popup_7c45dd0df300d0a87695a9fb870d49dd)
         ;
 
         
     
     
-            circle_marker_0c0cb9e7ba46c3656ff3185b4273d13e.bindTooltip(
+            circle_marker_b3ebe7c0bae22e429b0df14b37b72898.bindTooltip(
                 `<div>
                      Dikimevi
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var poly_line_d4f570ff6696e5706665290e8fcf9fcf = L.polyline(
-                [[39.9783, 32.8081], [39.995, 32.795]],
-                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F4A261", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
-        
-    
-        var popup_e281e8a802cab90ab77364928b6a6f12 = L.popup({
-  "maxWidth": "100%",
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_31815288774731699024da0f31cbb97f = $(`<div id="html_31815288774731699024da0f31cbb97f" style="width: 100.0%; height: 100.0%;"><b>T1 Yenimahalle–Şentepe Teleferik</b></div>`)[0];
-                popup_e281e8a802cab90ab77364928b6a6f12.setContent(html_31815288774731699024da0f31cbb97f);
-            
-        
-
-        poly_line_d4f570ff6696e5706665290e8fcf9fcf.bindPopup(popup_e281e8a802cab90ab77364928b6a6f12)
-        ;
-
-        
-    
-    
-            poly_line_d4f570ff6696e5706665290e8fcf9fcf.bindTooltip(
-                `<div>
-                     T1 Yenimahalle–Şentepe Teleferik
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_81e77f8b97bf10c433299247408bae3f = L.circleMarker(
-                [39.9783, 32.8081],
-                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
-        
-    
-        var popup_97a9a80dacfaae137609d4c9bede9571 = L.popup({
-  "maxWidth": 280,
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_26104ac3a95e946dd7214becf3e70770 = $(`<div id="html_26104ac3a95e946dd7214becf3e70770" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#F4A261;font-size:14px;">Yenimahalle</b><br><small style="color:#888;">T1 Yenimahalle–Şentepe Teleferik</small><br><span style="background:#FFD700;color:#000;padding:2px 6px;border-radius:3px;font-size:11px;">🔄 Transfer İstasyonu</span><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 2,248<br>🚇 Sefer: 31<br>📊 Doluluk: %37<br>💺 Kapasite: 23,967</div></div>`)[0];
-                popup_97a9a80dacfaae137609d4c9bede9571.setContent(html_26104ac3a95e946dd7214becf3e70770);
-            
-        
-
-        circle_marker_81e77f8b97bf10c433299247408bae3f.bindPopup(popup_97a9a80dacfaae137609d4c9bede9571)
-        ;
-
-        
-    
-    
-            circle_marker_81e77f8b97bf10c433299247408bae3f.bindTooltip(
-                `<div>
-                     🔄 Yenimahalle
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_34eb52e16e23d2c092f11abb0d7aa19f = L.circleMarker(
-                [39.995, 32.795],
-                {"bubblingMouseEvents": true, "color": "#F4A261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F4A261", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
-            ).addTo(map_733b83525b6d4b2ab3cbbb627893445f);
-        
-    
-        var popup_5207f23b8adc490afb672f4af0761a7f = L.popup({
-  "maxWidth": 280,
-  "autoClose": null,
-  "closeOnClick": null,
-});
-
-        
-            
-                var html_62fc90be5ba97b94ddfecd0f4866b62f = $(`<div id="html_62fc90be5ba97b94ddfecd0f4866b62f" style="width: 100.0%; height: 100.0%;"><div style="font-family:Arial;min-width:220px;"><b style="color:#F4A261;font-size:14px;">Şentepe</b><br><small style="color:#888;">T1 Yenimahalle–Şentepe Teleferik</small><hr style="margin:6px 0;"><b>Hat Günlük Ortalama:</b><br>👥 Yolcu: 2,248<br>🚇 Sefer: 31<br>📊 Doluluk: %37<br>💺 Kapasite: 23,967</div></div>`)[0];
-                popup_5207f23b8adc490afb672f4af0761a7f.setContent(html_62fc90be5ba97b94ddfecd0f4866b62f);
-            
-        
-
-        circle_marker_34eb52e16e23d2c092f11abb0d7aa19f.bindPopup(popup_5207f23b8adc490afb672f4af0761a7f)
-        ;
-
-        
-    
-    
-            circle_marker_34eb52e16e23d2c092f11abb0d7aa19f.bindTooltip(
-                `<div>
-                     Şentepe
                  </div>`,
                 {
   "sticky": true,
