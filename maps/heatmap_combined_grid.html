@@ -42,6 +42,40 @@
     
             <div class="folium-map" id="map_7379be15fcbaa6b2f1b151f3ce89a90b" ></div>
         
+
+<script>
+// Wait for map to be ready, then add metro overlay
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        // Find the Leaflet map object
+        var mapObj = null;
+        for (var key in window) {
+            if (window[key] && window[key]._leaflet_id && window[key].getZoom) {
+                mapObj = window[key];
+                break;
+            }
+        }
+        if (!mapObj) return;
+
+        var metroLines = {
+            'M1': {color: '#E63946', weight: 4, coords: [[39.920537,32.853951],[39.928164,32.855078],[39.939220,32.850671],[39.943573,32.845155],[39.951591,32.834168],[39.957240,32.817049],[39.961909,32.804545],[39.965541,32.793588],[39.969172,32.783446],[39.971875,32.766624],[39.970229,32.744933],[39.968173,32.726740]]},
+            'M2': {color: '#D62828', weight: 4, coords: [[39.920537,32.853951],[39.915097,32.844386],[39.915230,32.827216],[39.910638,32.808123],[39.908899,32.796332],[39.908360,32.784569],[39.907552,32.765402],[39.906941,32.750084],[39.906221,32.733271],[39.905349,32.707866],[39.897829,32.691071],[39.886843,32.686313]]},
+            'M3': {color: '#C1121F', weight: 4, coords: [[39.968173,32.726740],[39.967706,32.715397],[39.971694,32.703079],[39.980758,32.694150],[39.979644,32.662767],[39.980500,32.647812],[39.981109,32.627406],[39.981492,32.613216],[39.982264,32.598408],[39.984073,32.585301],[39.985553,32.574339],[39.987668,32.558702]]},
+            'M4': {color: '#457B9D', weight: 4, coords: [[39.920537,32.853951],[39.930558,32.850394],[39.933945,32.842582],[39.943573,32.845155],[39.947715,32.850491],[39.955386,32.858762],[39.966395,32.863921],[39.977933,32.868234],[39.983749,32.875378],[39.990358,32.875514],[39.999540,32.870418],[39.996223,32.860997]]},
+            'A1': {color: '#2A9D8F', weight: 4, coords: [[39.918247,32.814374],[39.923203,32.814899],[39.931126,32.819965],[39.932655,32.828878],[39.934729,32.837366],[39.932386,32.842667],[39.925718,32.847687],[39.920537,32.853951],[39.923419,32.861441],[39.928313,32.868440],[39.932588,32.878022]]}
+        };
+
+        for (var name in metroLines) {
+            var line = metroLines[name];
+            L.polyline(line.coords, {color: line.color, weight: line.weight, opacity: 0.85, dashArray: null}).addTo(mapObj).bindTooltip(name, {permanent: false});
+            // Terminal markers
+            L.circleMarker(line.coords[0], {radius: 4, color: line.color, fillColor: line.color, fillOpacity: 1, weight: 1}).addTo(mapObj);
+            L.circleMarker(line.coords[line.coords.length-1], {radius: 4, color: line.color, fillColor: line.color, fillOpacity: 1, weight: 1}).addTo(mapObj);
+        }
+    }, 500);
+});
+</script>
+
 </body>
 <script>
     
