@@ -1,0 +1,62 @@
+﻿hat,hat_adi,istasyon,sira,lat,lon,terminal,transfer
+M1,M1 Kızılay – Batıkent,Kızılay,1,39.9214,32.8537,True,True
+M1,M1 Kızılay – Batıkent,Sıhhiye,2,39.9274,32.8596,False,False
+M1,M1 Kızılay – Batıkent,Ulus,3,39.9413,32.857,False,False
+M1,M1 Kızılay – Batıkent,Atatürk Kültür Merkezi,4,39.9549,32.8483,False,False
+M1,M1 Kızılay – Batıkent,Akköprü,5,39.9621,32.8437,False,False
+M1,M1 Kızılay – Batıkent,İvedik,6,39.9728,32.8168,False,False
+M1,M1 Kızılay – Batıkent,Yenimahalle,7,39.9783,32.8081,False,True
+M1,M1 Kızılay – Batıkent,Demetevler,8,39.984,32.7919,False,False
+M1,M1 Kızılay – Batıkent,Hastane,9,39.9873,32.7779,False,False
+M1,M1 Kızılay – Batıkent,Macunköy,10,39.9893,32.7621,False,False
+M1,M1 Kızılay – Batıkent,OSTİM,11,39.9904,32.7483,False,False
+M1,M1 Kızılay – Batıkent,Batıkent,12,39.9716,32.7217,True,True
+M2,M2 Kızılay – Çayyolu/Koru,Kızılay,1,39.9214,32.8537,True,True
+M2,M2 Kızılay – Çayyolu/Koru,Necatibey,2,39.9197,32.8429,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Milli Kütüphane,3,39.9144,32.8277,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Söğütözü,4,39.9017,32.8101,False,False
+M2,M2 Kızılay – Çayyolu/Koru,MTA,5,39.8886,32.791,False,False
+M2,M2 Kızılay – Çayyolu/Koru,ODTÜ,6,39.8807,32.7765,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Bilkent,7,39.8743,32.7495,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Tarım Bakanlığı,8,39.866,32.7295,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Beytepe,9,39.8722,32.7192,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Ümitköy,10,39.8819,32.6977,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Çayyolu,11,39.8768,32.6849,False,False
+M2,M2 Kızılay – Çayyolu/Koru,Koru,12,39.8714,32.6703,True,False
+M3,M3 Batıkent – OSB/Törekent,Batıkent,1,39.9716,32.7217,True,True
+M3,M3 Batıkent – OSB/Törekent,Batı Merkez,2,39.9762,32.7118,False,False
+M3,M3 Batıkent – OSB/Törekent,Mesa,3,39.9789,32.7011,False,False
+M3,M3 Batıkent – OSB/Törekent,Botanik,4,39.9803,32.6895,False,False
+M3,M3 Batıkent – OSB/Törekent,İstanbul Yolu,5,39.978,32.6775,False,False
+M3,M3 Batıkent – OSB/Törekent,Eryaman 1-2,6,39.9741,32.6577,False,False
+M3,M3 Batıkent – OSB/Törekent,Eryaman 5,7,39.9698,32.6371,False,False
+M3,M3 Batıkent – OSB/Törekent,Devlet Mah.,8,39.9661,32.616,False,False
+M3,M3 Batıkent – OSB/Törekent,Harikalar Diyarı,9,39.961,32.5995,False,False
+M3,M3 Batıkent – OSB/Törekent,Fatih,10,39.9569,32.5838,False,False
+M3,M3 Batıkent – OSB/Törekent,GOP/Sincan,11,39.9525,32.5717,False,False
+M3,M3 Batıkent – OSB/Törekent,OSB-Törekent,12,39.9478,32.5558,True,False
+M4,M4 Kızılay – Şehitler (Keçiören),Kızılay,1,39.9214,32.8537,True,True
+M4,M4 Kızılay – Şehitler (Keçiören),Adliye,2,39.9307,32.8568,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Gar,3,39.937,32.856,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),AKM,4,39.9549,32.8483,False,True
+M4,M4 Kızılay – Şehitler (Keçiören),ASKİ,5,39.9625,32.8527,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Dışkapı,6,39.9682,32.8607,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Meteoroloji,7,39.9726,32.869,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Belediye,8,39.9778,32.8695,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Mecidiye,9,39.9848,32.873,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Kuyubaşı,10,39.9914,32.8755,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Dutluk,11,39.9986,32.8769,False,False
+M4,M4 Kızılay – Şehitler (Keçiören),Şehitler,12,40.0065,32.8803,True,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),AŞTİ,1,39.9095,32.8139,True,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Emek,2,39.9116,32.8228,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Bahçelievler,3,39.9139,32.8321,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Beşevler,4,39.9153,32.8381,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Anadolu,5,39.9177,32.847,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Maltepe,6,39.9196,32.8505,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Demirtepe,7,39.921,32.8537,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Kızılay,8,39.9214,32.8537,False,True
+A1,A1 Ankaray (AŞTİ – Dikimevi),Kolej,9,39.9212,32.865,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Kurtuluş,10,39.9209,32.8755,False,False
+A1,A1 Ankaray (AŞTİ – Dikimevi),Dikimevi,11,39.922,32.8855,True,False
+T1,T1 Yenimahalle–Şentepe Teleferik,Yenimahalle,1,39.9783,32.8081,True,True
+T1,T1 Yenimahalle–Şentepe Teleferik,Şentepe,2,39.995,32.795,True,False
