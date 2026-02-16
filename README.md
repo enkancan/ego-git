@@ -4,7 +4,7 @@
 
 ## Overview
 
-A comprehensive spatial and temporal analysis of Ankara's EGO public transit system. The study examines service-demand mismatches, route efficiency, and structural patterns using grid-based spatial analysis, anomaly detection, and regime shift analysis.
+A comprehensive spatial and temporal analysis of Ankara's EGO public transit system. The study examines service-demand mismatches, route efficiency, and structural patterns using grid-based spatial analysis, anomaly detection, and regime shift analysis. 
 
 ## Key Findings
 
@@ -24,18 +24,37 @@ A comprehensive spatial and temporal analysis of Ankara's EGO public transit sys
 3. **Grid Aggregation** → 1km × 1km spatial grid, two distribution methods:
    - **Connectivity-weighted**: Passengers distributed by stop transfer power
    - **Position-weighted**: Terminal-biased distribution (30% first/last stops)
+  
+<img width="1904" height="933" alt="grid_doluluk_orani" src="https://github.com/user-attachments/assets/362d60e1-2b98-420e-857e-62131bad6a1a" />
+
+
 
 ### Analysis Methods
 - **Anomaly Detection**: Autoencoder (PCA), Isolation Forest, LOF, Graph-based
 - **Regime Shift**: Embedding stability, Daily clustering
 - **Spatial Analysis**: Global/Local Moran's I (LISA)
-- **Validation**: KPI tail analysis, Weekday/weekend segmentation
+
+
+<img width="3249" height="1517" alt="6-grid" src="https://github.com/user-attachments/assets/c2947ecc-f734-4438-bdd8-c609150ad8e7" />
+
+
+
+
+<img width="2957" height="2990" alt="category_radar_chart" src="https://github.com/user-attachments/assets/762b87bc-7743-4f1e-8222-18e4b2658eb2" />
+
+
+  
+
 
 ## Tech Stack
 
 - **Python 3.13** — pandas, numpy, scikit-learn
 - **Visualization** — Matplotlib, Seaborn, Plotly, Folium
-- **Spatial** — PySAL (LISA/Moran's I), NetworkX
+
+
+
+
+
 - **ML** — Scikit-learn (Isolation Forest, LOF, K-Means, PCA)
 
 ## Quick Start
@@ -60,6 +79,7 @@ python scripts/visualize_raw_features_grid.py --input data/daily_grid_data.csv
 
 - **EGO Genel Müdürlüğü** — Ankara Metropolitan Municipality, Public Transit Authority
 - Daily bus route reports & metro/rail passenger data (PDF)
+- -Overpass and Google Geocoding API
 
 ## License
 
