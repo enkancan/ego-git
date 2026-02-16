@@ -35,12 +35,12 @@ A comprehensive spatial and temporal analysis of Ankara's EGO public transit sys
 - **Spatial Analysis**: Global/Local Moran's I (LISA)
 
 
-<img width="3249" height="1517" alt="6-grid" src="https://github.com/user-attachments/assets/c2947ecc-f734-4438-bdd8-c609150ad8e7" />
+<img width="3249" height="1000" alt="6-grid" src="https://github.com/user-attachments/assets/c2947ecc-f734-4438-bdd8-c609150ad8e7" />
 
 
 
 
-<img width="2957" height="2990" alt="category_radar_chart" src="https://github.com/user-attachments/assets/762b87bc-7743-4f1e-8222-18e4b2658eb2" />
+<img width="2957" height="1000" alt="category_radar_chart" src="https://github.com/user-attachments/assets/762b87bc-7743-4f1e-8222-18e4b2658eb2" />
 
 
   
