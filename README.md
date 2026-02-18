@@ -8,7 +8,7 @@ A comprehensive spatial and temporal analysis of Ankara's EGO public transit sys
 
 ## Key Findings
 
-- **233 days** of bus data analyzed (Dec 2023 – Oct 2024)
+- **173 days** of bus data analyzed (Dec 2023 – Oct 2024)
 - **315 days** of metro/rail data (Dec 2023 – Nov 2024)
 - **550 bus routes** + **5 rail lines** covering **1,382 grid cells** (1km × 1km)
 - **13 critical grids** identified (both anomalous and unstable)
