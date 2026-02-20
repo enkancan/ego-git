@@ -84,3 +84,20 @@ python scripts/visualize_raw_features_grid.py --input data/daily_grid_data.csv
 ## License
 
 Academic research use.
+
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@misc{kancan2026skeletaltrap,
+  title        = {The Skeletal Trap: Mapping Spatial Inequality and Ghost Stops in Ankara's Transit Network},
+  author       = {Kancan, Elifnaz},
+  year         = {2026},
+  eprint       = {2602.15470},
+  archivePrefix= {arXiv},
+  primaryClass = {physics.soc-ph},
+  doi          = {10.48550/arXiv.2602.15470},
+  url          = {https://arxiv.org/abs/2602.15470}
+}
+```
